@@ -1,0 +1,94 @@
+/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
+- customized version: box sizing added
+- some styles removed
+- incorporated styles into partials when properties would be set regardless
+--------------------------------------------------------------------------- */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  background-color: white;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// my additions
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  border-width: 0;
+}
+
+/* Forms
+   ========================================================================== */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"],
+input[type="search"] {
+  -webkit-appearance: none; /* 2 */
+  cursor: pointer; /* 3 */
+  outline: none;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+
+
+// media
+img {
+  height: auto;
+  max-width: 100%;
+  border-width: 0;
+}

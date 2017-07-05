@@ -1,0 +1,25 @@
+/* extends and helper classes
+-------------------------------------- */
+// screen reader text
+.clip {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+// make sure any target links clear the fixed header
+.anchor:target {
+	display: block;
+	position: relative;
+	// margin-top: -$header;
+	// padding-top: $header;
+}
+		
+// browser sync notification
+#__bs_notify__ {
+	padding: .25em!important;
+	font-size: .75em!important;
+	opacity: .25;
+}

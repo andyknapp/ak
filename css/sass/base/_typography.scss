@@ -1,0 +1,78 @@
+$headline-font: 'roboto-slab'; // 400, 700
+$body-font: "museo-sans-rounded", sans-serif; // 300, 500, 700
+
+body {
+	font-family: $body-font;
+	font-size: 16px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.5;
+	color: $black;
+}
+
+// headlines
+h1,h2,h3,h4,h5,h6 {
+	display: block;
+	margin: 0;
+  clear: both;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+  color: $blue-dark;
+  [class*='wf-robotoslab-'] & {
+  	font-family: $headline-font, Georgia, serif;
+  }
+}
+
+
+
+.headline-xl {
+	margin-bottom: 0.15em;
+	@include fluid(font-size, 20em, 68em, 1.625em, 4em);
+	&.mission-xl {
+		word-spacing: -(2 / 64)*1em;
+		letter-spacing: -(2 / 64)*1em;
+	}
+	word-spacing: -(11 / 64)*1em;
+	letter-spacing: -(2.5 / 64)*1em;
+
+	[class*='wf-robotoslab-'] & {
+		word-spacing: 0;
+		letter-spacing: 0;
+	}
+}
+
+// links 
+a {
+	color: $blue-light;
+	background-color: transparent;
+	text-decoration: none;
+	transition: color .2s ease-out;
+	&:hover,
+	&:focus {
+		color: $orange;
+		text-decoration: none;
+	}
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		outline: 0;
+	}
+}
+
+p {
+	margin: 0 0 1em;
+	@include fluid(font-size, 20em, 68em, 0.875em, 1em);	
+}
+// misc
+b,
+strong {
+	font-weight: bold;
+  font-weight: 600;
+}
+
+i {
+	font-style: italic;
+}

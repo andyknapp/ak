@@ -3,24 +3,17 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andy Knapp | Front End Developer</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!--typekit -->
-  <script type="text/javascript">
-    (function() {
-      var config = {
-        kitId: 'fyy5xgk',
-        scriptTimeout: 3000
-      };
-      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
-  </script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body class="resume">
-  <div id="page" class="site">
+<body>
+  <section class="intro flex-col">
+    <h1 class="logo">Andy Knapp</h1>
+  </section>
+  
     <header id="masthead" class="site-header" role="banner">
       <div class="container">
-        <h1 class="site-title">Andy Knapp</h1>
+        <h1 >Andy Knapp</h1>
         <div class="resume-contact">
           <ul class="contact-physical">
             <li>304 Spalding Rd. Wilmington, DE 19803</li>
@@ -362,7 +355,6 @@
         </div>
       </section>
     </div>
-  </div>
 
   <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="container">

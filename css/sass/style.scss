@@ -1,0 +1,18 @@
+// utils
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/helpers";
+@import "utils/normalize";
+@import "utils/accessibility";
+//@import "utils/animations";
+
+// base
+@import "base/typography";
+@import "base/global";
+
+// partials
+@import "partials/header";
+@import "partials/forms";
+@import "partials/footer";
+
+
