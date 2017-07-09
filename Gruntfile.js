@@ -65,40 +65,26 @@ module.exports = function(grunt) {
             dest: 'css/style.css'
           },
         },
-
-        // criticalcss: {
-        //   'home' : {
-        //     options: {
-        //       outputfile : 'css/critical/home.css',
-        //       filename : 'css/style.css',
-        //       url : 'http://ak.dev/'
-        //     }
-        //   }
-        // },
-
-        // 'string-replace': {
-        //   files: {
-        //     src: 'css/critical/*.css',
-        //     dest: 'css/critical/'
-
-        //   },
-        //   options: {
-        //     saveUnchanged: false,
-        //     replacements: [{
-        //       pattern: /url\(\.\.\//ig, // g needed to execute all instances
-        //       //replacement: 'url(/wp-content/themes/birdseye/assets/'
-        //     }]
-        //   }
-        // },
-
-        // cacheBust: {
-        //   options: {
-        //     jsonOutput: true,
-        //     jsonOutputFilename : 'grunt-cache-bust.json',
-        //     assets: ['css/style.css']
-        //   }, 
-        //   src: ['no.php']
-        // },
+        
+        criticalcss: {
+          'home' : {
+            options: {
+              outputfile : 'css/critical/home.css',
+              filename : 'css/style.css',
+              url : 'http://ak.dev/'
+            }
+          }
+        },
+        
+        // minify css
+        cssmin: {
+          target: {
+            files: {
+              'css/style.min.css': ['css/style.css'],
+              'css/critical.min.css': ['css/critical/home.css']
+            }
+          }
+        },
 
         // svg sprite system
         svgstore: {
@@ -127,7 +113,7 @@ module.exports = function(grunt) {
           },
           css: {
             files: ['css/sass/**/*.scss'],
-            tasks: ['sass', 'autoprefixer'],
+            tasks: ['sass', 'autoprefixer', 'cssmin'],
             options: {
                 spawn: false,
             }
@@ -158,13 +144,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-svgstore');
-    // grunt.loadNpmTasks('grunt-cache-bust');
-    // grunt.loadNpmTasks('grunt-criticalcss');
-  //  grunt.loadNpmTasks('grunt-string-replace');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'svgstore', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'criticalcss', 'cssmin', 'svgstore', 'browserSync', 'watch']);
 };

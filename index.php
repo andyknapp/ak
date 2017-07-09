@@ -3,7 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andy Knapp | Front End Developer</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style type="text/css">
+    <?php include('css/critical.min.css'); ?>
+  </style>
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.min.css"> -->
 </head>
 
 <body>
@@ -357,6 +362,10 @@
       <span>&copy; <?php echo date('Y'); ?> AndyKnapp.com</span>
     </div>
   </footer>
-
+  
+  <script type="text/javascript">
+    <?php include('js/loadCSS.min.js'); ?>
+    <?php include('js/cssrelpreload.min.js'); ?>
+  </script>
 </body>
 </html>
