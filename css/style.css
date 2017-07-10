@@ -388,15 +388,46 @@ html, body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  padding: 1em;
   background-color: white;
 }
 
+/* line 18, sass/partials/_resume.scss */
+.res-logo {
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+  margin-bottom: 1em;
+}
+
+/* line 23, sass/partials/_resume.scss */
+.res-contact {
+  text-align: center;
+}
+
+@media (min-width: 30em) {
+  /* line 28, sass/partials/_resume.scss */
+  .res-header {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: bottom;
+    -ms-flex-align: bottom;
+    align-items: bottom;
+  }
+}
 /* forms & buttons
 -------------------------------------------------------------- */
 /* line 5, sass/partials/_forms.scss */

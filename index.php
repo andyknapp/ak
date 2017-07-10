@@ -17,10 +17,10 @@
   </section>
   <section class="resume">
     <header id="masthead" class="res-header">
-      <h1 >Andy Knapp</h1>
-      <div class="resume-contact">
+      <h1 class="res-logo">Andy Knapp</h1>
+      <div class="res-contact">
         <ul class="contact-physical">
-          <li>304 Spalding Rd. Wilmington, DE 19803</li>
+          <li>Wilmington, DE</li>
         </ul>
         <ul class="contact-digital">
           <li><a href="tel:+19173751114">917.375.1114</a></li>
@@ -367,5 +367,8 @@
     <?php include('js/loadCSS.min.js'); ?>
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
+  
+  <?php include('icons/svg-defs.svg'); ?>
+  
 </body>
 </html>

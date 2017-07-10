@@ -26,15 +26,6 @@ section {
   display: block;
 }
 
-ul {
-  padding: 0px;
-  margin: 0px;
-}
-
-li {
-  list-style: none;
-}
-
 body {
   font-family: museo-sans-rounded, sans-serif;
   font-size: 16px;
@@ -86,9 +77,16 @@ body {
   flex-flow: row wrap;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  padding: 1em;
   background-color: white;
 }
 
@@ -115,19 +113,37 @@ body {
 }
 
 .res-header {
+  display: -webkit-flex;
+  -webkit-flex-flow: column nowrap;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
   position: -webkit-sticky;
   top: 0px;
+  padding: 1em;
   background-color: white;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-flex-align: center;
+  align-items: center;
   position: sticky;
   top: 0;
+}
+
+@media (min-width: 30em) {
+  .res-header {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: bottom;
+    -ms-flex-align: bottom;
+    align-items: bottom;
+  }
 }

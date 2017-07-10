@@ -6,8 +6,27 @@
 }
 .res-header {
   display: flex;
-  justify-content: space-around;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
+  padding: 1em;
   background-color: white;
+}
+
+.res-logo {
+  flex: 1 auto;
+  margin-bottom: 1em;
+}
+
+.res-contact {
+  text-align: center;
+}
+
+@media (min-width: $bp-res) {
+  .res-header {
+    flex-flow: row wrap;
+    align-items: bottom;
+  }
 }
