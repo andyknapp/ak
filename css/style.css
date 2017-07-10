@@ -383,6 +383,20 @@ html, body {
   background-color: white;
 }
 
+/* line 7, sass/partials/_resume.scss */
+.res-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
 /* forms & buttons
 -------------------------------------------------------------- */
 /* line 5, sass/partials/_forms.scss */
