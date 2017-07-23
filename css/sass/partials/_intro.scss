@@ -5,8 +5,17 @@
   top: 0;
   left: 0;
   background-color: white;
+  text-align: center;
+  span {
+    display: block;
+    font-family: $open-sans;
+    font-size: 0.35em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
 }
 
 .logo {
   margin: auto;
 }
+

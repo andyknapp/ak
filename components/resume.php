@@ -1,33 +1,23 @@
   <section class="resume">
     <header id="masthead" class="res-header">
       <h1 class="res-logo">Andy Knapp</h1>
-      <div class="res-contact">
-        <ul class="contact-physical">
-          <li>Wilmington, DE</li>
-        </ul>
-        <ul class="contact-digital">
-          <li><a href="tel:+19173751114">917.375.1114</a></li>
-          <li><a href="mailto:aknapp1@gmail.com">aknapp1@gmail.com</a></li>
-          <li><a href="http://andyknapp.com">andyknapp.com</a></li>
-          <li><a href="https://twitter.com/_aknapp">@_aknapp</a></li>
-        </ul>
-      </div>
     </header>
     <section class="experience">
       <header class="section-title">
         <h2>Experience</h2>
       </header>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="https://seakeeper.com/">Seakeeper</a></li>
-            <li>King Design - Summer / Fall 2016</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Collaborated on front end development and CMS (WordPress) integration.</p>
+      <div class="stage-kd">
+        <h4>King Design</h4>
+        <p>July 2014 - Present</p>
+        <div class="project">
+          <h3><a href="https://seakeeper.com/">Seakeeper</a></h3>
+          <span>King Design - Summer / Fall 2016</span>
+          <div class="project-details">
+            <p>alkjsdf asdlkja sdf l klasdf aslk asdf lkas dfasd f</p>
+          </div>
         </div>
       </div>
+
       <div class="project">
         <div class="project-details">
           <ul>

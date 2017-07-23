@@ -193,9 +193,9 @@ img {
   outline: 0;
 }
 
-/* line 4, sass/base/_typography.scss */
+/* line 5, sass/base/_typography.scss */
 body {
-  font-family: "museo-sans-rounded", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
   font-style: normal;
@@ -203,74 +203,90 @@ body {
   color: #4A4A4A;
 }
 
-/* line 14, sass/base/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 15, sass/base/_typography.scss */
+[class*='title-'] {
   display: block;
-  margin: 0;
-  clear: both;
-  font-family: Georgia, serif;
+  margin: 0 0 1em;
+  font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-style: normal;
-  line-height: 1;
-  color: #21547F;
-}
-/* line 23, sass/base/_typography.scss */
-[class*='wf-robotoslab-'] h1, [class*='wf-robotoslab-'] h2, [class*='wf-robotoslab-'] h3, [class*='wf-robotoslab-'] h4, [class*='wf-robotoslab-'] h5, [class*='wf-robotoslab-'] h6 {
-  font-family: "roboto-slab", Georgia, serif;
+  color: black;
 }
 
-/* line 30, sass/base/_typography.scss */
-.headline-xl {
-  margin-bottom: 0.15em;
-  word-spacing: -0.17188em;
-  letter-spacing: -0.03906em;
+/* line 23, sass/base/_typography.scss */
+.title-intro {
+  font-weight: 900;
 }
 /* line 7, sass/utils/_mixins.scss */
-.headline-xl {
+.title-intro {
   font-size: 1.625em;
 }
 @media screen and (min-width: 20em) {
   /* line 7, sass/utils/_mixins.scss */
-  .headline-xl {
+  .title-intro {
     font-size: calc(1.625em + 2.375 * (100vw - 20em) / 48);
   }
 }
 @media screen and (min-width: 68em) {
   /* line 7, sass/utils/_mixins.scss */
-  .headline-xl {
+  .title-intro {
     font-size: 4em;
   }
 }
-/* line 33, sass/base/_typography.scss */
-.headline-xl.mission-xl {
-  word-spacing: -0.03125em;
-  letter-spacing: -0.03125em;
+
+/* line 7, sass/utils/_mixins.scss */
+.title-l {
+  font-size: 1.25em;
 }
-/* line 40, sass/base/_typography.scss */
-[class*='wf-robotoslab-'] .headline-xl {
-  word-spacing: 0;
-  letter-spacing: 0;
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .title-l {
+    font-size: calc(1.25em + 1.75 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .title-l {
+    font-size: 3em;
+  }
 }
 
-/* line 47, sass/base/_typography.scss */
+/* line 7, sass/utils/_mixins.scss */
+.title-s {
+  font-size: 1em;
+}
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .title-s {
+    font-size: calc(1em + 1.25 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .title-s {
+    font-size: 2.25em;
+  }
+}
+
+/* line 37, sass/base/_typography.scss */
 a {
-  color: #04B7E3;
+  color: blue;
   background-color: transparent;
   text-decoration: none;
-  -webkit-transition: color .2s ease-out;
-  transition: color .2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
 }
-/* line 52, sass/base/_typography.scss */
+/* line 42, sass/base/_typography.scss */
 a:hover, a:focus {
-  color: #F6A623;
+  color: red;
   text-decoration: none;
 }
-/* line 57, sass/base/_typography.scss */
+/* line 47, sass/base/_typography.scss */
 a:hover, a:visited, a:active, a:focus {
   outline: 0;
 }
 
-/* line 65, sass/base/_typography.scss */
+/* line 55, sass/base/_typography.scss */
 p {
   margin: 0 0 1em;
 }
@@ -291,14 +307,14 @@ p {
   }
 }
 
-/* line 70, sass/base/_typography.scss */
+/* line 60, sass/base/_typography.scss */
 b,
 strong {
   font-weight: bold;
   font-weight: 600;
 }
 
-/* line 76, sass/base/_typography.scss */
+/* line 66, sass/base/_typography.scss */
 i {
   font-style: italic;
 }
@@ -350,20 +366,7 @@ html, body {
 .contact {
   position: relative;
   padding: 2em 1em 4em;
-}
-
-/* line 1, sass/partials/_header.scss */
-.res-header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
+  background-color: white;
 }
 
 /* line 1, sass/partials/_intro.scss */
@@ -374,9 +377,18 @@ html, body {
   top: 0;
   left: 0;
   background-color: white;
+  text-align: center;
+}
+/* line 9, sass/partials/_intro.scss */
+.intro span {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.35em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-/* line 10, sass/partials/_intro.scss */
+/* line 18, sass/partials/_intro.scss */
 .logo {
   margin: auto;
 }
@@ -394,37 +406,24 @@ html, body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 1em;
   background-color: white;
 }
 
-/* line 18, sass/partials/_resume.scss */
+/* line 14, sass/partials/_resume.scss */
 .res-logo {
-  -webkit-flex: 1 auto;
-  -ms-flex: 1 auto;
-  flex: 1 auto;
-  margin-bottom: 1em;
+  margin: 1em auto;
 }
 
-/* line 23, sass/partials/_resume.scss */
+/* line 18, sass/partials/_resume.scss */
 .res-contact {
   text-align: center;
 }
 
 @media (min-width: 30em) {
-  /* line 28, sass/partials/_resume.scss */
+  /* line 23, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
@@ -544,6 +543,11 @@ label.placeholder {
 /* line 68, sass/partials/_forms.scss */
 label.placeholder.filled {
   visibility: hidden;
+}
+
+/* line 1, sass/partials/_footer.scss */
+.site-footer {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

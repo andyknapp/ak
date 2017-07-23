@@ -13,7 +13,7 @@ body {
   margin: 0px;
   background-color: white;
   margin: 0;
-  font-family: "museo-sans-rounded", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
   font-style: normal;
@@ -26,8 +26,12 @@ section {
   display: block;
 }
 
+svg:not(:root) {
+  overflow: hidden;
+}
+
 body {
-  font-family: museo-sans-rounded, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
   font-style: normal;
@@ -35,19 +39,33 @@ body {
   color: rgb(74, 74, 74);
   margin: 0;
   background-color: white;
-  font-family: "museo-sans-rounded", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #4A4A4A;
 }
 
-h1 {
+[class*="title-"] {
   display: block;
-  margin: 0px;
-  clear: both;
-  font-family: Georgia, serif;
+  margin: 0px 0px 1em;
+  font-family: Rubik, sans-serif;
   font-weight: 700;
   font-style: normal;
-  line-height: 1;
-  color: rgb(33, 84, 127);
+  color: black;
+}
+
+.title-intro {
+  font-size: 1.625em;
+}
+
+@media screen and (min-width: 20em) {
+  .title-intro {
+    font-size: calc(1.625em + 2.375 * (100vw - 20em) / 48);
+  }
+}
+
+@media screen and (min-width: 68em) {
+  .title-intro {
+    font-size: 4em;
+  }
 }
 
 html,
@@ -64,30 +82,6 @@ body {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-.res-header {
-  display: -webkit-flex;
-  -webkit-flex-flow: row wrap;
-  -webkit-justify-content: space-between;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 1em;
-  background-color: white;
 }
 
 .intro {
@@ -114,25 +108,11 @@ body {
 
 .res-header {
   display: -webkit-flex;
-  -webkit-flex-flow: column nowrap;
-  -webkit-justify-content: space-between;
-  -webkit-align-items: center;
   position: -webkit-sticky;
   top: 0px;
-  padding: 1em;
   background-color: white;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -ms-flex-align: center;
-  align-items: center;
   position: sticky;
   top: 0;
 }
