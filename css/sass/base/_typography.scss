@@ -20,17 +20,24 @@ body {
   font-style: normal;
   color: black;
 }
+[class*='headline-'] {
+	display: block;
+	margin: 0;
+	line-height: 1;
+	font-weight: 400;
+	text-transform: uppercase;
+}
 .title-intro {
 	@include fluid(font-size, 20em, 68em, 1.625em, 4em);	
 	font-weight: 900;
 }
 
-.title-l {
-	@include fluid(font-size, 20em, 68em, 1.25em, 3em);	
+.title-s {
+	@include fluid(font-size, 20em, 68em, 1em, 1.5em);	
 }
 
-.title-s {
-	@include fluid(font-size, 20em, 68em, 1em, 2.25em);	
+.headline-m {
+	@include fluid(font-size, 20em, 68em, 0.75em, 1.125em);	
 }
 
 // links 

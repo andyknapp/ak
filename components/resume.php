@@ -1,10 +1,10 @@
   <section class="resume">
     <header id="masthead" class="res-header">
-      <h1 class="res-logo">Andy Knapp</h1>
+      <h1 class="title-s">Andy Knapp</h1>
     </header>
     <section class="experience">
-      <header class="section-title">
-        <h2>Experience</h2>
+      <header>
+        <h2 class="headline-m">Experience</h2>
       </header>
       <div class="stage-kd">
         <h4>King Design</h4>

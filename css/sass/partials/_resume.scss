@@ -8,15 +8,25 @@
   display: flex;
   position: sticky;
   top: 0;
+  padding: 1em;
   background-color: white;
-}
-
-.res-logo {
-  margin: 1em auto;
+  .title-s {
+    margin: 0;
+  }
 }
 
 .res-contact {
   text-align: center;
+}
+
+
+.experience {
+  padding-left: 1em;
+  padding-right: 1em;
+  header {
+    padding: 1em 0; 
+    text-align: right;
+  }
 }
 
 @media (min-width: $bp-res) {
