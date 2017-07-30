@@ -371,11 +371,18 @@ html, body {
   flex-direction: row;
 }
 
-/* line 32, sass/base/_global.scss */
-.contact {
-  position: relative;
-  padding: 2em 1em 4em;
-  background-color: white;
+/* line 30, sass/base/_global.scss */
+.sticky-module {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 1em;
+}
+/* line 34, sass/base/_global.scss */
+.sticky-module.flex-row {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 /* line 1, sass/partials/_intro.scss */
@@ -453,9 +460,14 @@ html, body {
     align-items: bottom;
   }
 }
-/* forms & buttons
--------------------------------------------------------------- */
-/* line 5, sass/partials/_forms.scss */
+/* line 2, sass/partials/_contact.scss */
+.contact {
+  position: relative;
+  padding: 2em 1em 4em;
+  background-color: white;
+}
+
+/* line 8, sass/partials/_contact.scss */
 button,
 input,
 textarea {
@@ -463,7 +475,7 @@ textarea {
   border-radius: 0;
 }
 
-/* line 14, sass/partials/_forms.scss */
+/* line 17, sass/partials/_contact.scss */
 .submit {
   display: block;
   width: 100%;
@@ -476,7 +488,7 @@ textarea {
   transition: color .2s ease, background-color .2s ease;
 }
 
-/* line 25, sass/partials/_forms.scss */
+/* line 28, sass/partials/_contact.scss */
 input,
 textarea {
   width: 100%;
@@ -507,7 +519,7 @@ textarea {
     font-size: 1em;
   }
 }
-/* line 36, sass/partials/_forms.scss */
+/* line 39, sass/partials/_contact.scss */
 input:focus,
 textarea:focus {
   outline: none;
@@ -534,7 +546,7 @@ textarea::-webkit-input-placeholder {
   color: blue;
 }
 
-/* line 47, sass/partials/_forms.scss */
+/* line 50, sass/partials/_contact.scss */
 label:not(.placeholder) {
   position: absolute;
   bottom: 1em;
@@ -547,11 +559,11 @@ label:not(.placeholder) {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-/* line 57, sass/partials/_forms.scss */
+/* line 60, sass/partials/_contact.scss */
 label:not(.placeholder).visible {
   opacity: 1;
 }
-/* line 61, sass/partials/_forms.scss */
+/* line 64, sass/partials/_contact.scss */
 label.placeholder {
   position: absolute;
   top: 9px;
@@ -560,7 +572,7 @@ label.placeholder {
   font-size: 1em;
   color: #6B6B6B;
 }
-/* line 68, sass/partials/_forms.scss */
+/* line 71, sass/partials/_contact.scss */
 label.placeholder.filled {
   visibility: hidden;
 }

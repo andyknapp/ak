@@ -27,10 +27,12 @@ html, body {
 	flex-direction: row;
 }
 
-
-// contact section
-.contact {
-	position: relative;
-	padding: 2em 1em 4em;
-	background-color: white;
+.sticky-module {
+	position: sticky;
+	top: 0;
+	padding: 1em;
+	&.flex-row {
+		justify-content: flex-end;
+	}
+	
 }

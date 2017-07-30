@@ -3,9 +3,9 @@
       <h1 class="title-s">Andy Knapp</h1>
     </header>
     <section class="experience">
-      <header>
+      <div class="sticky-module flex-row">
         <h2 class="headline-m">Experience</h2>
-      </header>
+      </div>
       <div class="stage-kd">
         <h4>King Design</h4>
         <p>July 2014 - Present</p>
@@ -210,9 +210,9 @@
       </div>
     </section>
     <section class="resume-skills resume-main">
-      <header class="section-title">
+      <div class="sticky-module flex-row">
         <h2>Skills / Languages</h2>
-      </header>
+      </div>
       <div class="project">
         <div class="project-details">
           <ul>
@@ -235,9 +235,9 @@
       </div>
     </section>
     <section class="resume-misc resume-main">
-      <header class="section-title">
+      <div class="sticky-module flex-row">
         <h2>Miscellaneous</h2>
-      </header>
+      </div>
       <div class="project">
         <div class="project-details">
           <ul>
@@ -250,10 +250,10 @@
       </div>
     </section>
     <section class="resume-prior resume-main">
-      <header class="section-title">
+      <div class="sticky-module flex-row">
         <h2>Prior Work Experience</h2>
         <p>After college I worked in the Advertising industry, Media Planning specifically, for nearly 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
-      </header>
+      </div>
     </section>
     <section class="resume-adv resume-main">
       <div class="project">
