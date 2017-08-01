@@ -375,14 +375,23 @@ html, body {
 .sticky-module {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
   padding: 1em;
 }
-/* line 34, sass/base/_global.scss */
-.sticky-module.flex-row {
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+/* line 33, sass/base/_global.scss */
+.sticky-module.center {
+  text-align: center;
+}
+/* line 36, sass/base/_global.scss */
+.sticky-module.top {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  height: 4.25em;
+}
+/* line 40, sass/base/_global.scss */
+.sticky-module.top .headline-m {
+  margin: auto;
 }
 
 /* line 1, sass/partials/_intro.scss */
@@ -438,19 +447,27 @@ html, body {
   text-align: center;
 }
 
-/* line 23, sass/partials/_resume.scss */
+/* line 22, sass/partials/_resume.scss */
 .experience {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 26, sass/partials/_resume.scss */
-.experience header {
-  padding: 1em 0;
-  text-align: right;
+
+/* line 28, sass/partials/_resume.scss */
+[class*='stage-'] .stage {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  top: 4.25em;
+  background-color: #eee;
+}
+/* line 32, sass/partials/_resume.scss */
+[class*='stage-'] .stage * {
+  margin: 0;
 }
 
 @media (min-width: 30em) {
-  /* line 33, sass/partials/_resume.scss */
+  /* line 39, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;

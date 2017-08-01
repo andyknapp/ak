@@ -29,10 +29,16 @@ html, body {
 
 .sticky-module {
 	position: sticky;
-	top: 0;
 	padding: 1em;
-	&.flex-row {
-		justify-content: flex-end;
+	&.center {
+		text-align: center;
 	}
-	
+	&.top {
+		display: flex;
+		top: 0;
+		height: $header;
+		.headline-m {
+			margin: auto;
+		}
+	}
 }

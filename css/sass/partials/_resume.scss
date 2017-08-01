@@ -19,13 +19,19 @@
   text-align: center;
 }
 
-
 .experience {
   padding-left: 1em;
   padding-right: 1em;
-  header {
-    padding: 1em 0; 
-    text-align: right;
+}
+
+[class*='stage-'] {
+  .stage {
+    justify-content: space-between;
+    top: $header;
+    background-color: #eee;
+    * {
+      margin: 0;
+    }
   }
 }
 

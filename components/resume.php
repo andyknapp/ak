@@ -3,209 +3,212 @@
       <h1 class="title-s">Andy Knapp</h1>
     </header>
     <section class="experience">
-      <div class="sticky-module flex-row">
+      <div class="sticky-module top center">
         <h2 class="headline-m">Experience</h2>
       </div>
       <div class="stage-kd">
-        <h4>King Design</h4>
-        <p>July 2014 - Present</p>
+        <header class="sticky-module flex-row stage">
+          <h4>King Design</h4>  
+          <p>July 2014 - Present</p>
+        </header>
         <div class="project">
-          <h3><a href="https://seakeeper.com/">Seakeeper</a></h3>
-          <span>King Design - Summer / Fall 2016</span>
+          <h3>Seakeeper <a href="https://seakeeper.com/">View Site</a></h3>
+          <span>Fall 2016</span>
           <div class="project-details">
-            <p>alkjsdf asdlkja sdf l klasdf aslk asdf lkas dfasd f</p>
+            <p>Front end development and CMS (WordPress) integration. </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://www.scullycompany.com/">Scully Company</a></li>
+              <li>Summer 2016</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Collaborated on front end development & WordPress Multisite implementation for Scully Company properties.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="https://epic.church/">Epic Church</a></li>
+              <li>Summer 2016</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://21cccs.org/">21st Century Cyber Charter School</a></li>
+              <li>Summer 2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://usa.m3.com/">M3 USA</a></li>
+              <li>Summer 2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="https://www.breasthealth.org/">BreastHealth.org</a></li>
+              <li>February 2015</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="https://www.honesttea.com/">HonestTea.com</a></li>
+              <li>September 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
       </div>
+      
+      <div class="stage-freelance">
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz</a></li>
+              <li>Freelance - May 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://www.scullycompany.com/">Scully Company</a></li>
-            <li>King Design - Summer 2016</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com</a></li>
+              <li>Freelance April 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Collaborated on front end development & WordPress Multisite implementation for Scully Company properties.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="https://epic.church/">Epic Church</a></li>
-            <li>King Design - Summer 2016</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://21cccs.org/">21st Century Cyber Charter School</a></li>
-            <li>King Design - Summer 2015</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://kainmurphy.com/">KainMurphy.com</a></li>
+              <li>Freelance February 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://usa.m3.com/">M3 USA</a></li>
-            <li>King Design - Summer 2015</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://albertoassociates.com/">AlbertoAssociates.com</a></li>
+              <li>Freelance February 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="https://www.breasthealth.org/">BreastHealth.org</a></li>
-            <li>King Design - February 2015</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://www.frangallun.com/">FranGallun.com</a></li>
+              <li>Freelance January 2014</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="https://www.honesttea.com/">HonestTea.com</a></li>
-            <li>King Design - September 2014</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://hvwm.com/">HVWM.com</a></li>
+              <li>Freelance October 2013</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz</a></li>
-            <li>Freelance - May 2014</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://www.lvlrealtors.com/">LVLRealtors.com</a></li>
+              <li>Freelance April 2013</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design & development. Integrated IDX data feed (MLS listing data) into site, resulting in one point of entry for listings.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com</a></li>
-            <li>Freelance April 2014</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://fiboxusa.com/">FiboxUSA.com</a></li>
+              <li>Freelance February 2013</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://kainmurphy.com/">KainMurphy.com</a></li>
-            <li>Freelance February 2014</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li><a href="http://haddonfield300.org/">Haddonfield300.org</a></li>
+              <li>Freelance October 2012</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://albertoassociates.com/">AlbertoAssociates.com</a></li>
-            <li>Freelance February 2014</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://www.frangallun.com/">FranGallun.com</a></li>
-            <li>Freelance January 2014</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://hvwm.com/">HVWM.com</a></li>
-            <li>Freelance October 2013</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://www.lvlrealtors.com/">LVLRealtors.com</a></li>
-            <li>Freelance April 2013</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design & development. Integrated IDX data feed (MLS listing data) into site, resulting in one point of entry for listings.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://fiboxusa.com/">FiboxUSA.com</a></li>
-            <li>Freelance February 2013</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li><a href="http://haddonfield300.org/">Haddonfield300.org</a></li>
-            <li>Freelance October 2012</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li class="res-project-title"><a href="http://www.delawarevalleysmartgrowth.org/new-site/">DelawareValleySmartGrowth.org</a></li>
-            <li>Freelance 2013</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Site design, front end development and CMS (WordPress) integration.</p>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li class="res-project-title"><a href="http://www.delawarevalleysmartgrowth.org/new-site/">DelawareValleySmartGrowth.org</a></li>
+              <li>Freelance 2013</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Site design, front end development and CMS (WordPress) integration.</p>
+          </div>
         </div>
       </div>
     </section>
