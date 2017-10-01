@@ -466,8 +466,23 @@ html, body {
   margin: 0;
 }
 
+/* line 38, sass/partials/_resume.scss */
+.project {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  padding: 1em;
+}
+/* line 42, sass/partials/_resume.scss */
+.project h2 {
+  margin: 0 0 0.5em;
+}
+
 @media (min-width: 30em) {
-  /* line 39, sass/partials/_resume.scss */
+  /* line 48, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;

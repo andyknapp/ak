@@ -6,85 +6,59 @@
       <div class="sticky-module top center">
         <h2 class="headline-m">Experience</h2>
       </div>
+      
       <div class="stage-kd">
         <header class="sticky-module flex-row stage">
           <h4>King Design</h4>  
           <p>July 2014 - Present</p>
         </header>
         <div class="project">
-          <h3>Seakeeper <a href="https://seakeeper.com/">View Site</a></h3>
+          <h2>Seakeeper <a href="https://seakeeper.com/"><span>View Site</span></a></h2>
           <span>Fall 2016</span>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration. </p>
           </div>
         </div>
         <div class="project">
+          <h2>Scully Company <a href="http://www.scullycompany.com/""><span>View Site</span></a></h2>
+          <p>Summer 2016</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://www.scullycompany.com/">Scully Company</a></li>
-              <li>Summer 2016</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>Collaborated on front end development & WordPress Multisite implementation for Scully Company properties.</p>
+            <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
         <div class="project">
+          <h2>Epic Church <a href="https://epic.church/"><span>View Site</span></a></h2>
+          <p>Summer 2016</p>
           <div class="project-details">
-            <ul>
-              <li><a href="https://epic.church/">Epic Church</a></li>
-              <li>Summer 2016</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>21st Century Cyber Charter School<a href="http://21cccs.org/"><span>View Site</span></a></h2>
           <div class="project-details">
-            <ul>
-              <li><a href="http://21cccs.org/">21st Century Cyber Charter School</a></li>
-              <li>Summer 2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>M3 USA<a href="http://usa.m3.com/"><span>View Site</span></a></h2>
           <div class="project-details">
-            <ul>
-              <li><a href="http://usa.m3.com/">M3 USA</a></li>
-              <li>Summer 2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>BreastHealth.org<a href="https://www.breasthealth.org/"><span>View Site</span></a></h2>
           <div class="project-details">
-            <ul>
-              <li><a href="https://www.breasthealth.org/">BreastHealth.org</a></li>
-              <li>February 2015</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>Honest Tea<a href="https://www.honesttea.com/"><span>View Site</span></a></h2>
+          <p>September 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="https://www.honesttea.com/">HonestTea.com</a></li>
-              <li>September 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
@@ -92,78 +66,56 @@
       
       <div class="stage-freelance">
         <div class="project">
+          <h2>AdvancePhysicalTherapy.biz <a href="http://www.advancephysicaltherapy.biz/"><span>View Site</span></a></h2>
+          <p>May 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz</a></li>
-              <li>Freelance - May 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>ArtisanCustomPainting.com <a href="http://artisancustompainting.com/"><span>View Site</span></a></h2>
+          <p>April 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com</a></li>
-              <li>Freelance April 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>KainMurphy.com <a href="http://kainmurphy.com/"><span>View Site</span></a></h2>
+          <p>February 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://kainmurphy.com/">KainMurphy.com</a></li>
-              <li>Freelance February 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>AlbertoAssociates.com <a href="http://albertoassociates.com/"><span>View Site</span></a></h2>
+          <p>February 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://albertoassociates.com/">AlbertoAssociates.com</a></li>
-              <li>Freelance February 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>FranGallun.com<a href="http://www.frangallun.com/"><span>View Site</span></a></h2>
+          <p>January 2014</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://www.frangallun.com/">FranGallun.com</a></li>
-              <li>Freelance January 2014</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
+          <h2>HVWM.com<a href="http://hvwm.com/"><span>View Site</span></a></h2>
+          <p>October 2013</p>
           <div class="project-details">
-            <ul>
-              <li><a href="http://hvwm.com/">HVWM.com</a></li>
-              <li>Freelance October 2013</li>
-            </ul>
-          </div>
-          <div class="project-description">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
+            
           </div>
         </div>
 
         <div class="project">
+          <h2><a href=""><span>View Site</span></a></h2>
           <div class="project-details">
             <ul>
               <li><a href="http://www.lvlrealtors.com/">LVLRealtors.com</a></li>
@@ -176,6 +128,7 @@
         </div>
 
         <div class="project">
+          <h2><a href=""><span>View Site</span></a></h2>
           <div class="project-details">
             <ul>
               <li><a href="http://fiboxusa.com/">FiboxUSA.com</a></li>
@@ -188,6 +141,7 @@
         </div>
 
         <div class="project">
+          <h2><a href=""><span>View Site</span></a></h2>
           <div class="project-details">
             <ul>
               <li><a href="http://haddonfield300.org/">Haddonfield300.org</a></li>
@@ -200,6 +154,7 @@
         </div>
 
         <div class="project">
+          <h2><a href=""><span>View Site</span></a></h2>
           <div class="project-details">
             <ul>
               <li class="res-project-title"><a href="http://www.delawarevalleysmartgrowth.org/new-site/">DelawareValleySmartGrowth.org</a></li>
