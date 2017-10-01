@@ -32,12 +32,21 @@ body {
 	font-weight: 900;
 }
 
-.title-s {
-	@include fluid(font-size, 20em, 68em, 1em, 1.5em);	
+.title-l {
+	@include fluid(font-size, 20em, 68em, 1.75em, 2.75em);	
 }
 
-.headline-m {
-	@include fluid(font-size, 20em, 68em, 0.75em, 1.125em);	
+.title-m {
+	@include fluid(font-size, 20em, 68em, 1.25em, 2em);	
+	font-weight: 400;
+}
+
+.title-s,
+.headline-s {
+	@include fluid(font-size, 20em, 68em, 1em, 1.5em);	
+	font-weight: 300;
+	text-transform: lowercase;
+	letter-spacing: 3px;
 }
 
 // links 

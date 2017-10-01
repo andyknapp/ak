@@ -41,6 +41,14 @@
   padding: 1em;
   h2 {
     margin: 0 0 0.5em;
+    line-height: 1;
+    span {
+      display: inline-block;
+      text-indent: -9999em;
+      width: 5px;
+      height: 5px;
+      background-color: red;
+    }
   }
 }
 
