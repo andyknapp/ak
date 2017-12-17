@@ -17,12 +17,12 @@
   <section class="intro flex-col">
     <h1 class="logo title-intro">Andy Knapp<span>Web Developer</span></h1>
   </section>
-  
-  <?php 
-    include('components/resume.php'); 
-    include('components/contact.php'); 
-    include('components/footer.php'); 
+
+  <?php
+    include('components/resume.php');
+    include('components/contact.php');
+    include('components/footer.php');
   ?>
-  
+
 </body>
 </html>
