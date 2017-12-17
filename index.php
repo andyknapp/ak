@@ -20,7 +20,7 @@
 
   <?php
     include('components/resume.php');
-    //include('components/contact.php');
+    include('components/contact.php');
     include('components/footer.php');
   ?>
 
