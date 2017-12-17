@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Andy Knapp | Front End Developer</title>
+  <title>Andy Knapp | Web Developer</title>
   <style type="text/css">
     <?php include('css/critical.min.css'); ?>
   </style>
