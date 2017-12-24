@@ -43,11 +43,33 @@ html, body {
 	}
 }
 
-
-.content-container {
+.sticky-container {
 	position: sticky;
 	width: 100%;
 	margin-top: 100vh;
   z-index: 1;
   background-color: white;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: $nav-width 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"nav main"
+		"footer footer";
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}
+
+.grid-nav {
+	grid-area: nav;
+}
+
+.grid-main {
+	grid-area: main;
+}
+
+.grid-footer {
+	grid-area: footer;
 }

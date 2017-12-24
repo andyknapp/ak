@@ -17,37 +17,41 @@
     <h1 class="logo title-intro">Andy Knapp <span>Web Developer</span></h1>
   </header>
 
-  <nav class="site-nav">
-    <ul>
-      <li>
-        <a href="#experience">Experience</a>
-        <ul>
-          <li>
-            <a href="#kd">King Design</a>
+  <div class="sticky-container">
+    <div class="grid-container">
+      <nav class="site-nav grid-nav">
+        <ul class="nav-container">
+          <li class="nav-item">
+            <a href="#experience">Experience</a>
+            <ul>
+              <li class="nav-item">
+                <a href="#kd">King Design</a>
+              </li>
+              <li class="nav-item">
+                <a href="#freelance">Freelance</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="#freelance">Freelance</a>
+          <li class="nav-item">
+            <a href="#skills">Skills / Languages</a>
+          </li>
+          <li class="nav-item">
+            <a href="#misc">Skills / Languages</a>
+          </li>
+          <li class="nav-item">
+            <a href="#advertising">Previous Career</a>
           </li>
         </ul>
-      </li>
-      <li>
-        <a href="#skills">Skills</a>
-      </li>
-      <li>
-        <a href="#advertising">Previous Career</a>
-      </li>
-    </ul>
-  </nav>
+      </nav>
 
-  <div class="content-container">
+      <?php
+        include('components/resume.php');
+        include('components/contact.php');
+        include('components/footer.php');
+      ?>
 
-    <?php
-      include('components/resume.php');
-      include('components/contact.php');
-      include('components/footer.php');
-    ?>
+    </div>
   </div>
-
 
 </body>
 </html>

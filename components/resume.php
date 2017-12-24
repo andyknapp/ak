@@ -1,9 +1,9 @@
-  <section class="resume">
+  <section class="resume grid-main">
+
     <section id="experience" class="experience">
       <div class="sticky-module top center">
         <h2 class="headline-s">Experience</h2>
       </div>
-
       <div id="kd" class="stage-kd">
         <header class="sticky-module flex-row stage">
           <h4>King Design</h4>
@@ -60,8 +60,11 @@
           </div>
         </div>
       </div>
-
       <div id="freelance"class="stage-freelance">
+        <header class="sticky-module flex-row stage">
+          <h4>Freelance Work</h4>
+          <p>??? 201? - July 2014</p>
+        </header>
         <div class="project">
           <h2 class="title-m"><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz <span>View Site</span></a></h2>
           <p>May 2014</p>
@@ -144,9 +147,10 @@
         </div>
       </div>
     </section>
+
     <section id="skills" class="resume-skills resume-main">
-      <div class="sticky-module flex-row">
-        <h2 class="title-m">Skills / Languages</h2>
+      <div class="sticky-module top center">
+        <h2 class="headline-s">Skills / Languages</h2>
       </div>
       <div class="project">
         <div class="project-details">
@@ -169,9 +173,10 @@
         </div>
       </div>
     </section>
-    <section class="resume-misc resume-main">
-      <div class="sticky-module flex-row">
-        <h2 class="title-m">Miscellaneous</h2>
+
+    <section id="misc" class="resume-misc resume-main">
+      <div class="sticky-module top center">
+        <h2 class="headline-s">Miscellaneous</h2>
       </div>
       <div class="project">
         <div class="project-details">
@@ -184,12 +189,26 @@
         </div>
       </div>
     </section>
+
     <section id="advertising" class="resume-prior resume-main">
-      <div class="sticky-module flex-row">
-        <h2 class="title-m">Prior Work Experience</h2>
-        <p>After college I worked in the Advertising industry, Media Planning specifically, for nearly 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
+      <div class="sticky-module top center">
+        <h2 class="headline-s">Old Experience</h2>
+      </div>
+      <div id="old-intro" class="stage-">
+        <header class="sticky-module flex-row stage">
+          <h4>Advertising</h4>
+          <p>dates</p>
+        </header>
+        <div class="project">
+          <p>After college I worked in the Advertising industry, Media Planning specifically, for nearly 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
+        </div>
+      </div>
+      <div id="old-something" class="">
+        <h2 class="headline-s">Prior Work Experience</h2>
+
       </div>
     </section>
+
     <section class="resume-adv resume-main">
       <div class="project">
         <div class="project-details">
@@ -247,6 +266,7 @@
         </div>
       </div>
     </section>
+
     <section class="resume-edu resume-main">
       <header>
         <h2 class="title-m">Education</h2>

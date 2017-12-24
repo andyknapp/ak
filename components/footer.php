@@ -1,4 +1,4 @@
-<footer class="site-footer" rol e="contentinfo">
+<footer class="site-footer grid-footer" role="contentinfo">
   <div class="res-contact">
     <ul class="contact-digital">
       <li><a href="tel:+19173751114">917.375.1114</a></li>

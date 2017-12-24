@@ -1,7 +1,6 @@
-.site-nav {
+.nav-container {
   position: sticky;
   top: 0;
   width: $nav-width;
-  height: 100%;
-  margin-top: 100vh;
+  height: auto;
 }

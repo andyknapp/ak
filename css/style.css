@@ -425,14 +425,39 @@ html, body {
   margin: auto;
 }
 
-/* line 47, sass/base/_global.scss */
-.content-container {
+/* line 46, sass/base/_global.scss */
+.sticky-container {
   position: -webkit-sticky;
   position: sticky;
   width: 100%;
   margin-top: 100vh;
   z-index: 1;
   background-color: white;
+}
+
+/* line 54, sass/base/_global.scss */
+.grid-container {
+  display: grid;
+  grid-template-columns: 12.5em 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav main" "footer footer";
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+/* line 65, sass/base/_global.scss */
+.grid-nav {
+  grid-area: nav;
+}
+
+/* line 69, sass/base/_global.scss */
+.grid-main {
+  grid-area: main;
+}
+
+/* line 73, sass/base/_global.scss */
+.grid-footer {
+  grid-area: footer;
 }
 
 /* line 1, sass/partials/_header.scss */
@@ -460,13 +485,12 @@ html, body {
 }
 
 /* line 1, sass/partials/_nav.scss */
-.site-nav {
+.nav-container {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 12.5em;
-  height: 100%;
-  margin-top: 100vh;
+  height: auto;
 }
 
 /* line 1, sass/partials/_resume.scss */
