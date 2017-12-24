@@ -65,7 +65,7 @@ module.exports = function(grunt) {
             dest: 'css/style.css'
           },
         },
-        
+
         criticalcss: {
           'home' : {
             options: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
             }
           }
         },
-        
+
         // minify css
         cssmin: {
           target: {
@@ -133,7 +133,7 @@ module.exports = function(grunt) {
                 forms: true,
                 scroll: true
             },
-            proxy: "ak.dev" // change this to your project's dev URL
+            proxy: "ak.test" // change this to your project's dev URL
             }
           }
         }
