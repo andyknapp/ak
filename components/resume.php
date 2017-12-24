@@ -2,14 +2,14 @@
     <header id="masthead" class="res-header">
       <h1 class="title-s">Andy Knapp</h1>
     </header>
-    <section class="experience">
+    <section id="experience" class="experience">
       <div class="sticky-module top center">
         <h2 class="headline-s">Experience</h2>
       </div>
-      
-      <div class="stage-kd">
+
+      <div id="kd" class="stage-kd">
         <header class="sticky-module flex-row stage">
-          <h4>King Design</h4>  
+          <h4>King Design</h4>
           <p>July 2014 - Present</p>
         </header>
         <div class="project">
@@ -63,8 +63,8 @@
           </div>
         </div>
       </div>
-      
-      <div class="stage-freelance">
+
+      <div id="freelance"class="stage-freelance">
         <div class="project">
           <h2 class="title-m"><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz <span>View Site</span></a></h2>
           <p>May 2014</p>
@@ -110,7 +110,7 @@
           <p>October 2013</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
-            
+
           </div>
         </div>
 
@@ -123,7 +123,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="<a href="http://fiboxusa.com/">Fibox USA<span>View Site</span></a></h2>
+          <h2 class="title-m"><a href="http://fiboxusa.com/">Fibox USA<span>View Site</span></a></h2>
           <p>February 2013</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -147,7 +147,7 @@
         </div>
       </div>
     </section>
-    <section class="resume-skills resume-main">
+    <section id="skills" class="resume-skills resume-main">
       <div class="sticky-module flex-row">
         <h2 class="title-m">Skills / Languages</h2>
       </div>
@@ -187,7 +187,7 @@
         </div>
       </div>
     </section>
-    <section class="resume-prior resume-main">
+    <section id="advertising" class="resume-prior resume-main">
       <div class="sticky-module flex-row">
         <h2 class="title-m">Prior Work Experience</h2>
         <p>After college I worked in the Advertising industry, Media Planning specifically, for nearly 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
@@ -232,7 +232,7 @@
           </ul>
         </div>
         <div class="project-description">
-          <p>Clients: <i>GlaxoSmithKline</i>, <i>AT&T</i>, <i>Remy Amerique</i></p>
+          <p>Clients: <i>GlaxoSmithKline</i>, <i>ATT</i>, <i>Remy Amerique</i></p>
           <p>Develop strategic planning for three consumer and two trade brands. Primary contact for client and partner agencies.</p>
         </div>
       </div>

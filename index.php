@@ -10,10 +10,33 @@
   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
   <!-- <link rel="stylesheet" type="text/css" href="css/style.min.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Rubik:300,400,500,700,900" rel="stylesheet">
-
 </head>
 
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#experience">Experience</a>
+          <ul>
+            <li>
+              <a href="#kd">King Design</a>
+            </li>
+            <li>
+              <a href="#freelance">Freelance</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#advertising">Previous Career</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="intro flex-col">
     <h1 class="logo title-intro">Andy Knapp<span>Web Developer</span></h1>
   </section>
