@@ -13,39 +13,41 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#experience">Experience</a>
-          <ul>
-            <li>
-              <a href="#kd">King Design</a>
-            </li>
-            <li>
-              <a href="#freelance">Freelance</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#advertising">Previous Career</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="site-header flex-col">
+    <h1 class="logo title-intro">Andy Knapp <span>Web Developer</span></h1>
   </header>
 
-  <section class="intro flex-col">
-    <h1 class="logo title-intro">Andy Knapp<span>Web Developer</span></h1>
-  </section>
+  <nav class="site-nav">
+    <ul>
+      <li>
+        <a href="#experience">Experience</a>
+        <ul>
+          <li>
+            <a href="#kd">King Design</a>
+          </li>
+          <li>
+            <a href="#freelance">Freelance</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#advertising">Previous Career</a>
+      </li>
+    </ul>
+  </nav>
 
-  <?php
-    include('components/resume.php');
-    include('components/contact.php');
-    include('components/footer.php');
-  ?>
+  <div class="content-container">
+
+    <?php
+      include('components/resume.php');
+      include('components/contact.php');
+      include('components/footer.php');
+    ?>
+  </div>
+
 
 </body>
 </html>

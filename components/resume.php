@@ -1,7 +1,4 @@
   <section class="resume">
-    <header id="masthead" class="res-header">
-      <h1 class="title-s">Andy Knapp</h1>
-    </header>
     <section id="experience" class="experience">
       <div class="sticky-module top center">
         <h2 class="headline-s">Experience</h2>

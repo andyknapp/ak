@@ -425,18 +425,33 @@ html, body {
   margin: auto;
 }
 
-/* line 1, sass/partials/_intro.scss */
-.intro {
+/* line 47, sass/base/_global.scss */
+.content-container {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  margin-top: 100vh;
+  z-index: 1;
+  background-color: white;
+}
+
+/* line 1, sass/partials/_header.scss */
+.site-header {
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   background-color: white;
+}
+
+/* line 10, sass/partials/_header.scss */
+.logo {
+  margin: auto;
   text-align: center;
 }
-/* line 9, sass/partials/_intro.scss */
-.intro span {
+/* line 13, sass/partials/_header.scss */
+.logo span {
   display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 0.35em;
@@ -444,20 +459,17 @@ html, body {
   letter-spacing: 3px;
 }
 
-/* line 18, sass/partials/_intro.scss */
-.logo {
-  margin: auto;
+/* line 1, sass/partials/_nav.scss */
+.site-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 12.5em;
+  height: 100%;
+  margin-top: 100vh;
 }
 
 /* line 1, sass/partials/_resume.scss */
-.resume {
-  position: relative;
-  margin-top: 100vh;
-  z-index: 1;
-  background-color: white;
-}
-
-/* line 7, sass/partials/_resume.scss */
 .res-header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -468,23 +480,28 @@ html, body {
   padding: 1em;
   background-color: white;
 }
-/* line 13, sass/partials/_resume.scss */
+/* line 7, sass/partials/_resume.scss */
 .res-header .title-s {
   margin: 0;
 }
 
-/* line 18, sass/partials/_resume.scss */
+/* line 12, sass/partials/_resume.scss */
+.resume {
+  margin-top: 0;
+}
+
+/* line 16, sass/partials/_resume.scss */
 .res-contact {
   text-align: center;
 }
 
-/* line 22, sass/partials/_resume.scss */
+/* line 20, sass/partials/_resume.scss */
 .experience {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 28, sass/partials/_resume.scss */
+/* line 26, sass/partials/_resume.scss */
 [class*='stage-'] .stage {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -492,12 +509,12 @@ html, body {
   top: 4.25em;
   background-color: #eee;
 }
-/* line 32, sass/partials/_resume.scss */
+/* line 30, sass/partials/_resume.scss */
 [class*='stage-'] .stage * {
   margin: 0;
 }
 
-/* line 38, sass/partials/_resume.scss */
+/* line 36, sass/partials/_resume.scss */
 .project {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -507,12 +524,12 @@ html, body {
   flex-flow: column nowrap;
   padding: 1em;
 }
-/* line 42, sass/partials/_resume.scss */
+/* line 40, sass/partials/_resume.scss */
 .project h2 {
   margin: 0 0 0.5em;
   line-height: 1;
 }
-/* line 45, sass/partials/_resume.scss */
+/* line 43, sass/partials/_resume.scss */
 .project h2 span {
   display: inline-block;
   text-indent: -9999em;
@@ -522,7 +539,7 @@ html, body {
 }
 
 @media (min-width: 30em) {
-  /* line 56, sass/partials/_resume.scss */
+  /* line 54, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
