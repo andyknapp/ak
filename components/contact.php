@@ -1,4 +1,4 @@
-<section class="contact grid-contact">
+<section id="contact" class="contact grid-contact">
   <div id="wufoo-zpn38ao167dxhw">
     Fill out my <a href="https://aknapp.wufoo.com/forms/zpn38ao167dxhw">online form</a>.
   </div>

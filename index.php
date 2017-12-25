@@ -41,6 +41,12 @@
           <li class="nav-item">
             <a href="#advertising">Previous Career</a>
           </li>
+          <li class="nav-item">
+            <a href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
 
