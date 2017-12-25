@@ -419,13 +419,15 @@ html, body {
   display: flex;
   top: 0;
   height: 4.25em;
+  z-index: 1;
+  background-color: white;
 }
-/* line 40, sass/base/_global.scss */
+/* line 42, sass/base/_global.scss */
 .sticky-module.top .title-m {
   margin: auto;
 }
 
-/* line 46, sass/base/_global.scss */
+/* line 48, sass/base/_global.scss */
 .sticky-container {
   position: -webkit-sticky;
   position: sticky;
@@ -435,27 +437,32 @@ html, body {
   background-color: white;
 }
 
-/* line 54, sass/base/_global.scss */
+/* line 56, sass/base/_global.scss */
 .grid-container {
   display: grid;
   grid-template-columns: 12.5em 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "nav main" "footer footer";
+  grid-template-areas: "nav main" "contact contact" "footer footer";
   grid-column-gap: 1em;
   grid-row-gap: 1em;
 }
 
-/* line 65, sass/base/_global.scss */
+/* line 68, sass/base/_global.scss */
 .grid-nav {
   grid-area: nav;
 }
 
-/* line 69, sass/base/_global.scss */
+/* line 72, sass/base/_global.scss */
 .grid-main {
   grid-area: main;
 }
 
-/* line 73, sass/base/_global.scss */
+/* line 76, sass/base/_global.scss */
+.grid-contact {
+  grid-area: contact;
+}
+
+/* line 80, sass/base/_global.scss */
 .grid-footer {
   grid-area: footer;
 }

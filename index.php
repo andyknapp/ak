@@ -36,7 +36,7 @@
             <a href="#skills">Skills / Languages</a>
           </li>
           <li class="nav-item">
-            <a href="#misc">Skills / Languages</a>
+            <a href="#misc">Misc</a>
           </li>
           <li class="nav-item">
             <a href="#advertising">Previous Career</a>

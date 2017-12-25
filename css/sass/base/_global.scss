@@ -37,6 +37,8 @@ html, body {
 		display: flex;
 		top: 0;
 		height: $header;
+		z-index: 1;
+		background-color: white;
 		.title-m {
 			margin: auto;
 		}
@@ -57,6 +59,7 @@ html, body {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"nav main"
+		"contact contact"
 		"footer footer";
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
@@ -68,6 +71,10 @@ html, body {
 
 .grid-main {
 	grid-area: main;
+}
+
+.grid-contact {
+	grid-area: contact;
 }
 
 .grid-footer {

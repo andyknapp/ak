@@ -194,83 +194,76 @@
       <div class="sticky-module top center">
         <h2 class="headline-s">Old Experience</h2>
       </div>
-      <div id="old-intro" class="stage-">
+      <div id="old-intro" class="stage- ">
         <header class="sticky-module flex-row stage">
           <h4>Advertising</h4>
           <p>dates</p>
         </header>
         <div class="project">
-          <p>After college I worked in the Advertising industry, Media Planning specifically, for nearly 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
+          <p>My first 10 years after college were spent working in the Advertising industry, Media Planning specifically. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
         </div>
-      </div>
-      <div id="old-something" class="">
-        <h2 class="headline-s">Prior Work Experience</h2>
-
-      </div>
-    </section>
-
-    <section class="resume-adv resume-main">
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Maxus</li>
-            <li>New York, NY 1/08 - 8/11</li>
-            <li>Partner, Group Planning Director</li>
-            <li>Partner, Associate Planning Director</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>Maxus</li>
+              <li>New York, NY 1/08 - 8/11</li>
+              <li>Partner, Group Planning Director</li>
+              <li>Partner, Associate Planning Director</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Clients: <i>Church & Dwight</i> (Trojan, Simply Saline, Arm & Hammer SpinBrush, Arm & Hammer Toothpaste), <i>Shangri-La Hotels</i></p>
+            <p>Primary senior client contact, responsible for strategic development and implementation oversight. Extensive work in the digital space, including social media strategy and custom program development.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Clients: <i>Church & Dwight</i> (Trojan, Simply Saline, Arm & Hammer SpinBrush, Arm & Hammer Toothpaste), <i>Shangri-La Hotels</i></p>
-          <p>Primary senior client contact, responsible for strategic development and implementation oversight. Extensive work in the digital space, including social media strategy and custom program development.</p>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>MindShare</li>
+              <li>Chicago, IL 9/05 - 3/07</li>
+              <li>Associate Planning Director</li>
+              <li>Planning Supervisor</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Clients: <i>BP Lubricants</i> (Castrol Motor Oil)</p>
+            <p>Develop strategic planning for three consumer and two trade brands. Primary contact for client and partner agencies.</p>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>MindShare</li>
-            <li>Chicago, IL 9/05 - 3/07</li>
-            <li>Associate Planning Director</li>
-            <li>Planning Supervisor</li>
-          </ul>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>Mediaedge</li>
+              <li>New York, NY 3/03 - 8/05</li>
+              <li>Communications Manager</li>
+              <li>Communications Analyst</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>Clients: <i>GlaxoSmithKline</i>, <i>ATT</i>, <i>Remy Amerique</i></p>
+            <p>Develop strategic planning for three consumer and two trade brands. Primary contact for client and partner agencies.</p>
+          </div>
         </div>
-        <div class="project-description">
-          <p>Clients: <i>BP Lubricants</i> (Castrol Motor Oil)</p>
-          <p>Develop strategic planning for three consumer and two trade brands. Primary contact for client and partner agencies.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Mediaedge</li>
-            <li>New York, NY 3/03 - 8/05</li>
-            <li>Communications Manager</li>
-            <li>Communications Analyst</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Clients: <i>GlaxoSmithKline</i>, <i>ATT</i>, <i>Remy Amerique</i></p>
-          <p>Develop strategic planning for three consumer and two trade brands. Primary contact for client and partner agencies.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Brouillard Communications</li>
-            <li>New York, NY 9/00 - 3/03</li>
-            <li>Media Planner</li>
-            <li>Assistant Media Planner</li>
-          </ul>
-        </div>
-        <div class="project-description">
-        <p>Clients: <i>The Rouse Company</i>, <i>Maserati</i>, <i>Dassault Falcon</i></p>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>Brouillard Communications</li>
+              <li>New York, NY 9/00 - 3/03</li>
+              <li>Media Planner</li>
+              <li>Assistant Media Planner</li>
+            </ul>
+          </div>
+          <div class="project-description">
+          <p>Clients: <i>The Rouse Company</i>, <i>Maserati</i>, <i>Dassault Falcon</i></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="resume-edu resume-main">
-      <header>
-        <h2 class="title-m">Education</h2>
-      </header>
+    <section id="education" class="resume-edu resume-main">
+      <div class="sticky-module top center">
+        <h2 class="headline-s">Education</h2>
+      </div>
       <div class="project">
         <div class="project-details">
           <ul>
