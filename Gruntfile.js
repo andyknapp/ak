@@ -3,25 +3,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Notify changes via Growl
-        notify: {
-          js: {
-            options: {
-              message: 'JS minified'
-            }
-          },
-          sass: {
-            options: {
-              message: 'SASS compiled'
-            }
-          },
-          watch: {
-            options: {
-              message: 'Watch is running'
-            }
-          }
-        },
-
         // Concats javascript files
         concat: {
           basic: {
@@ -106,7 +87,7 @@ module.exports = function(grunt) {
         watch: {
           scripts: {
             files: ['js/**/*.js'],
-            tasks: ['concat', 'uglify', 'notify:js'],
+            tasks: ['concat', 'uglify'],
             options: {
                 spawn: false,
             },
@@ -148,7 +129,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-notify');
+    // grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-svgstore');
 
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);

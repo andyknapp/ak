@@ -29,7 +29,6 @@ html, body {
 
 .sticky-module {
 	position: sticky;
-	padding: 1em;
 	&.center {
 		text-align: center;
 	}
@@ -39,7 +38,9 @@ html, body {
 		height: $header;
 		z-index: 1;
 		background-color: white;
-		.title-m {
+
+		.title-m,
+		.headline-s {
 			margin: auto;
 		}
 	}
@@ -55,12 +56,12 @@ html, body {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: $nav-width 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-template-areas:
-		"nav main"
-		"contact contact"
-		"footer footer";
+		"main"
+		"contact"
+		"footer";
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 }

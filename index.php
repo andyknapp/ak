@@ -13,43 +13,22 @@
 </head>
 
 <body>
-  <header class="site-header flex-col">
-    <h1 class="logo title-intro">Andy Knapp <span>Web Developer</span></h1>
+  <header class="site-header">
+    <div class="full-screen flex-col">
+      <h1 class="logo title-intro">Andy Knapp <span>Web Developer</span></h1>
+    </div>
   </header>
+  <nav class="site-nav grid-nav">
+    <div class="nav-container">
+      <a href="#experience" class="nav-item">Experience</a>
+      <a href="#education" class="nav-item">Education</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </div>
+  </nav>
+
 
   <div class="sticky-container">
     <div class="grid-container">
-      <nav class="site-nav grid-nav">
-        <ul class="nav-container">
-          <li class="nav-item">
-            <a href="#experience">Experience</a>
-            <ul>
-              <li class="nav-item">
-                <a href="#kd">King Design</a>
-              </li>
-              <li class="nav-item">
-                <a href="#freelance">Freelance</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#skills">Skills / Languages</a>
-          </li>
-          <li class="nav-item">
-            <a href="#misc">Misc</a>
-          </li>
-          <li class="nav-item">
-            <a href="#advertising">Previous Career</a>
-          </li>
-          <li class="nav-item">
-            <a href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
       <?php
         include('components/resume.php');
         include('components/contact.php');

@@ -17,19 +17,36 @@
   text-align: center;
 }
 
-.experience {
-  padding-left: 1em;
-  padding-right: 1em;
-}
 
 [class*='stage-'] {
   .stage {
     justify-content: space-between;
-    top: $header;
-    background-color: #eee;
-    * {
-      margin: 0;
-    }
+    align-items: center;
+    top: 0;
+    padding: 1em;
+    background-color: white;
+  }
+}
+
+.dates {
+  display: flex;
+  width: 6em;
+  height: 6em;
+  background: aliceblue;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1;
+  background-color: aliceblue;
+  font-size: 70%;
+
+  span {
+    margin: auto;
+  }
+}
+
+.employer {
+  .title-l {
+    margin: 0;
   }
 }
 

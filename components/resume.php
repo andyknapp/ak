@@ -1,13 +1,16 @@
   <section class="resume grid-main">
 
     <section id="experience" class="experience">
-      <div class="sticky-module top center">
-        <h2 class="headline-s">Experience</h2>
-      </div>
       <div id="kd" class="stage-kd">
         <header class="sticky-module flex-row stage">
-          <h4>King Design</h4>
-          <p>July 2014 - Present</p>
+          <div class="employer">
+            <span class="headline-xs">Web Developer at</span>
+            <h4 class="title-l">King Design</h4>
+          </div>
+
+          <div class="dates">
+            <span>July 2014 <br />to <br />present</span>
+          </div>
         </header>
         <div class="project">
           <h2 class="title-m"><a href="https://seakeeper.com/">Seakeeper <span>View Site</span></a></h2>
@@ -60,10 +63,17 @@
           </div>
         </div>
       </div>
-      <div id="freelance"class="stage-freelance">
+
+      <div id="freelance" class="stage-freelance">
         <header class="sticky-module flex-row stage">
-          <h4>Freelance Work</h4>
-          <p>??? 201? - July 2014</p>
+          <div class="employer">
+            <span class="headline-xs">Web Developer / Designer</span>
+            <h4 class="title-l">Self Employed</h4>
+          </div>
+
+          <div class="dates">
+            <span>August 2011 <br />to <br />July 2014</span>
+          </div>
         </header>
         <div class="project">
           <h2 class="title-m"><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz <span>View Site</span></a></h2>
@@ -73,7 +83,7 @@
           </div>
         </div>
 
-        <div class="project">
+        <!-- <div class="project">
           <h2 class="title-m"><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com <span>View Site</span></a></h2>
           <p>April 2014</p>
           <div class="project-details">
@@ -144,61 +154,50 @@
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
           </div>
-        </div>
+        </div> -->
       </div>
-    </section>
 
-    <section id="skills" class="resume-skills resume-main">
-      <div class="sticky-module top center">
-        <h2 class="headline-s">Skills / Languages</h2>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Skills</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>WordPress development & theme creation, Photoshop, Illustrator, Git & version control, build tools</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Languages</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>HTML, CSS/Sass, jQuery/JavaScript, PHP</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="misc" class="resume-misc resume-main">
-      <div class="sticky-module top center">
-        <h2 class="headline-s">Miscellaneous</h2>
-      </div>
-      <div class="project">
-        <div class="project-details">
-          <ul>
-            <li>Growth</li>
-          </ul>
-        </div>
-        <div class="project-description">
-          <p>Attended several WordCamps and WordPress Meetups, regular reader of leading industry blogs such as CSS-Tricks, Smashing Magazine & A List Apart. Over 30 badges earned on <a href="http://teamtreehouse.com/andyknapp">Treehouse</a>.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="advertising" class="resume-prior resume-main">
-      <div class="sticky-module top center">
-        <h2 class="headline-s">Old Experience</h2>
-      </div>
-      <div id="old-intro" class="stage- ">
+      <div class="stage-skills">
         <header class="sticky-module flex-row stage">
-          <h4>Advertising</h4>
-          <p>dates</p>
+          <div class="employer">
+            <span class="headline-xs">Web Developer</span>
+            <h4 class="title-l">Skills / Languages</h4>
+          </div>
         </header>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>Skills</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>WordPress development & theme creation, Photoshop, Illustrator, Git & version control, build tools</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-details">
+            <ul>
+              <li>Languages</li>
+            </ul>
+          </div>
+          <div class="project-description">
+            <p>HTML, CSS/Sass, jQuery/JavaScript, PHP</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-advertising">
+        <header class="sticky-module flex-row stage">
+          <div class="employer">
+            <span class="headline-xs">Previous Career</span>
+            <h4 class="title-l">Advertising</h4>
+          </div>
+
+          <div class="dates">
+            <span>August 2011 <br />to <br />July 2014</span>
+          </div>
+        </header>
+
         <div class="project">
           <p>My first 10 years after college were spent working in the Advertising industry, Media Planning specifically. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
         </div>
