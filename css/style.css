@@ -640,11 +640,22 @@ html, body {
 /* line 2, sass/partials/_contact.scss */
 .contact {
   position: relative;
-  padding: 2em 1em 4em;
+  min-height: 100vh;
+  padding: 2em 0 4em;
   background-color: white;
 }
+/* line 13, sass/partials/_contact.scss */
+.contact .project .flex-row {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+/* line 16, sass/partials/_contact.scss */
+.contact .project .flex-child {
+  width: calc(50% - 0.5em);
+}
 
-/* line 8, sass/partials/_contact.scss */
+/* line 22, sass/partials/_contact.scss */
 button,
 input,
 textarea {
@@ -652,7 +663,7 @@ textarea {
   border-radius: 0;
 }
 
-/* line 17, sass/partials/_contact.scss */
+/* line 31, sass/partials/_contact.scss */
 .submit {
   display: block;
   width: 100%;
@@ -665,7 +676,7 @@ textarea {
   transition: color .2s ease, background-color .2s ease;
 }
 
-/* line 28, sass/partials/_contact.scss */
+/* line 42, sass/partials/_contact.scss */
 input,
 textarea {
   width: 100%;
@@ -696,7 +707,7 @@ textarea {
     font-size: 1em;
   }
 }
-/* line 39, sass/partials/_contact.scss */
+/* line 53, sass/partials/_contact.scss */
 input:focus,
 textarea:focus {
   outline: none;
@@ -723,7 +734,7 @@ textarea::-webkit-input-placeholder {
   color: blue;
 }
 
-/* line 50, sass/partials/_contact.scss */
+/* line 64, sass/partials/_contact.scss */
 label:not(.placeholder) {
   position: absolute;
   bottom: 1em;
@@ -736,11 +747,11 @@ label:not(.placeholder) {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-/* line 60, sass/partials/_contact.scss */
+/* line 74, sass/partials/_contact.scss */
 label:not(.placeholder).visible {
   opacity: 1;
 }
-/* line 64, sass/partials/_contact.scss */
+/* line 78, sass/partials/_contact.scss */
 label.placeholder {
   position: absolute;
   top: 9px;
@@ -749,9 +760,14 @@ label.placeholder {
   font-size: 1em;
   color: #6B6B6B;
 }
-/* line 71, sass/partials/_contact.scss */
+/* line 85, sass/partials/_contact.scss */
 label.placeholder.filled {
   visibility: hidden;
+}
+
+/* line 91, sass/partials/_contact.scss */
+.hide {
+  display: none !important;
 }
 
 /* line 1, sass/partials/_footer.scss */

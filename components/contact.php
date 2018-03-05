@@ -1,27 +1,47 @@
 <section id="contact" class="contact grid-contact">
-  <div id="wufoo-zpn38ao167dxhw">
-    Fill out my <a href="https://aknapp.wufoo.com/forms/zpn38ao167dxhw">online form</a>.
-  </div>
-  <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Online contact and registration forms from <a href="http://www.wufoo.com">Wufoo</a>.</div>
-</section>
+  <header class="sticky-module flex-row stage">
+    <h4 class="title-l">Contact me</h4>
+  </header>
 
-<script type="text/javascript">
-  var zpn38ao167dxhw;(function(d, t) {
-    var s = d.createElement(t), options = {
-      'userName':'aknapp',
-      'formHash':'zpn38ao167dxhw',
-      'autoResize':true,
-      'height':'497',
-      'async':true,
-      'host':'wufoo.com',
-      'header':'show',
-      'ssl':true
-    };
-    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-    s.onload = s.onreadystatechange = function() {
-      var rs = this.readyState;
-      if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-      try { zpn38ao167dxhw = new WufooForm();zpn38ao167dxhw.initialize(options);zpn38ao167dxhw.display(); } catch (e) {}};
-      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-    })(document, 'script');
-</script>
+  <div class="project">
+    <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+          action="https://aknapp.wufoo.com/forms/zpn38ao167dxhw/#public">
+
+      <div class="flex-row">
+        <div id="foli4" class="notranslate flex-child">
+            <label class="desc" id="title4" for="Field4">Name<span id="req_4" class="req">*</span></label>
+            <div>
+              <input id="Field4" name="Field4" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required placeholder="Name" />
+            </div>
+          </div>
+
+        <div id="foli3" class="notranslate flex-child">
+          <label class="desc" id="title3" for="Field3">Email<span id="req_3" class="req">*</span></label>
+          <div>
+            <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" placeholder="Email" required />
+          </div>
+        </div>
+      </div>
+
+
+      <div id="foli5" class="notranslate">
+        <label class="desc" id="title5" for="Field5">Message<span id="req_5" class="req">*</span></label>
+        <div>
+          <textarea id="Field5" name="Field5" class="field textarea medium" spellcheck="false" rows="4" cols="50" tabindex="3" onkeyup="" placeholder="Message" required></textarea>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div>
+          <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"/>
+        </div>
+      </div>
+
+      <div class="hide">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="CRGk/Yjg66+t7yEoOO8nZoZr3HzqOFdTOGTnRZWVzlg=" />
+        </div>
+    </form>
+  </div>
+</section>

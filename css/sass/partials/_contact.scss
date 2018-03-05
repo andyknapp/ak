@@ -1,12 +1,26 @@
 // contact section
 .contact {
   position: relative;
-  padding: 2em 1em 4em;
+  min-height: 100vh;
+  padding: 2em 0 4em;
   background-color: white;
+
+  // [class*='stage-'] .stage {
+  //   padding-bottom: 2em;
+  // }
+
+  .project {
+    .flex-row {
+      justify-content: space-between;
+    }
+    .flex-child {
+      width: calc(50% - 0.5em);
+    }
+  }
 }
 
 button,
-input, 
+input,
 textarea {
   border: none;
   border-radius: 0;
@@ -25,7 +39,7 @@ textarea {
   transition: color .2s ease, background-color .2s ease;
 }
 
-input, 
+input,
 textarea {
   width: 100%;
   margin: 0 0 0.5em;
@@ -72,4 +86,8 @@ label {
       visibility: hidden;
     }
   }
+}
+
+.hide {
+  display: none!important;
 }

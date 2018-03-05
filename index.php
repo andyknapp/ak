@@ -18,14 +18,9 @@
       <h1 class="logo title-intro">Andy Knapp <span>Web Developer</span></h1>
     </div>
   </header>
-  <nav class="site-nav grid-nav">
-    <div class="nav-container">
-      <a href="#experience" class="nav-item">Experience</a>
-      <a href="#education" class="nav-item">Education</a>
-      <a href="#contact" class="nav-item">Contact</a>
-    </div>
+  <nav class="site-nav">
+    <a href="#contact" class="nav-item">Contact</a>
   </nav>
-
 
   <div class="sticky-container">
     <div class="grid-container">
