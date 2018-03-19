@@ -1,6 +1,7 @@
-<section id="contact" class="contact grid-contact">
+<section id="contact" class="contact grid-contact stage-contact`">
   <header class="sticky-module flex-row stage">
-    <h4 class="title-l">Contact me</h4>
+    <span class="headline-xs">comments / inquires</span>
+    <h4 class="title-l">Contact Information</h4>
   </header>
 
   <div class="project">
@@ -44,4 +45,5 @@
         </div>
     </form>
   </div>
+
 </section>

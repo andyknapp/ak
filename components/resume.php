@@ -4,7 +4,7 @@
       <div id="kd" class="stage-kd">
         <header class="sticky-module flex-row stage">
           <div class="employer">
-            <span class="headline-xs">Web Developer at</span>
+            <span class="headline-xs">Web Developer</span>
             <h4 class="title-l">King Design</h4>
           </div>
 
@@ -157,7 +157,7 @@
         </div> -->
       </div>
 
-      <div class="stage-skills">
+      <div class="stage-skills" style="display:none;">
         <header class="sticky-module flex-row stage">
           <div class="employer">
             <span class="headline-xs">Web Developer</span>
@@ -189,8 +189,8 @@
       <div class="stage-advertising">
         <header class="sticky-module flex-row stage">
           <div class="employer">
-            <span class="headline-xs">Previous Career</span>
-            <h4 class="title-l">Advertising</h4>
+            <span class="headline-xs">Communications Strategy / Media Planning</span>
+            <h4 class="title-l">Advertising Professional</h4>
           </div>
 
           <div class="dates">
@@ -259,7 +259,7 @@
       </div>
     </section>
 
-    <section id="education" class="resume-edu resume-main">
+    <section id="education" class="resume-edu resume-main" style="display:none;">
       <div class="sticky-module top center">
         <h2 class="headline-s">Education</h2>
       </div>
