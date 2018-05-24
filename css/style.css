@@ -418,7 +418,7 @@ html, body {
   flex-direction: column;
 }
 
-/* line 25, sass/base/_global.scss */
+/* line 26, sass/base/_global.scss */
 .flex-row {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -428,16 +428,25 @@ html, body {
   flex-direction: row;
 }
 
-/* line 30, sass/base/_global.scss */
+/* line 32, sass/base/_global.scss */
+.full-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+/* line 41, sass/base/_global.scss */
 .sticky-module {
   position: -webkit-sticky;
   position: sticky;
 }
-/* line 32, sass/base/_global.scss */
+/* line 43, sass/base/_global.scss */
 .sticky-module.center {
   text-align: center;
 }
-/* line 35, sass/base/_global.scss */
+/* line 46, sass/base/_global.scss */
 .sticky-module.top {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -447,73 +456,51 @@ html, body {
   z-index: 1;
   background-color: white;
 }
-/* line 42, sass/base/_global.scss */
+/* line 53, sass/base/_global.scss */
 .sticky-module.top .title-m,
 .sticky-module.top .headline-s {
   margin: auto;
 }
 
-/* line 49, sass/base/_global.scss */
+/* line 60, sass/base/_global.scss */
 .sticky-container {
   position: -webkit-sticky;
   position: sticky;
-  width: 100%;
+  width: calc(100% - 12em);
   margin-top: 100vh;
+  margin-left: 10em;
   z-index: 1;
   background-color: white;
 }
 
-/* line 57, sass/base/_global.scss */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "main" "contact" "footer";
-  grid-column-gap: 1em;
-  grid-row-gap: 1em;
-}
-
-/* line 69, sass/base/_global.scss */
-.grid-nav {
-  grid-area: nav;
-}
-
-/* line 73, sass/base/_global.scss */
-.grid-main {
-  grid-area: main;
-}
-
-/* line 77, sass/base/_global.scss */
-.grid-contact {
-  grid-area: contact;
-}
-
-/* line 81, sass/base/_global.scss */
-.grid-footer {
-  grid-area: footer;
-}
-
 /* line 1, sass/partials/_header.scss */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 10em;
+  padding: 1em;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   background-color: white;
 }
 
-/* line 5, sass/partials/_header.scss */
-.full-screen {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
+/* line 12, sass/partials/_header.scss */
+.intro {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-/* line 13, sass/partials/_header.scss */
-.logo {
+/* line 16, sass/partials/_header.scss */
+.title-intro {
   margin: auto;
   text-align: center;
 }
-/* line 16, sass/partials/_header.scss */
-.logo span {
+/* line 20, sass/partials/_header.scss */
+.title-intro span {
   display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 0.35em;
@@ -521,17 +508,43 @@ html, body {
   letter-spacing: 3px;
 }
 
-/* line 5, sass/partials/_nav.scss */
-.nav-container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 12em;
-  height: 10vh;
-  padding: 1em;
+/* line 29, sass/partials/_header.scss */
+.logo {
+  font-weight: 900;
+  letter-spacing: -0.075em;
+}
+/* line 7, sass/utils/_mixins.scss */
+.logo {
+  font-size: 1.57em;
+}
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .logo {
+    font-size: calc(1.57em + 0.805 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .logo {
+    font-size: 2.375em;
+  }
 }
 
-/* line 13, sass/partials/_nav.scss */
+/* line 37, sass/partials/_header.scss */
+.site-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* line 44, sass/partials/_header.scss */
 .nav-item {
   display: block;
   padding: 0.5em 0;
@@ -565,7 +578,11 @@ html, body {
   text-align: center;
 }
 
-/* line 22, sass/partials/_resume.scss */
+/* line 21, sass/partials/_resume.scss */
+[class*='stage-'] {
+  position: relative;
+}
+/* line 24, sass/partials/_resume.scss */
 [class*='stage-'] .stage {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -574,35 +591,47 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   top: 0;
-  padding: 1em;
+  padding: 1em 1em 1em 0;
+  z-index: 1;
   background-color: white;
 }
 
-/* line 31, sass/partials/_resume.scss */
+/* line 34, sass/partials/_resume.scss */
 .dates {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 6em;
-  height: 6em;
-  background: aliceblue;
-  border-radius: 50%;
-  text-align: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: absolute;
+  top: 12em;
+  bottom: 0;
+  width: 4em;
   line-height: 1;
   background-color: aliceblue;
   font-size: 70%;
 }
-/* line 42, sass/partials/_resume.scss */
+/* line 47, sass/partials/_resume.scss */
 .dates span {
-  margin: auto;
+  display: block;
 }
 
-/* line 48, sass/partials/_resume.scss */
+/* line 52, sass/partials/_resume.scss */
+.employer {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+/* line 55, sass/partials/_resume.scss */
 .employer .title-l {
   margin: 0;
 }
 
-/* line 53, sass/partials/_resume.scss */
+/* line 60, sass/partials/_resume.scss */
 .project {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -610,14 +639,20 @@ html, body {
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  padding: 1em;
+  padding: 4em 1em 1em 5em;
 }
-/* line 57, sass/partials/_resume.scss */
+/* line 65, sass/partials/_resume.scss */
 .project h2 {
   margin: 0 0 0.5em;
   line-height: 1;
+  font-weight: 700;
+  text-transform: initial;
 }
-/* line 60, sass/partials/_resume.scss */
+/* line 71, sass/partials/_resume.scss */
+.project h2 a {
+  color: #4A4A4A;
+}
+/* line 75, sass/partials/_resume.scss */
 .project h2 span {
   display: inline-block;
   text-indent: -9999em;
@@ -627,7 +662,7 @@ html, body {
 }
 
 @media (min-width: 30em) {
-  /* line 71, sass/partials/_resume.scss */
+  /* line 86, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
@@ -685,7 +720,7 @@ textarea {
   -webkit-transition: background-color .2s ease-out, color .2s ease-out;
   transition: background-color .2s ease-out, color .2s ease-out;
   -webkit-appearance: none;
-  border: 1px solid red;
+  border: 1px solid #4A4A4A;
   border-radius: 0;
 }
 /* line 7, sass/utils/_mixins.scss */
@@ -717,21 +752,21 @@ input::-moz-placeholder,
 textarea::-moz-placeholder {
   font-size: 1em;
   line-height: 1;
-  color: blue;
+  color: #6B6B6B;
 }
 /* line 72, sass/utils/_mixins.scss */
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   font-size: 1em;
   line-height: 1;
-  color: blue;
+  color: #6B6B6B;
 }
 /* line 73, sass/utils/_mixins.scss */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font-size: 1em;
   line-height: 1;
-  color: blue;
+  color: #6B6B6B;
 }
 
 /* line 64, sass/partials/_contact.scss */

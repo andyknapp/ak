@@ -1,18 +1,22 @@
 .site-header {
-  background-color: white;  
-}
-
-.full-screen{
   position: fixed;
-  width: 100%;
-  height: 100vh;
   top: 0;
   left: 0;
+  height: 100vh;
+  width: $nav-width;
+  padding: 1em;
+  align-items: flex-start;
+  background-color: white;
 }
 
-.logo {
+.intro {
+  display: flex;
+}
+
+.title-intro {
   margin: auto;
   text-align: center;
+
   span {
     display: block;
     font-family: $open-sans;
@@ -20,4 +24,26 @@
     text-transform: uppercase;
     letter-spacing: 3px;
   }
+}
+
+.logo {
+  @include fluid(font-size, 20em, 68em, 1.57em, 2.375em);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+}
+
+
+
+.site-nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-item {
+  display: block;
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+  line-height: 1;
 }

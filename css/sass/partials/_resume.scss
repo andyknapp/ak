@@ -19,32 +19,39 @@
 
 
 [class*='stage-'] {
+  position: relative;
+
   .stage {
     justify-content: space-between;
     align-items: center;
     top: 0;
-    padding: 1em;
+    padding: 1em 1em 1em 0;
+    z-index: 1;
     background-color: white;
   }
 }
 
 .dates {
   display: flex;
-  width: 6em;
-  height: 6em;
-  background: aliceblue;
-  border-radius: 50%;
-  text-align: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 12em;
+  bottom: 0;
+  width: $timeline-width;
+;
   line-height: 1;
   background-color: aliceblue;
   font-size: 70%;
 
   span {
-    margin: auto;
+    display: block;
   }
 }
 
 .employer {
+  order: 1;
+
   .title-l {
     margin: 0;
   }
@@ -53,10 +60,18 @@
 .project {
   display: flex;
   flex-flow: column nowrap;
-  padding: 1em;
+  padding: 4em 1em 1em 5em;
+
   h2 {
     margin: 0 0 0.5em;
     line-height: 1;
+    font-weight: 700;
+    text-transform: initial;
+
+    a {
+      color: $black;
+    }
+
     span {
       display: inline-block;
       text-indent: -9999em;

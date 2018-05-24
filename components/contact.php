@@ -1,7 +1,9 @@
 <section id="contact" class="contact grid-contact stage-contact`">
   <header class="sticky-module flex-row stage">
-    <span class="headline-xs">comments / inquires</span>
-    <h4 class="title-l">Contact Information</h4>
+    <div class="employer">
+      <span class="headline-xs">comments / inquiries</span>
+      <h4 class="title-l">Contact Information</h4>
+    </div>
   </header>
 
   <div class="project">

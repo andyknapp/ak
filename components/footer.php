@@ -12,10 +12,3 @@
     <span>form by <a href="http://www.wufoo.com">Wufoo</a></span>
   </div>
 </footer>
-<script type="text/javascript">
-  <?php include('js/loadCSS.min.js'); ?>
-  <?php include('js/cssrelpreload.min.js'); ?>
-</script>
-<script src="js/wufoo.js"></script>
-
-<?php include('icons/svg-defs.svg'); ?>

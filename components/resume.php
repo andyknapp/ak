@@ -1,4 +1,4 @@
-  <section class="resume grid-main">
+  <section class="resume">
 
     <section id="experience" class="experience">
       <div id="kd" class="stage-kd">
@@ -7,57 +7,54 @@
             <span class="headline-xs">Web Developer</span>
             <h4 class="title-l">King Design</h4>
           </div>
-
-          <div class="dates">
-            <span>July 2014 <br />to <br />present</span>
-          </div>
         </header>
+        <div class="dates">
+          <span>present</span>
+          <span>July 2014</span>
+        </div>
         <div class="project">
-          <h2 class="title-m"><a href="https://seakeeper.com/">Seakeeper <span>View Site</span></a></h2>
-          <span>Fall 2016</span>
+          <h2 class="title-s"><a href="https://seakeeper.com/">Seakeeper <span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration. </p>
           </div>
         </div>
         <div class="project">
-          <h2 class="title-m"><a href="http://www.scullycompany.com/">Scully Company <span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://www.scullycompany.com/">Scully Company <span>View Site</span></a></h2>
+          <div class="project-details">
+            <p>Front end development and CMS (WordPress) integration.</p>
+          </div>
+        </div>
+        <div class="project">
+          <h2 class="title-s"><a href="https://epic.church/">Epic Church <span>View Site</span></a></h2>
           <p>Summer 2016</p>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
+
         <div class="project">
-          <h2 class="title-m"><a href="https://epic.church/">Epic Church <span>View Site</span></a></h2>
-          <p>Summer 2016</p>
+          <h2 class="title-s"><a href="http://21cccs.org/">21st Century Cyber Charter School<span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://21cccs.org/">21st Century Cyber Charter School<span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://usa.m3.com/">M3 USA<span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://usa.m3.com/">M3 USA<span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="https://www.breasthealth.org/">BreastHealth.org<span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="https://www.breasthealth.org/">BreastHealth.org<span>View Site</span></a></h2>
-          <div class="project-details">
-            <p>Front end development and CMS (WordPress) integration.</p>
-          </div>
-        </div>
-
-        <div class="project">
-          <h2 class="title-m"><a href="https://www.honesttea.com/">Honest Tea<span>View Site</span></a></h2>
-          <p>September 2014</p>
+          <h2 class="title-s"><a href="https://www.honesttea.com/">Honest Tea<span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
@@ -70,21 +67,20 @@
             <span class="headline-xs">Web Developer / Designer</span>
             <h4 class="title-l">Self Employed</h4>
           </div>
-
-          <div class="dates">
-            <span>August 2011 <br />to <br />July 2014</span>
-          </div>
         </header>
+        <div class="dates">
+          <span>July 2014</span>
+          <span>August 2011</span>
+        </div>
         <div class="project">
-          <h2 class="title-m"><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz <span>View Site</span></a></h2>
-          <p>May 2014</p>
+          <h2 class="title-s"><a href="http://www.advancephysicaltherapy.biz/">AdvancePhysicalTherapy.biz <span>View Site</span></a></h2>
           <div class="project-details">
             <p>Front end development and CMS (WordPress) integration.</p>
           </div>
         </div>
 
         <!-- <div class="project">
-          <h2 class="title-m"><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com <span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://artisancustompainting.com/">ArtisanCustomPainting.com <span>View Site</span></a></h2>
           <p>April 2014</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -92,7 +88,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://kainmurphy.com/">KainMurphy.com <span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://kainmurphy.com/">KainMurphy.com <span>View Site</span></a></h2>
           <p>February 2014</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -100,7 +96,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://albertoassociates.com/">AlbertoAssociates.com <span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://albertoassociates.com/">AlbertoAssociates.com <span>View Site</span></a></h2>
           <p>February 2014</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -108,7 +104,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://www.frangallun.com/">FranGallun.com<span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://www.frangallun.com/">FranGallun.com<span>View Site</span></a></h2>
           <p>January 2014</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -116,7 +112,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://hvwm.com/">HVWM.com<span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://hvwm.com/">HVWM.com<span>View Site</span></a></h2>
           <p>October 2013</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -125,7 +121,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://www.lvlrealtors.com/"><span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://www.lvlrealtors.com/"><span>View Site</span></a></h2>
           <p>April 2013</p>
           <div class="project-details">
             <p>Site design & development. Integrated IDX data feed (MLS listing data) into site, resulting in one point of entry for listings.</p>
@@ -133,7 +129,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://fiboxusa.com/">Fibox USA<span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://fiboxusa.com/">Fibox USA<span>View Site</span></a></h2>
           <p>February 2013</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -141,7 +137,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href=""><span>View Site</span></a></h2>
+          <h2 class="title-s"><a href=""><span>View Site</span></a></h2>
           <p>October 2012</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -149,7 +145,7 @@
         </div>
 
         <div class="project">
-          <h2 class="title-m"><a href="http://www.delawarevalleysmartgrowth.org/new-site/">DelawareValleySmartGrowth.org</a><span>View Site</span></a></h2>
+          <h2 class="title-s"><a href="http://www.delawarevalleysmartgrowth.org/new-site/">DelawareValleySmartGrowth.org</a><span>View Site</span></a></h2>
           <p>February 2013</p>
           <div class="project-details">
             <p>Site design, front end development and CMS (WordPress) integration.</p>
@@ -192,11 +188,11 @@
             <span class="headline-xs">Communications Strategy / Media Planning</span>
             <h4 class="title-l">Advertising Professional</h4>
           </div>
-
-          <div class="dates">
-            <span>August 2011 <br />to <br />July 2014</span>
-          </div>
         </header>
+        <div class="dates">
+          <span>July 2014</span>
+          <span>August 2011</span>
+        </div>
 
         <div class="project">
           <p>My first 10 years after college were spent working in the Advertising industry, Media Planning specifically. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
