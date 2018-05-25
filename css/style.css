@@ -200,7 +200,7 @@ body {
   font-weight: 300;
   font-style: normal;
   line-height: 1.5;
-  color: #4A4A4A;
+  color: #888888;
 }
 
 /* line 15, sass/base/_typography.scss */
@@ -210,7 +210,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: black;
+  color: #888888;
 }
 
 /* line 24, sass/base/_typography.scss */
@@ -389,7 +389,7 @@ i {
 html, body {
   height: 100%;
   min-width: 100%;
-  background-color: white;
+  background-color: #212121;
 }
 
 /* line 9, sass/base/_global.scss */
@@ -466,11 +466,11 @@ html, body {
 .sticky-container {
   position: -webkit-sticky;
   position: sticky;
-  width: calc(100% - 12em);
+  width: 100%;
   margin-top: 100vh;
-  margin-left: 10em;
+  padding-left: 10em;
   z-index: 1;
-  background-color: white;
+  background-color: #1c1c1c;
 }
 
 /* line 1, sass/partials/_header.scss */
@@ -478,28 +478,32 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 10em;
+  height: 100%;
   padding: 1em;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  background-color: white;
+  z-index: 2;
 }
 
-/* line 12, sass/partials/_header.scss */
+/* line 13, sass/partials/_header.scss */
 .intro {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 16, sass/partials/_header.scss */
+/* line 17, sass/partials/_header.scss */
 .title-intro {
   margin: auto;
   text-align: center;
+  color: #888888;
 }
-/* line 20, sass/partials/_header.scss */
+/* line 22, sass/partials/_header.scss */
 .title-intro span {
   display: block;
   font-family: "Open Sans", sans-serif;
@@ -508,10 +512,13 @@ html, body {
   letter-spacing: 3px;
 }
 
-/* line 29, sass/partials/_header.scss */
+/* line 31, sass/partials/_header.scss */
 .logo {
+  margin: 0;
   font-weight: 900;
   letter-spacing: -0.075em;
+  line-height: 0.9;
+  color: #888888;
 }
 /* line 7, sass/utils/_mixins.scss */
 .logo {
@@ -530,7 +537,7 @@ html, body {
   }
 }
 
-/* line 37, sass/partials/_header.scss */
+/* line 42, sass/partials/_header.scss */
 .site-nav {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -538,18 +545,19 @@ html, body {
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   width: 100%;
 }
 
-/* line 44, sass/partials/_header.scss */
+/* line 49, sass/partials/_header.scss */
 .nav-item {
   display: block;
   padding: 0.5em 0;
-  margin-bottom: 1em;
+  margin: 0 0 2em;
   line-height: 1;
+  color: #888888;
 }
 
 /* line 1, sass/partials/_resume.scss */
@@ -572,17 +580,22 @@ html, body {
 .resume {
   margin-top: 0;
 }
+/* line 15, sass/partials/_resume.scss */
+.resume > section {
+  padding-top: 5em;
+}
 
-/* line 16, sass/partials/_resume.scss */
+/* line 20, sass/partials/_resume.scss */
 .res-contact {
   text-align: center;
 }
 
-/* line 21, sass/partials/_resume.scss */
+/* line 25, sass/partials/_resume.scss */
 [class*='stage-'] {
   position: relative;
+  padding-left: 10em;
 }
-/* line 24, sass/partials/_resume.scss */
+/* line 29, sass/partials/_resume.scss */
 [class*='stage-'] .stage {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -591,12 +604,12 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   top: 0;
-  padding: 1em 1em 1em 0;
+  padding: 4em 1em 1em 0;
   z-index: 1;
-  background-color: white;
+  background-color: #1c1c1c;
 }
 
-/* line 34, sass/partials/_resume.scss */
+/* line 39, sass/partials/_resume.scss */
 .dates {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -608,30 +621,42 @@ html, body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
-  top: 12em;
+  top: 14em;
+  left: 0;
   bottom: 0;
-  width: 4em;
+  width: 6em;
   line-height: 1;
-  background-color: aliceblue;
+  border-left: 1px solid #888888;
   font-size: 70%;
 }
-/* line 47, sass/partials/_resume.scss */
+/* line 52, sass/partials/_resume.scss */
 .dates span {
   display: block;
+  padding: 0.5em 0.75em;
+  text-align: center;
+}
+/* line 57, sass/partials/_resume.scss */
+.dates span::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5em;
+  background-color: #888888;
 }
 
-/* line 52, sass/partials/_resume.scss */
+/* line 68, sass/partials/_resume.scss */
 .employer {
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
 }
-/* line 55, sass/partials/_resume.scss */
+/* line 71, sass/partials/_resume.scss */
 .employer .title-l {
   margin: 0;
 }
 
-/* line 60, sass/partials/_resume.scss */
+/* line 76, sass/partials/_resume.scss */
 .project {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,20 +664,20 @@ html, body {
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  padding: 4em 1em 1em 5em;
+  padding: 4em 1em 1em;
 }
-/* line 65, sass/partials/_resume.scss */
+/* line 81, sass/partials/_resume.scss */
 .project h2 {
   margin: 0 0 0.5em;
   line-height: 1;
   font-weight: 700;
   text-transform: initial;
 }
-/* line 71, sass/partials/_resume.scss */
+/* line 87, sass/partials/_resume.scss */
 .project h2 a {
-  color: #4A4A4A;
+  color: #888888;
 }
-/* line 75, sass/partials/_resume.scss */
+/* line 91, sass/partials/_resume.scss */
 .project h2 span {
   display: inline-block;
   text-indent: -9999em;
@@ -662,7 +687,7 @@ html, body {
 }
 
 @media (min-width: 30em) {
-  /* line 86, sass/partials/_resume.scss */
+  /* line 102, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
@@ -720,7 +745,7 @@ textarea {
   -webkit-transition: background-color .2s ease-out, color .2s ease-out;
   transition: background-color .2s ease-out, color .2s ease-out;
   -webkit-appearance: none;
-  border: 1px solid #4A4A4A;
+  border: 1px solid #212121;
   border-radius: 0;
 }
 /* line 7, sass/utils/_mixins.scss */

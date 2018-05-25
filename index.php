@@ -16,8 +16,8 @@
   <header class="site-header flex-col">
     <span class="logo title-logo">AK</span>
     <nav class="site-nav">
-      <a href="#contact" class="nav-item">Contact</a>
       <a href="#resume" class="nav-item">Work</a>
+      <a href="#contact" class="nav-item">Contact</a>
     </nav>
   </header>
 
@@ -38,6 +38,8 @@
     <?php include('js/loadCSS.min.js'); ?>
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <script src="js/wufoo.js"></script>
 
   <?php include('icons/svg-defs.svg'); ?>

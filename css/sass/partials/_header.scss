@@ -2,11 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: $nav-width;
+  height: 100%;
   padding: 1em;
+  justify-content: space-between;
   align-items: flex-start;
-  background-color: white;
+  z-index: 2;
 }
 
 .intro {
@@ -16,6 +17,7 @@
 .title-intro {
   margin: auto;
   text-align: center;
+  color: $gray;
 
   span {
     display: block;
@@ -28,8 +30,11 @@
 
 .logo {
   @include fluid(font-size, 20em, 68em, 1.57em, 2.375em);
+  margin: 0;
   font-weight: 900;
   letter-spacing: -0.075em;
+  line-height: 0.9;
+  color: $gray;
 }
 
 
@@ -37,13 +42,14 @@
 .site-nav {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
 }
 
 .nav-item {
   display: block;
   padding: 0.5em 0;
-  margin-bottom: 1em;
+  margin: 0 0 2em;
   line-height: 1;
+  color: $gray;
 }
