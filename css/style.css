@@ -260,32 +260,37 @@ body {
 }
 
 /* line 40, sass/base/_typography.scss */
-.title-m {
-  font-weight: 400;
+.title-m,
+.headline-m {
+  letter-spacing: 1px;
 }
 /* line 7, sass/utils/_mixins.scss */
-.title-m {
-  font-size: 1.25em;
+.title-m,
+.headline-m {
+  font-size: 1em;
 }
 @media screen and (min-width: 20em) {
   /* line 7, sass/utils/_mixins.scss */
-  .title-m {
-    font-size: calc(1.25em + 0.75 * (100vw - 20em) / 48);
+  .title-m,
+  .headline-m {
+    font-size: calc(1em + 0.75 * (100vw - 20em) / 48);
   }
 }
 @media screen and (min-width: 68em) {
   /* line 7, sass/utils/_mixins.scss */
-  .title-m {
-    font-size: 2em;
+  .title-m,
+  .headline-m {
+    font-size: 1.75em;
   }
 }
 
-/* line 45, sass/base/_typography.scss */
+/* line 46, sass/base/_typography.scss */
 .title-s,
 .headline-s {
-  font-weight: 300;
-  text-transform: lowercase;
-  letter-spacing: 3px;
+  margin: 1.5em 0 0.5em;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 /* line 7, sass/utils/_mixins.scss */
 .title-s,
@@ -296,18 +301,18 @@ body {
   /* line 7, sass/utils/_mixins.scss */
   .title-s,
   .headline-s {
-    font-size: calc(1em + 0.5 * (100vw - 20em) / 48);
+    font-size: calc(1em + 0.25 * (100vw - 20em) / 48);
   }
 }
 @media screen and (min-width: 68em) {
   /* line 7, sass/utils/_mixins.scss */
   .title-s,
   .headline-s {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
-/* line 53, sass/base/_typography.scss */
+/* line 55, sass/base/_typography.scss */
 .headline-xs {
   font-weight: 300;
   text-transform: lowercase;
@@ -330,7 +335,7 @@ body {
   }
 }
 
-/* line 61, sass/base/_typography.scss */
+/* line 63, sass/base/_typography.scss */
 a {
   color: blue;
   background-color: transparent;
@@ -338,17 +343,17 @@ a {
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
 }
-/* line 66, sass/base/_typography.scss */
+/* line 68, sass/base/_typography.scss */
 a:hover, a:focus {
   color: red;
   text-decoration: none;
 }
-/* line 71, sass/base/_typography.scss */
+/* line 73, sass/base/_typography.scss */
 a:hover, a:visited, a:active, a:focus {
   outline: 0;
 }
 
-/* line 79, sass/base/_typography.scss */
+/* line 81, sass/base/_typography.scss */
 p,
 li {
   margin: 0 0 1em;
@@ -372,15 +377,20 @@ li {
     font-size: 1em;
   }
 }
-
 /* line 86, sass/base/_typography.scss */
+p a,
+li a {
+  color: #F1F5F7;
+}
+
+/* line 92, sass/base/_typography.scss */
 b,
 strong {
   font-weight: bold;
   font-weight: 600;
 }
 
-/* line 92, sass/base/_typography.scss */
+/* line 98, sass/base/_typography.scss */
 i {
   font-style: italic;
 }
@@ -593,9 +603,10 @@ html, body {
 /* line 25, sass/partials/_resume.scss */
 [class*='stage-'] {
   position: relative;
-  padding-left: 10em;
+  margin-bottom: 6em;
+  padding: 0 1em 0 10em;
 }
-/* line 29, sass/partials/_resume.scss */
+/* line 30, sass/partials/_resume.scss */
 [class*='stage-'] .stage {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -609,7 +620,7 @@ html, body {
   background-color: #1c1c1c;
 }
 
-/* line 39, sass/partials/_resume.scss */
+/* line 40, sass/partials/_resume.scss */
 .dates {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -621,21 +632,22 @@ html, body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
-  top: 14em;
+  top: 8.5em;
   left: 0;
   bottom: 0;
   width: 6em;
+  padding: 1em 0;
   line-height: 1;
   border-left: 1px solid #888888;
   font-size: 70%;
 }
-/* line 52, sass/partials/_resume.scss */
+/* line 54, sass/partials/_resume.scss */
 .dates span {
   display: block;
   padding: 0.5em 0.75em;
   text-align: center;
 }
-/* line 57, sass/partials/_resume.scss */
+/* line 59, sass/partials/_resume.scss */
 .dates span::after {
   content: '';
   display: block;
@@ -645,49 +657,94 @@ html, body {
   background-color: #888888;
 }
 
-/* line 68, sass/partials/_resume.scss */
+/* line 70, sass/partials/_resume.scss */
 .employer {
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
 }
-/* line 71, sass/partials/_resume.scss */
+/* line 73, sass/partials/_resume.scss */
 .employer .title-l {
   margin: 0;
 }
 
-/* line 76, sass/partials/_resume.scss */
+/* line 78, sass/partials/_resume.scss */
 .project {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  padding: 4em 1em 1em;
+  width: 100%;
+  max-width: 64em;
+  padding: 6em 1em 1em 0;
 }
-/* line 81, sass/partials/_resume.scss */
-.project h2 {
-  margin: 0 0 0.5em;
+/* line 83, sass/partials/_resume.scss */
+.project header {
+  margin-bottom: 1em;
+}
+/* line 87, sass/partials/_resume.scss */
+.project .title-m {
+  margin: 0 1.5em 0 0;
   line-height: 1;
   font-weight: 700;
   text-transform: initial;
 }
-/* line 87, sass/partials/_resume.scss */
-.project h2 a {
+
+/* line 96, sass/partials/_resume.scss */
+.project-details {
+  position: relative;
+  max-width: 51em;
+}
+/* line 100, sass/partials/_resume.scss */
+.project-details.intro {
+  padding-top: 2em;
+}
+/* line 104, sass/partials/_resume.scss */
+.project-details ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 0.5em;
+}
+/* line 110, sass/partials/_resume.scss */
+.project-details li {
+  margin: 0 1.5em 0 0;
+  font-size: 0.875em;
   color: #888888;
 }
-/* line 91, sass/partials/_resume.scss */
-.project h2 span {
+/* line 115, sass/partials/_resume.scss */
+.project-details li:last-of-type {
+  margin-right: 0;
+}
+
+/* line 121, sass/partials/_resume.scss */
+.project-link {
+  margin-top: 0.5em;
+  font-size: 0.875em;
+  text-transform: lowercase;
+  color: #888888;
+}
+/* line 127, sass/partials/_resume.scss */
+.project-link svg {
   display: inline-block;
-  text-indent: -9999em;
-  width: 5px;
-  height: 5px;
-  background-color: red;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.25em;
+  font-size: 80%;
+  fill: #888888;
+}
+
+/* line 138, sass/partials/_resume.scss */
+.content-cols {
+  -webkit-columns: 3 200px;
+  -moz-columns: 3 200px;
+  columns: 3 200px;
+  -webkit-column-gap: 3em;
+  -moz-column-gap: 3em;
+  column-gap: 3em;
 }
 
 @media (min-width: 30em) {
-  /* line 102, sass/partials/_resume.scss */
+  /* line 144, sass/partials/_resume.scss */
   .res-header {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
