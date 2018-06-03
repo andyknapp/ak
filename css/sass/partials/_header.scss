@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: $nav-width;
+  //width: $nav-width;
   height: 100%;
   padding: 1em;
   justify-content: space-between;
@@ -10,31 +10,15 @@
   z-index: 2;
 }
 
-.intro {
-  display: flex;
-}
-
-.title-intro {
-  margin: auto;
-  text-align: center;
-  color: $gray;
-
-  span {
-    display: block;
-    font-family: $open-sans;
-    font-size: 0.35em;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
+.position {
+  display: block;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  font-weight: 900;
 }
 
 .logo {
-  @include fluid(font-size, 20em, 68em, 1.57em, 2.375em);
-  margin: 0;
-  font-weight: 900;
-  letter-spacing: -0.075em;
-  line-height: 0.9;
-  color: $gray;
+  fill: $gray;
 }
 
 

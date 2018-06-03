@@ -1,4 +1,4 @@
-  <section class="resume">
+  <section id="resume" class="resume">
 
     <section id="experience" class="experience">
       <div id="kd" class="stage-kd">

@@ -14,17 +14,17 @@
 
 <body>
   <header class="site-header flex-col">
-    <span class="logo title-logo">AK</span>
+    <div>
+      <?php include('logo/andyknapp-r.svg'); ?>
+
+      <h1 class="screen-reader-text">Andy Knapp</h1>
+      <span class="position">Web Developer</span>
+    </div>
     <nav class="site-nav">
       <a href="#resume" class="nav-item">Work</a>
       <a href="#contact" class="nav-item">Contact</a>
     </nav>
   </header>
-
-  <section class="intro full-screen">
-    <h1 class="title-intro">Andy Knapp <span>Web Developer</span></h1>
-  </section>
-
 
   <div class="sticky-container">
     <?php
@@ -39,7 +39,7 @@
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <script src="js/scroll.js"></script>
   <script src="js/wufoo.js"></script>
 
   <?php include('icons/svg-defs.svg'); ?>

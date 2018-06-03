@@ -4,16 +4,16 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         // Concats javascript files
-        concat: {
-          basic: {
-            src: [
-              'js/global/*.js',
-              '!js/global.js',
-              '!js/global.min.js'
-            ],
-            dest: 'js/global.js',
-          },
-        },
+        // concat: {
+        //   basic: {
+        //     src: [
+        //       'js/global/*.js',
+        //       '!js/global.js',
+        //       '!js/global.min.js'
+        //     ],
+        //     dest: 'js/global.js',
+        //   },
+        // },
 
         // Minifies javascript files
         uglify: {
@@ -129,7 +129,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-svgstore');
 
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
