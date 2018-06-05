@@ -14,17 +14,28 @@
 
 <body>
   <header class="site-header flex-col">
-    <div>
-      <?php include('logo/andyknapp-r.svg'); ?>
+    <div class="svg-container">
 
-      <h1 class="screen-reader-text">Andy Knapp</h1>
-      <span class="position">Web Developer</span>
+      <?php include('logo/ak.svg'); ?>
+
     </div>
     <nav class="site-nav">
       <a href="#resume" class="nav-item">Work</a>
       <a href="#contact" class="nav-item">Contact</a>
     </nav>
   </header>
+
+  <section class="full-screen">
+    <div>
+      <div class="svg-container">
+
+        <?php include('logo/andyknapp.svg'); ?>
+
+      </div>
+      <h1 class="screen-reader-text">Andy Knapp</h1>
+      <span class="position">Web Developer</span>
+    </div>
+  </section>
 
   <div class="sticky-container">
     <?php

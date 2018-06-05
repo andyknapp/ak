@@ -16,14 +16,16 @@ jQuery(document).ready(function($) {
   $(window).on('scroll', function() {
     var scroll = $(window).scrollTop(),
         logo = $('.logo'),
-        offset = $(logo).height() + 16,
-        resume = $('#resume').offset().top - offset;
+        offset = $(logo).height(),
+        resume = $('#resume').offset().top - offset,
+        triggerA = resume / 2;
 
+        console.log(offset);
         console.log(resume);
 
-    if(scroll >= resume) {
+    if(scroll >= triggerA) {
       $(logo).addClass('reduce');
-    } else if(scroll < resume){
+    } else if(scroll < triggerA){
       $(logo).removeClass('reduce');
     }
   });

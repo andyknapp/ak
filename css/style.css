@@ -193,6 +193,66 @@ img {
   outline: 0;
 }
 
+@-webkit-keyframes outLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.75;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.25;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes outLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.75;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.25;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    -webkit-transform: scaleX(1) translateX(0);
+    transform: scaleX(1) translateX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1) translateX(-10em);
+    transform: scaleX(1) translateX(-10em);
+  }
+}
+@keyframes slideLeft {
+  from {
+    -webkit-transform: scaleX(1) translateX(0);
+    -ms-transform: scaleX(1) translateX(0);
+    transform: scaleX(1) translateX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1) translateX(-10em);
+    -ms-transform: scaleX(1) translateX(-10em);
+    transform: scaleX(1) translateX(-10em);
+  }
+}
 /* line 5, sass/base/_typography.scss */
 body {
   font-family: "Open Sans", sans-serif;
@@ -439,23 +499,30 @@ html, body {
 
 /* line 32, sass/base/_global.scss */
 .full-screen {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
 }
+/* line 40, sass/base/_global.scss */
+.full-screen > div {
+  margin: auto;
+}
 
-/* line 41, sass/base/_global.scss */
+/* line 46, sass/base/_global.scss */
 .sticky-module {
   position: -webkit-sticky;
   position: sticky;
 }
-/* line 43, sass/base/_global.scss */
+/* line 48, sass/base/_global.scss */
 .sticky-module.center {
   text-align: center;
 }
-/* line 46, sass/base/_global.scss */
+/* line 51, sass/base/_global.scss */
 .sticky-module.top {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,13 +532,13 @@ html, body {
   z-index: 1;
   background-color: white;
 }
-/* line 53, sass/base/_global.scss */
+/* line 58, sass/base/_global.scss */
 .sticky-module.top .title-m,
 .sticky-module.top .headline-s {
   margin: auto;
 }
 
-/* line 60, sass/base/_global.scss */
+/* line 65, sass/base/_global.scss */
 .sticky-container {
   position: -webkit-sticky;
   position: sticky;
@@ -488,7 +555,7 @@ html, body {
   top: 0;
   left: 0;
   height: 100%;
-  padding: 1em;
+  padding: 2em 1em 0;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -504,14 +571,84 @@ html, body {
   letter-spacing: 3px;
   text-transform: lowercase;
   font-weight: 900;
+  text-align: center;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 7, sass/utils/_mixins.scss */
+.position {
+  font-size: 0.75em;
+}
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .position {
+    font-size: calc(0.75em + 0.375 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .position {
+    font-size: 1.125em;
+  }
+}
+/* line 22, sass/partials/_header.scss */
+.position.split {
+  -webkit-animation: outLeft 1s ease forwards;
+  animation: outLeft 1s ease forwards;
 }
 
-/* line 20, sass/partials/_header.scss */
+/* line 27, sass/partials/_header.scss */
+.svg-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+}
+/* line 33, sass/partials/_header.scss */
+.svg-container svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 40, sass/partials/_header.scss */
+.site-header .svg-container {
+  width: 4.6875em;
+  padding-bottom: 50.66667%;
+}
+/* line 44, sass/partials/_header.scss */
+.site-header .svg-container svg {
+  fill: #212121;
+}
+/* line 49, sass/partials/_header.scss */
+.full-screen .svg-container {
+  margin-bottom: 0.75em;
+  padding-bottom: 14.84848%;
+}
+/* line 7, sass/utils/_mixins.scss */
+.full-screen .svg-container {
+  width: 10em;
+}
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .full-screen .svg-container {
+    width: calc(10em + 8 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  .full-screen .svg-container {
+    width: 18em;
+  }
+}
+
+/* line 56, sass/partials/_header.scss */
 .logo {
   fill: #888888;
 }
 
-/* line 26, sass/partials/_header.scss */
+/* line 78, sass/partials/_header.scss */
 .site-nav {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -525,7 +662,7 @@ html, body {
   width: 100%;
 }
 
-/* line 33, sass/partials/_header.scss */
+/* line 85, sass/partials/_header.scss */
 .nav-item {
   display: block;
   padding: 0.5em 0;
