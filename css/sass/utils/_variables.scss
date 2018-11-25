@@ -1,9 +1,30 @@
 // Colors
+$color-black: #212121;
+$color-white: #fafafa;
+$color-blue: rgb(36, 103, 210);
+
+$color-green: rgb(109, 204, 122);
+$color-green-retro: rgb(161, 212, 97);
+
+$color-orange: rgb(242, 105, 62);
+
+$color-red: rgb(235, 77, 85);
+$color-red-a: rgb(247, 92, 79);
+
+
+
+$color-black-1: #1c1c1c;
+
+$gray: #888888;
+$gray-1: #444;
+
+
+
 $blue-dark: #21547F;
 $blue-light: #04B7E3;
-$black: #212121;
-$blackest: #1c1c1c;
-$gray: #888888;
+
+
+
 $gray-dark: #6B6B6B;
 $gray-lightest: #F1F5F7;
 $gray-blue: #3A3A52;
@@ -12,13 +33,18 @@ $orange: #F6A623;
 $yellow: #F5C96A;
 
 // Sizes
+$left: 3vw;
+$footer: 5.5em;
+
 $header: (48/16)*1em;
 $header-l: 5em;
 $nav-width: 10em;
 $timeline-width: 6em;
 
+$gap: 2.5vw;
+
 // Break Points
-$bp-m: 40em;
+$bp-m: 43em;
 $bp-bg: 50em;
 $bp-nav: 66em;
 $bp-max-font: 68em;

@@ -13,43 +13,45 @@
 </head>
 
 <body>
-  <header class="site-header flex-col">
-    <div class="svg-container">
-
-      <?php include('logo/ak.svg'); ?>
-
-    </div>
-    <nav class="site-nav">
-      <a href="#resume" class="nav-item">Work</a>
-      <a href="#contact" class="nav-item">Contact</a>
-    </nav>
-  </header>
-
-  <section class="full-screen">
-    <div>
-      <div class="svg-container">
-
-        <?php include('logo/andyknapp.svg'); ?>
-
-      </div>
+  <div class="site-container">
+    <header id="header" class="site-header">
       <h1 class="screen-reader-text">Andy Knapp</h1>
-      <span class="position">Web Developer</span>
-    </div>
-  </section>
+      <div class="logo-container">
+        <?php include('logo/andyknapp.svg'); ?>
+        <span class="position">Web Developer</span>
+      </div>
 
-  <div class="sticky-container">
-    <?php
-      include('components/resume.php');
-      include('components/contact.php');
-      include('components/footer.php');
-    ?>
+      <nav class="site-nav">
+        <span class="nav-logo">
+          <?php include('logo/ak.svg'); ?>
+        </span>
+        <a href="#resume" class="nav-item">Work</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <?php
+        include('components/resume.php');
+        include('components/contact.php');
+      ?>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <ul>
+        <li><a href="tel:+19173751114">917.375.1114</a></li>
+        <li><a href="mailto:aknapp1@gmail.com">aknapp1@gmail.com</a></li>
+        <li><a href="https://twitter.com/_aknapp">@_aknapp</a></li>
+        <li>Wilmington, DE</li>
+      </ul>
+    </footer>
+
   </div>
 
   <script type="text/javascript">
     <?php include('js/loadCSS.min.js'); ?>
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/wufoo.js"></script>
 

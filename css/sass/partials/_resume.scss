@@ -1,15 +1,15 @@
 .res-header {
   display: flex;
-  position: sticky;
   top: 0;
   padding: 1em;
-  background-color: white;
+
   .title-s {
     margin: 0;
   }
 }
 
 .resume {
+  position: relative;
   margin-top: 0;
 
   > section {
@@ -17,23 +17,13 @@
   }
 }
 
-.res-contact {
-  text-align: center;
-}
-
-
 [class*='stage-'] {
   position: relative;
-  margin-bottom: 6em;
-  padding: 0 1em 0 $nav-width;
+  padding: 10em 1em 5em;
 
   .stage {
     justify-content: space-between;
     align-items: center;
-    top: 0;
-    padding: 4em 1em 1em 0;
-    z-index: 1;
-    background-color: $blackest;
   }
 }
 
@@ -42,14 +32,15 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   position: absolute;
-  top: 8.5em;
-  left: 0;
+  top: 0;
+  right: 0;
   bottom: 0;
-  width: $timeline-width;
-  padding: 1em 0;
+  padding: 50vh 0 1em;
+  z-index: 1;
   line-height: 1;
-  border-left: 1px solid $gray;
+  border-right: 1px solid $color-white;
   font-size: 70%;
+  color: white;
 
   span {
     display: block;
@@ -62,8 +53,17 @@
       width: 100%;
       height: 2px;
       margin-top: 0.5em;
-      background-color: $gray;
+      background-color: $color-white;
     }
+  }
+}
+
+.date {
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
+
+  &.active {
+    opacity: 1;
   }
 }
 
@@ -136,8 +136,8 @@
 
 
 .content-cols {
-  columns: 3 200px;
-  column-gap: 3em;
+  columns: 2 200px;
+  column-gap: 2em;
 }
 
 @media (min-width: $bp-res) {

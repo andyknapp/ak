@@ -1,15 +1,8 @@
 // contact section
 .contact {
-  position: relative;
-  padding: 2em 0 4em;
-
-  // [class*='stage-'] .stage {
-  //   padding-bottom: 2em;
-  // }
-
   .project {
     max-width: 51em;
-    
+
     .flex-row {
       justify-content: space-between;
     }
@@ -48,7 +41,7 @@ textarea {
   transition: background-color .2s ease-out, color .2s ease-out;
   -webkit-appearance: none;
   @include fluid(font-size, 20em, 68em, 0.875em, 1em);
-  border: 1px solid $black;
+  border: 1px solid $color-black;
   border-radius: 0;
   &:focus {
     outline: none;

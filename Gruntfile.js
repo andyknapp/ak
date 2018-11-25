@@ -131,5 +131,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-svgstore');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
 };

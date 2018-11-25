@@ -1,20 +1,56 @@
 html, body {
 	height: 100%;
   min-width: 100%;
-	background-color: $black;
+}
+
+body {
+	background-color: $color-white;
 }
 
 
 // structure
-[class*='container-'] {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-	padding-right: 1em;
-  &.clear:after {
-    @include clear;
-  }
+.site-container {
+	// display: grid;
+	// grid-template-columns: 100%;
+	// grid-template-rows: 100vh auto auto;
+	// grid-template-areas:
+	// 	'header'
+	// 	'main'
+	// 	'footer';
+	// grid-column-gap: $gap;
+}
+
+.site-header {
+	grid-area: header;
+	padding: 0 $gap $gap / 2
+}
+
+.main-content {
+	grid-area: main;
+	position: relative;
+	margin-top: 100vh;
+	padding-bottom: $footer;
+	z-index: 1;
+	background-color: $color-white;
+}
+
+.site-footer {
+	grid-area: footer;
+	padding: $gap $gap $gap / 2;
+}
+
+
+@media (min-width: $bp-m) {
+	.site-container {
+		display: grid;
+		grid-template-columns: 15em 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			'header . . .'
+			'. main main main'
+			'footer footer footer footer';
+		grid-column-gap: $gap;
+	}
 }
 
 /* common flexbox classes */
@@ -29,6 +65,7 @@ html, body {
 }
 
 
+// intro
 .full-screen {
 	display: flex;
   position: fixed;
@@ -36,37 +73,14 @@ html, body {
   height: 100vh;
   top: 0;
   left: 0;
-
-	> div {
-		margin: auto;
-	}
 }
 
 
-.sticky-module {
-	position: sticky;
-	&.center {
-		text-align: center;
-	}
-	&.top {
-		display: flex;
-		top: 0;
-		height: $header;
-		z-index: 1;
-		background-color: white;
-
-		.title-m,
-		.headline-s {
-			margin: auto;
-		}
-	}
-}
-
-.sticky-container {
-	position: sticky;
-	width: 100%;
-	margin-top: 100vh;
-	padding-left: $nav-width;
-  z-index: 1;
-  background-color: $blackest;
+.position {
+  @include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
+  display: block;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  font-weight: 900;
+	color: $color-black;
 }

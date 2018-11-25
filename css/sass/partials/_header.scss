@@ -2,90 +2,95 @@
   position: fixed;
   top: 0;
   left: 0;
-  //width: $nav-width;
+  width: 100%;
   height: 100%;
-  padding: 2em 1em 0;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex;
   z-index: 2;
 }
 
-.position {
-  @include fluid(font-size, 20em, 68em, 0.75em, 1.125em);
-  display: block;
-  letter-spacing: 3px;
-  text-transform: lowercase;
-  font-weight: 900;
-  text-align: center;
-  transform: translateX(0);
 
-  &.split {
-    @include out-left;
-  }
-}
+.logo-container {
+  margin: auto 0;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
 
-.svg-container {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  overflow: hidden;
-
-  svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .bottom-header & {
+    opacity: 0;
   }
 
-  .site-header & {
-    width: 4.6875em;
-    padding-bottom: (38 / 75) * 100%;
-
-    svg {
-      fill: $black;
-    }
-  }
-
-  .full-screen & {
-    @include fluid(width, 20em, 68em, 10em, 18em);
-    margin-bottom: 0.75em;
-    padding-bottom: (49 / 330) * 100%;
-  }
 }
 
 .logo {
-  fill: $gray;
-
-  &.reduce {
-    // .k {
-    //   @include slide-left;
-    // }
-    //
-    // .n,
-    // .d,
-    // .y,
-    // .n2,
-    // .a2,
-    // .p,
-    // .p2 {
-    //   @include go-away;
-    // }
-  }
+  width: 100%;
+  @include fluid(width, 20em, 80em, 16em, 28em);
+  fill: $color-black;
 }
-
 
 
 .site-nav {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  padding: $gap / 2 $gap $gap / 2;
+  background-color: $color-white;
+  transform: translateX(-4em);
+  transition: transform 0.2s ease;
+
+  .bottom-header & {
+    transform: translateX(0);
+  }
 }
 
 .nav-item {
+  line-height: 1.5;
+  color: $color-black;
+  font-weight: 400;
+  text-transform: lowercase;
+
+  &:first-of-type {
+    margin-right: 2em;
+  }
+}
+
+.nav-logo {
   display: block;
-  padding: 0.5em 0;
-  margin: 0 0 2em;
-  line-height: 1;
-  color: $gray;
+  width: 2em;
+  margin-right: 2em;
+}
+
+@media (min-width: $bp-m) {
+  .site-nav {
+    width: auto;
+    transform: translateX(0);
+
+    .bottom-header & {
+      transform: translateX(0);
+    }
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .logo-container {
+    .bottom-header & {
+      opacity: 1
+    }
+  }
+
+  .logo {
+    &.reveal {
+      .lower {
+        @include fade-out;
+      }
+
+      .upper.k {
+        @include slide-left;
+      }
+    }
+  }
 }

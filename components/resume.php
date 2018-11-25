@@ -1,18 +1,26 @@
   <section id="resume" class="resume">
 
-    <section id="experience" class="experience">
-      <div id="kd" class="stage-kd">
-        <header class="sticky-module flex-row stage">
+    <div class="dates">
+      <span class="date">present</span>
+      <span class="date">2017</span>
+      <span class="date">2016</span>
+      <span class="date">2015</span>
+      <span class="date">Jul 2014</span>
+      <span class="date">Jun 2014</span>
+      <span class="date">Sep 2011</span>
+      <span class="date">Aug 2011</span>
+      <span class="date">Sep 2000</span>
+    </div>
+
+    <div id="kd" class="stage-kd swatch" data-color="color-blue">
+      <div class="container-site">
+        <header class="flex-row stage">
           <div class="employer">
             <span class="headline-xs">Web Developer</span>
             <h4 class="title-l">King Design</h4>
           </div>
         </header>
-        <div class="dates">
-          <span>present</span>
-          <span>Jul 2014</span>
-        </div>
-        <div class="project-details intro">
+        <div class="project-details ">
           <p>Lorem ipsum dolor sit amet, sit vocent sadipscing repudiandae in. Ex feugiat fabulas inciderint eum. Quot etiam tractatos ea vix, error dicit comprehensam te mea. In viris consequuntur pri. Vel in malis torquatos reformidans, debitis efficiendi no eum, vim commune offendit deseruisse ei. Hendrerit constituto ut eos, vix te regione nominavi neglegentur, augue iracundia sit cu.</p>
         </div>
 
@@ -119,23 +127,19 @@
             <a href="#">Site</a>
           </div>
         </div>
-
       </div>
+    </div>
 
-      <div id="freelance" class="stage-freelance">
-        <header class="sticky-module flex-row stage">
+    <div id="freelance" class="stage-freelance swatch" data-color="color-orange">
+      <div class="container-site">
+        <header class="flex-row stage">
           <div class="employer">
             <span class="headline-xs">Web Developer / Designer</span>
             <h4 class="title-l">Self Employed</h4>
           </div>
         </header>
 
-        <div class="dates">
-          <span>Jul 2014</span>
-          <span>Aug 2011</span>
-        </div>
-
-        <div class="project-details intro">
+        <div class="project-details ">
           <p>Lorem ipsum dolor sit amet, sit vocent sadipscing repudiandae in. Ex feugiat fabulas inciderint eum. Quot etiam tractatos ea vix, error dicit comprehensam te mea. In viris consequuntur pri. Vel in malis torquatos reformidans, debitis efficiendi no eum, vim commune offendit deseruisse ei. Hendrerit constituto ut eos, vix te regione nominavi neglegentur, augue iracundia sit cu.</p>
         </div>
 
@@ -278,50 +282,47 @@
           </div>
         </div> -->
       </div>
+    </div>
 
-      <div class="stage-skills" style="display:none;">
-        <header class="sticky-module flex-row stage">
-          <div class="employer">
-            <span class="headline-xs">Web Developer</span>
-            <h4 class="title-l">Skills / Languages</h4>
-          </div>
-        </header>
-        <div class="project">
-          <div class="project-details">
-            <ul>
-              <li>Skills</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>WordPress development & theme creation, Photoshop, Illustrator, Git & version control, build tools</p>
-          </div>
+    <div class="stage-skills" style="display:none;">
+      <header class="sticky-module flex-row stage">
+        <div class="employer">
+          <span class="headline-xs">Web Developer</span>
+          <h4 class="title-l">Skills / Languages</h4>
         </div>
-        <div class="project">
-          <div class="project-details">
-            <ul>
-              <li>Languages</li>
-            </ul>
-          </div>
-          <div class="project-description">
-            <p>HTML, CSS/Sass, jQuery/JavaScript, PHP</p>
-          </div>
+      </header>
+      <div class="project">
+        <div class="project-details">
+          <ul>
+            <li>Skills</li>
+          </ul>
+        </div>
+        <div class="project-description">
+          <p>WordPress development & theme creation, Photoshop, Illustrator, Git & version control, build tools</p>
         </div>
       </div>
+      <div class="project">
+        <div class="project-details">
+          <ul>
+            <li>Languages</li>
+          </ul>
+        </div>
+        <div class="project-description">
+          <p>HTML, CSS/Sass, jQuery/JavaScript, PHP</p>
+        </div>
+      </div>
+    </div>
 
-      <div class="stage-advertising">
-        <header class="sticky-module flex-row stage">
+    <div class="stage-advertising swatch" data-color="color-blue">
+      <div class="container-site">
+        <header class="flex-row stage">
           <div class="employer">
             <span class="headline-xs">Communications Strategy / Media Planning</span>
             <h4 class="title-l">Advertising Professional</h4>
           </div>
         </header>
 
-        <div class="dates">
-          <span>Aug 2011</span>
-          <span>Sep 2000</span>
-        </div>
-
-        <div class="project-details intro">
+        <div class="project-details ">
           <p>My first 10 years after college were spent working in the Advertising industry, Media Planning specifically. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
         </div>
 
@@ -384,7 +385,8 @@
           </div>
         </div>
       </div>
-    </section>
+
+      </div>
 
     <section id="education" class="resume-edu resume-main" style="display:none;">
       <div class="sticky-module top center">
