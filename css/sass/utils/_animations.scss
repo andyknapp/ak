@@ -1,9 +1,11 @@
-$delay: 0.025s;
-$time: 0.04s;
-$animationTime: $time + 0.01s;
+$delay: 0.015s;
+$time: 0.35s;
+$drawTime: 3s;
+$animationTime: $time + 0.00s;
+$dashOffset: 1000;
 
 @mixin fade-out {
-	animation: fadeOut $animationTime ease-in forwards;
+	animation: fadeOut $animationTime ease-out forwards;
 
   &.p2 {
     animation-delay: 0;
@@ -35,44 +37,125 @@ $animationTime: $time + 0.01s;
 }
 
 
+@mixin fade-out-3d {
+	animation: fadeOut3d $animationTime ease-in forwards;
+}
+
+
 @mixin slide-left {
-  animation: slideLeft $animationTime * 3 $time * 4 ease-in forwards;
+  animation: slideLeft $animationTime * 3 $time * 4 ease-out forwards;
+}
+
+
+@mixin slide-left-sneak {
+  animation: slideLeftSneaky $animationTime * 3 $time * 4 ease-out forwards;
+}
+
+
+@mixin fade-n-draw {
+	animation: fadeDraw $drawTime ease forwards;
+}
+
+@mixin k-draw {
+	animation: draw $drawTime $time * 1.9 ease forwards;
 }
 
 
 @keyframes fadeOut {
 	0% {
 		opacity: 1;
-		// transform: translateY(0);
-		// fill: $color-orange;
+		transform: translateY(0);
 	}
 
-	50% {
-		//opacity: 0.25;
-		// transform: translateY(50%);
-		// fill: $color-green-retro;
-	}
-
-	75% {
-		//opacity: 0;
-		// transform: translateY(75%);
-		// fill: $color-blue;
+	20% {
+		opacity: 1;
+		transform: translateY(20%);
 	}
 
 	100% {
 		opacity: 0;
-		// transform: translateY(100%);
-		// fill: $color-red;
+		transform: translateY(100%);
 	}
 }
 
 
 @keyframes slideLeft {
-	from {
-		transform: translateX(0);
+	0% {
+		transform: translate3d(0, 0, 0) skewX(0);
 	}
 
-	to {
-		transform: translateX(-35%);
+	80% {
+		transform: translate3d(-28%, 0, 0) skewX(-6deg);
+	}
+
+	90% {
+		transform: translate3d(-31.5%, 0, 0) skewX(2deg);
+	}
+
+	100% {
+		transform: translate3d(-35%, 0, 0) skewX(0);
+	}
+}
+
+
+@keyframes slideLeftSneaky {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+
+	10% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+
+	75% {
+		opacity: 0;
+		transform: translate3d(-35%, 0, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate3d(-35%, 0, 0);
+	}
+}
+
+
+
+@keyframes draw {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+@keyframes fadeDraw {
+	0% {
+		fill: $color-black;
+		stroke-dashoffset: $dashOffset;
+	}
+
+	10% {
+		fill: transparent;
+		stroke-dashoffset: $dashOffset;
+	}
+
+	100% {
+		fill: transparent;
+		stroke-dashoffset: 0;
+	}
+}
+
+
+@keyframes fadeOut3d {
+	0% {
+		transform: scale3d(1, 1, 1) skewX(0) translateX(0);
+		opacity: 1;
+	}
+
+
+	100% {
+		transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
+		opacity: 0;
 	}
 }

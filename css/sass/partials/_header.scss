@@ -1,10 +1,11 @@
 .site-header {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  padding: 0 0 $gap / 2 $gap / 2;
   z-index: 2;
 }
 
@@ -35,7 +36,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: $gap / 2 $gap $gap / 2;
+  padding: $gap / 2 $gap / 2 $gap / 2;
   background-color: $color-white;
   transform: translateX(-4em);
   transition: transform 0.2s ease;
@@ -63,8 +64,14 @@
 }
 
 @media (min-width: $bp-m) {
+  .site-header {
+    width: auto;
+    padding: 0 0 $gap / 2 $gap;
+  }
+
   .site-nav {
     width: auto;
+    padding: $gap / 2 $gap $gap / 2;
     transform: translateX(0);
 
     .bottom-header & {
@@ -83,13 +90,39 @@
   }
 
   .logo {
+    //fill: none;
+    stroke: transparent;
+    stroke-width: 2px;
+
+    .upper.a,
+    .clone.k {
+      stroke-dasharray: 1000;
+    	stroke-dashoffset: 1000;
+    	stroke: $color-black;
+    }
+
+    .lower,
+    .upper.k {
+      transform-origin: 12% 7%;
+    }
+
+    .clone.k {
+      fill: transparent;
+      transform: translate3d(-35%, 0, 0);
+    }
+
     &.reveal {
-      .lower {
-        @include fade-out;
+      .lower,
+      .upper.k {
+        @include fade-out-3d;
       }
 
-      .upper.k {
-        @include slide-left;
+      .upper.a {
+        @include fade-n-draw;
+      }
+
+      .clone.k {
+        @include k-draw;
       }
     }
   }

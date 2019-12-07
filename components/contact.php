@@ -1,4 +1,4 @@
-<section id="contact" class="contact stage-contact swatch" data-color="color-red">
+<section id="contact" class="contact stage-contact container-content" data-color="color-red">
   <div class="container-site">
     <header class="flex-row stage">
       <div class="employer">

@@ -1,5 +1,6 @@
 .site-footer {
   width: 100%;
+  padding: $gap $gap $gap / 2;
   background-color: $color-white;
   text-align: center;
 
@@ -16,9 +17,6 @@
 
 
   @media (min-width: $bp-m) {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     text-align: right;
 
     li {

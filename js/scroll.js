@@ -6,10 +6,15 @@ const dates = document.querySelectorAll('.date');
 const logoRect = logo.getBoundingClientRect();
 const logoHeight = Math.round(logoRect.height);
 const logoBottom = Math.round(logoRect.bottom);
-const logoTrigger = (logoBottom + logoHeight);
+const logoTrigger = (logoBottom - logoHeight);
 const swatches = document.querySelectorAll('.swatch');
 
-
+const leadBlock = document.querySelector('#lead-block');
+const secondaryBlock = document.querySelector('#secondary-block');
+const tertiaryBlock = document.querySelector('#tertiary-block');
+const groupA = document.querySelector('.group-a');
+const groupB = document.querySelector('.group-b');
+const groupC = document.querySelector('.group-c');
 
 
 function debounce(func, wait = 10, immediate = true) {
@@ -51,9 +56,6 @@ function checkPosition() {
     const swatchHeight = swatch.offsetHeight;
     const colorChange = swatch.offsetTop <= scroll && swatch.offsetTop + swatch.offsetHeight > scroll;
     let colorClass = swatch.dataset.color;
-
-
-
     let str = 'color';
     let regex = new RegExp(/^color-\S+/g);
     //let regex = /^color*$/;
@@ -64,7 +66,6 @@ function checkPosition() {
     if(colorChange){
       //removeClassByPrefix(logo, str);
       logo.classList.add(colorClass);
-
     }
   });
 
@@ -79,6 +80,41 @@ function checkPosition() {
   });
 
 }
+
+
+
+function setTimeline() {
+  let anchorTime;
+  let offset;
+  let pos;
+
+  let leadBlockRect = leadBlock.getBoundingClientRect();
+  let leadBlockHeight = Math.round(leadBlockRect.height);
+  let secondaryBlockRect = secondaryBlock.getBoundingClientRect();
+  let secondaryBlockHeight = Math.round(secondaryBlockRect.height);
+  let tertiaryBlockRect = tertiaryBlock.getBoundingClientRect();
+  let tertiaryBlockHeight = Math.round(tertiaryBlockRect.height);
+
+  groupA.style.height = tertiaryBlockHeight + 'px';
+  groupB.style.height = secondaryBlockHeight + 'px';
+  groupC.style.height = leadBlockHeight + 'px';
+
+  // dateAnchors.forEach(anchor => {
+  //   offset = anchor.offsetTop;
+  //   anchorTime = anchor.dataset.time;
+  //
+  //   dates.forEach(date => {
+  //     pos = date.dataset.timeline;
+  //
+  //     if(pos == anchorTime) {
+  //       date.style.top = offset + 'px';
+  //     }
+  //   });
+  // });
+}
+
+//setTimeline();
+
 
 //window.addEventListener('scroll', debounce(checkPosition));
 window.addEventListener('scroll', checkPosition);

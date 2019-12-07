@@ -1,57 +1,94 @@
 html, body {
 	height: 100%;
-  min-width: 100%;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 body {
+	position: relative;
 	background-color: $color-white;
+
+	&::after {
+		content: '';
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 0.75em;
+		height: 100%;
+		background-image: linear-gradient(top, rgba($color-blue, 1) 0%, rgba($color-orange, 1) 50%, rgba($color-red, 1) 100%);
+	}
 }
 
 
 // structure
-.site-container {
-	// display: grid;
-	// grid-template-columns: 100%;
-	// grid-template-rows: 100vh auto auto;
-	// grid-template-areas:
-	// 	'header'
-	// 	'main'
-	// 	'footer';
-	// grid-column-gap: $gap;
-}
-
-.site-header {
-	grid-area: header;
-	padding: 0 $gap $gap / 2
-}
-
 .main-content {
-	grid-area: main;
 	position: relative;
 	margin-top: 100vh;
-	padding-bottom: $footer;
+	padding: 0 $gap / 2 $footer;
 	z-index: 1;
 	background-color: $color-white;
 }
 
-.site-footer {
-	grid-area: footer;
-	padding: $gap $gap $gap / 2;
+.container-content {
+	max-width: (800 / 16) * 1em;
 }
 
 
 @media (min-width: $bp-m) {
 	.site-container {
 		display: grid;
-		grid-template-columns: 15em 1fr 1fr 1fr;
+		grid-template-columns: 15em 1fr;
 		grid-template-rows: auto;
 		grid-template-areas:
-			'header . . .'
-			'. main main main'
-			'footer footer footer footer';
+			'header .'
+			'header main'
+			'header footer';
 		grid-column-gap: $gap;
 	}
+
+	.site-header {
+		grid-area: header;
+	}
+
+	.site-footer {
+		grid-area: footer;
+	}
+
+	.main-content {
+		display: grid;
+		grid-area: main;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			'resume'
+			'contact';
+		grid-column-gap: $gap;
+	}
+
+	.resume {
+		grid-area: resume;
+	}
+
+	.timeline {
+		grid-area: timeline;
+	}
+
+	.contact {
+		grid-area: contact;
+	}
 }
+
+
+@media (min-width: $bp-m) {
+	.main-content {
+		padding: 0 $gap $footer;
+		@include fluid(padding-left, 43em, 100em, 2em, 10em);
+	}
+}
+
+
 
 /* common flexbox classes */
 .flex-col {
@@ -65,17 +102,6 @@ body {
 }
 
 
-// intro
-.full-screen {
-	display: flex;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-
 .position {
   @include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
   display: block;
@@ -83,4 +109,52 @@ body {
   text-transform: lowercase;
   font-weight: 900;
 	color: $color-black;
+}
+
+
+
+// experience
+.experience-block {
+	margin-bottom: 5em;
+
+
+	@media (min-width: $bp-bg) {
+		margin-bottom: 10em;
+	}
+}
+
+
+.experience-header {
+	margin-bottom: 1em;
+
+	.header-group {
+		padding-bottom: 0.25em;
+	}
+
+	.headline-xs {
+		margin-bottom: 1em;
+	}
+
+	@media (min-width: $bp-bg) {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 2em;
+
+		.header-group {
+			padding-bottom: 0;
+		}
+
+		.headline-sub {
+			margin-bottom: 0.25em;
+		}
+	}
+}
+
+
+.experience-description {
+	a {
+		color: $color-blue;
+	}
 }

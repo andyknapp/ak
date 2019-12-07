@@ -25,24 +25,22 @@
         <span class="nav-logo">
           <?php include('logo/ak.svg'); ?>
         </span>
-        <a href="#resume" class="nav-item">Work</a>
+        <a href="#experience" class="nav-item">Experience</a>
         <a href="#contact" class="nav-item">Contact</a>
       </nav>
     </header>
 
     <main class="main-content">
       <?php
-        include('components/resume.php');
+        include('components/experience.php');
         include('components/contact.php');
       ?>
     </main>
 
     <footer class="site-footer" role="contentinfo">
       <ul>
-        <li><a href="tel:+19173751114">917.375.1114</a></li>
-        <li><a href="mailto:aknapp1@gmail.com">aknapp1@gmail.com</a></li>
-        <li><a href="https://twitter.com/_aknapp">@_aknapp</a></li>
-        <li>Wilmington, DE</li>
+        <li><a href="/">resume</a></li>
+        <li><a href="/">github</a></li>
       </ul>
     </footer>
 
