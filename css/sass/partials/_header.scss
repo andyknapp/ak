@@ -1,129 +1,146 @@
 .site-header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 $gap / 2 $gap / 2;
-  z-index: 2;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 $gap / 2 $gap / 2;
+    z-index: 2;
 }
 
 
 .logo-container {
-  margin: auto 0;
-  opacity: 1;
-  transition: opacity 0.2s ease-out;
+    margin: auto 0;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.25s ease, opacity 0.25s ease;
 
-  .bottom-header & {
-    opacity: 0;
-  }
-
+    &.fade-out {
+        opacity: 0;
+        transform: scale(0.7);
+    }
 }
 
 .logo {
-  width: 100%;
-  @include fluid(width, 20em, 80em, 16em, 28em);
-  fill: $color-black;
+    width: 100%;
+    @include fluid(width, 20em, 80em, 16em, 28em);
+    fill: $color-black;
 }
 
 
 .site-nav {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: $gap / 2 $gap / 2 $gap / 2;
-  background-color: $color-white;
-  transform: translateX(-4em);
-  transition: transform 0.2s ease;
-
-  .bottom-header & {
-    transform: translateX(0);
-  }
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $gap / 2 $gap / 2 $gap / 2;
+    background-color: $color-white;
+    z-index: 3;
 }
 
 .nav-item {
-  line-height: 1.5;
-  color: $color-black;
-  font-weight: 400;
-  text-transform: lowercase;
+    line-height: 1.5;
+    color: $color-black;
+    font-weight: 400;
+    text-transform: lowercase;
+    transform: translateX(-64px);
+    transition: transform 0.2s ease;
 
-  &:first-of-type {
-    margin-right: 2em;
-  }
+    &:first-of-type {
+        margin-right: 2em;
+    }
+
+    &:last-of-type {
+        transition-delay: 0.05s;
+    }
+
+    .bottom-header & {
+        transform: translateX(0);
+    }
 }
 
 .nav-logo {
-  display: block;
-  width: 2em;
-  margin-right: 2em;
+    display: block;
+    width: 2em;
+    margin-right: 2em;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+
+    .bottom-header & {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
+
+
 @media (min-width: $bp-m) {
-  .site-header {
-    width: auto;
-    padding: 0 0 $gap / 2 $gap;
-  }
-
-  .site-nav {
-    width: auto;
-    padding: $gap / 2 $gap $gap / 2;
-    transform: translateX(0);
-
-    .bottom-header & {
-      transform: translateX(0);
-    }
-  }
-
-  .nav-logo {
-    display: none;
-  }
-
-  .logo-container {
-    .bottom-header & {
-      opacity: 1
-    }
-  }
-
-  .logo {
-    //fill: none;
-    stroke: transparent;
-    stroke-width: 2px;
-
-    .upper.a,
-    .clone.k {
-      stroke-dasharray: 1000;
-    	stroke-dashoffset: 1000;
-    	stroke: $color-black;
+    .site-header {
+        width: auto;
+        padding: 0 0 $gap / 2 $gap;
     }
 
-    .lower,
-    .upper.k {
-      transform-origin: 12% 7%;
+    .site-nav {
+        width: auto;
+        padding: $gap / 2 $gap $gap / 2;
+        transform: translateX(0);
+
+        .bottom-header & {
+            transform: translateX(0);
+        }
     }
 
-    .clone.k {
-      fill: transparent;
-      transform: translate3d(-35%, 0, 0);
+    .nav-logo {
+        display: none;
     }
 
-    &.reveal {
-      .lower,
-      .upper.k {
-        @include fade-out-3d;
-      }
-
-      .upper.a {
-        @include fade-n-draw;
-      }
-
-      .clone.k {
-        @include k-draw;
-      }
+    .logo-container {
+        &.fade-out {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
-  }
+
+    .logo {
+        //fill: none;
+        stroke: transparent;
+        stroke-width: 2px;
+
+        .upper.a,
+        .clone.k {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            stroke: $color-black;
+        }
+
+        .lower,
+        .upper.k {
+            transform-origin: 12% 7%;
+        }
+
+        .clone.k {
+            fill: transparent;
+            transform: translate3d(-35%, 0, 0);
+        }
+
+        &.reveal {
+            .lower,
+            .upper.k {
+                @include fade-out-3d;
+            }
+
+            .upper.a {
+                @include fade-n-draw;
+            }
+
+            .clone.k {
+                @include k-draw;
+            }
+        }
+    }
 }

@@ -99,7 +99,8 @@ a {
 p,
 li {
 	margin: 0 0 1em;
-	@include fluid(font-size, 20em, 68em, 0.875em, 1em);
+	@include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
+	line-height: 1.6;
 
 	a {
 		color: $gray-lightest;

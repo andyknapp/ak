@@ -84,11 +84,12 @@
 
     <section class="experience-block">
         <header class="section-title experience-header">
-          <h2 class="headline">Education</h2>
-          <ul>
-            <li>Oswego State University</li>
-            <li>Oswego, NY 1999</li>
-          </ul>
+            <div class="header-group">
+                <h2 class="headline-xs">Education</h2>
+                <h3 class="title-m">Oswego State University</h3>
+            </div>
+
+            <p class="headline-sub">Oswego, NY 1999</p>
         </header>
 
         <div class="experience-description">
