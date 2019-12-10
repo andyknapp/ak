@@ -41,10 +41,7 @@ function debounce(func, wait = 10, immediate = true) {
 
 function checkPosition() {
     const scroll = window.scrollY;
-    const trigger = height - vh - 140;
-
-    // console.log('trigger ' + trigger);
-    // console.log('scroll ' + scroll);
+    const trigger = height - vh - 60;
 
     // initial logo transition
     if(scroll > logoTrigger) {
@@ -60,7 +57,9 @@ function checkPosition() {
 
     // move footer nav up to reveal actual footer
     if( scroll > trigger ) {
-        console.log( 'fuck yeah' );
+        nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
+    } else {
+        nav.style.transform = "translateY(0)";
     }
 }
 

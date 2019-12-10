@@ -87,7 +87,7 @@ module.exports = function(grunt) {
         watch: {
           scripts: {
             files: ['js/**/*.js'],
-            tasks: ['concat', 'uglify'],
+            tasks: ['uglify'],
             options: {
                 spawn: false,
             },
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    //grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
