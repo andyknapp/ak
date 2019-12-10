@@ -74,7 +74,7 @@ body {
 .headline-sub {
 	@include fluid(font-size, 20em, 68em, 0.75em, 0.9em);
 	//font-weight: 300;
-	//letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 
 // links

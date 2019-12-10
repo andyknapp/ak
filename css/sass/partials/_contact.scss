@@ -1,57 +1,63 @@
 // contact section
 .contact {
-  .project {
-    max-width: 51em;
+    padding: 2.5em 0;
 
-    .flex-row {
-      justify-content: space-between;
+    .project {
+        max-width: 51em;
+
+        .flex-row {
+            justify-content: space-between;
+        }
+
+        .flex-child {
+            width: calc(50% - 0.5em);
+        }
     }
-    .flex-child {
-      width: calc(50% - 0.5em);
-    }
-  }
 }
 
 button,
 input,
 textarea {
-  border: none;
-  border-radius: 0;
+    border: none;
+    border-radius: 0;
 }
 
 
 // buttons
 .submit {
-  display: block;
-  width: 100%;
-  max-width: (185/14)*1em;
-  padding: (18/14)*1em 0;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 2px;
-  transition: color .2s ease, background-color .2s ease;
+    display: block;
+    width: 100%;
+    max-width: (185/14)*1em;
+    padding: (18/14)*1em 0;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: color .2s ease, background-color .2s ease;
 }
+
 
 input,
 textarea {
-  width: 100%;
-  margin: 0 0 0.5em;
-  padding: 0.5em 0.875em;
-  //box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
-  transition: background-color .2s ease-out, color .2s ease-out;
-  -webkit-appearance: none;
-  @include fluid(font-size, 20em, 68em, 0.875em, 1em);
-  border: 1px solid $color-black;
-  border-radius: 0;
-  &:focus {
-    outline: none;
-  }
-  @include placeholder {
-    font-size: 1em;
-    line-height: 1;
-    color: $gray-dark;
-  }
+    width: 100%;
+    margin: 0 0 0.5em;
+    padding: 0.5em 0.875em;
+    //box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    transition: background-color .2s ease-out, color .2s ease-out;
+    -webkit-appearance: none;
+    @include fluid(font-size, 20em, 68em, 0.875em, 1em);
+    border: 1px solid $color-black;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;
+    }
+    @include placeholder {
+        font-size: 1em;
+        line-height: 1;
+        color: $gray-dark;
+    }
 }
+
 
 label {
   &:not(.placeholder) {
@@ -82,5 +88,5 @@ label {
 }
 
 .hide {
-  display: none!important;
+    display: none!important;
 }

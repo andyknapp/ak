@@ -41,7 +41,8 @@
 
         <footer class="site-footer" role="contentinfo">
             <ul>
-                <li><a href="/">resume pdf</a></li>
+                <li class="headline-sub">&copy; <?php echo date('Y');?> | Andy Knapp</li>
+                <li class="headline-sub"><a href="/">resume pdf</a></li>
             </ul>
         </footer>
 
