@@ -89,12 +89,20 @@
     }
 
     .site-nav {
-        width: auto;
-        padding: $gap / 2 $gap $gap / 2;
+        width: 15em;
+        padding-left: 2em;
         transform: translateX(0);
 
         .bottom-header & {
             transform: translateX(0);
+        }
+    }
+
+    .nav-item {
+        transform: translateX(0);
+
+        &:first-of-type {
+            margin-right: 3em;
         }
     }
 

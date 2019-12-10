@@ -42,6 +42,9 @@ function debounce(func, wait = 10, immediate = true) {
 function checkPosition() {
     const scroll = window.scrollY;
     const trigger = height - vh - 40;
+    const vw = window.innerWidth;
+
+    console.log(vw);
 
     // initial logo transition
     if(scroll > logoTrigger) {
@@ -56,17 +59,18 @@ function checkPosition() {
     }
 
     // move footer nav up to reveal actual footer
-    if( scroll > trigger ) {
-        nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
-        nav.classList.add('bottomed-out');
+    if( vw < 688 ) {
+        if( scroll > trigger ) {
+            nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
+            nav.classList.add('bottomed-out');
 
-    } else {
-        nav.style.transform = "translateY(0)";
-        nav.classList.remove('bottomed-out');
-    }
+        } else {
+            nav.style.transform = "translateY(0)";
+            nav.classList.remove('bottomed-out');
+        }
+    } else {}
 }
 
 
-//window.addEventListener('scroll', debounce(checkPosition));
 window.addEventListener('scroll', checkPosition);
 window.addEventListener('resize', checkPosition);

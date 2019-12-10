@@ -1007,8 +1007,8 @@ body {
 
   /* line 91, sass/partials/_header.scss */
   .site-nav {
-    width: auto;
-    padding: 1em 2em 1em;
+    width: 15em;
+    padding-left: 2em;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -1021,11 +1021,22 @@ body {
   }
 
   /* line 101, sass/partials/_header.scss */
+  .nav-item {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  /* line 104, sass/partials/_header.scss */
+  .nav-item:first-of-type {
+    margin-right: 3em;
+  }
+
+  /* line 109, sass/partials/_header.scss */
   .nav-logo {
     display: none;
   }
 
-  /* line 106, sass/partials/_header.scss */
+  /* line 114, sass/partials/_header.scss */
   .logo-container.fade-out {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1033,44 +1044,44 @@ body {
     transform: scale(1);
   }
 
-  /* line 112, sass/partials/_header.scss */
+  /* line 120, sass/partials/_header.scss */
   .logo {
     stroke: transparent;
     stroke-width: 2px;
   }
-  /* line 117, sass/partials/_header.scss */
+  /* line 125, sass/partials/_header.scss */
   .logo .upper.a,
   .logo .clone.k {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #212121;
   }
-  /* line 124, sass/partials/_header.scss */
+  /* line 132, sass/partials/_header.scss */
   .logo .lower,
   .logo .upper.k {
     -webkit-transform-origin: 12% 7%;
     -ms-transform-origin: 12% 7%;
     transform-origin: 12% 7%;
   }
-  /* line 129, sass/partials/_header.scss */
+  /* line 137, sass/partials/_header.scss */
   .logo .clone.k {
     fill: transparent;
     -webkit-transform: translate3d(-35%, 0, 0);
     -ms-transform: translate3d(-35%, 0, 0);
     transform: translate3d(-35%, 0, 0);
   }
-  /* line 135, sass/partials/_header.scss */
+  /* line 143, sass/partials/_header.scss */
   .logo.reveal .lower,
   .logo.reveal .upper.k {
     -webkit-animation: fadeOut3d 0.35s ease-in forwards;
     animation: fadeOut3d 0.35s ease-in forwards;
   }
-  /* line 140, sass/partials/_header.scss */
+  /* line 148, sass/partials/_header.scss */
   .logo.reveal .upper.a {
     -webkit-animation: fadeDraw 3s ease forwards;
     animation: fadeDraw 3s ease forwards;
   }
-  /* line 144, sass/partials/_header.scss */
+  /* line 152, sass/partials/_header.scss */
   .logo.reveal .clone.k {
     -webkit-animation: draw 3s 0.665s ease forwards;
     animation: draw 3s 0.665s ease forwards;
@@ -1290,15 +1301,43 @@ label.placeholder.filled {
 @media (min-width: 43em) {
   /* line 1, sass/partials/_footer.scss */
   .site-footer {
-    text-align: right;
+    padding-bottom: 1em;
+    padding-left: 0;
   }
-  /* line 20, sass/partials/_footer.scss */
-  .site-footer li {
-    display: inline-block;
+  /* line 21, sass/partials/_footer.scss */
+  .site-footer ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
-  /* line 23, sass/partials/_footer.scss */
+  /* line 28, sass/partials/_footer.scss */
+  .site-footer li:first-of-type {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin-right: 0.66667em;
+    font-size: 12px;
+  }
+  /* line 35, sass/partials/_footer.scss */
   .site-footer li:last-of-type {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
     margin-right: 0;
+    line-height: 1.5;
+    color: #212121;
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
   }
 }
 

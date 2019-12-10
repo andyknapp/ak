@@ -15,13 +15,31 @@
 
 
     @media (min-width: $bp-m) {
-        text-align: right;
+        padding-bottom: 1em;
+        padding-left: 0;
+
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
 
         li {
-            display: inline-block;
+            &:first-of-type {
+                order: 1;
+                align-self: center;
+                margin-right: (8 / 12) * 1em;
+                font-size: 12px;
+            }
 
             &:last-of-type {
+                order: 0;
                 margin-right: 0;
+                line-height: 1.5;
+                color: $color-black;
+                font-size: 1em;
+                font-family: $rubik;
+                font-weight: 400;
             }
         }
     }
