@@ -8,45 +8,51 @@
     </header>
 
     <div class="project">
-      <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-            action="https://aknapp.wufoo.com/forms/zpn38ao167dxhw/#public">
 
-        <div class="flex-row">
-          <div id="foli4" class="notranslate flex-child">
-              <label class="desc" id="title4" for="Field4">Name<span id="req_4" class="req">*</span></label>
-              <div>
-                <input id="Field4" name="Field4" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required placeholder="Name" />
-              </div>
-            </div>
+        <?php if (isset($_POST['form_submitted'])): ?>
 
-          <div id="foli3" class="notranslate flex-child">
-            <label class="desc" id="title3" for="Field3">Email<span id="req_3" class="req">*</span></label>
-            <div>
-              <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" placeholder="Email" required />
-            </div>
-          </div>
-        </div>
+            <p>Thank You <?php echo $_POST['name']; ?> </p>
 
+            <?php
+                $to = 'aknapp1@gmail.com';
+                $subject = 'Contact form submission';
+                //$email = $_POST['email'];
+                $message = $_POST['message'];
+                $headers = 'From: site@andyknapp.com' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
 
-        <div id="foli5" class="notranslate">
-          <label class="desc" id="title5" for="Field5">Message<span id="req_5" class="req">*</span></label>
-          <div>
-            <textarea id="Field5" name="Field5" class="field textarea medium" spellcheck="false" rows="4" cols="50" tabindex="3" onkeyup="" placeholder="Message" required></textarea>
-          </div>
-        </div>
+                mail($to, $subject, $message, $headers);
+            ?>
 
-        <div class="buttons">
-          <div>
-            <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"/>
-          </div>
-        </div>
-        <span>form by <a href="http://www.wufoo.com">Wufoo</a></span>
-        <div class="hide">
-            <label for="comment">Do Not Fill This Out</label>
-            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-            <input type="hidden" id="idstamp" name="idstamp" value="CRGk/Yjg66+t7yEoOO8nZoZr3HzqOFdTOGTnRZWVzlg=" />
-          </div>
-      </form>
+        <?php else: ?>
+
+            <form action="/#contact" method="POST">
+                <div class="flex-row">
+                    <div class="flex-child">
+                        <label for="name">Name<span class="req">*</span></label>
+                        <input id="name" name="name" type="text" value="" maxlength="255" tabindex="1" required placeholder="Name" />
+                    </div>
+
+                    <div class="flex-child">
+                        <label for="email">Email<span class="req">*</span></label>
+                        <input id="email" name="email" type="email" value="" maxlength="255" tabindex="1" required placeholder="Email" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message">Message<span class="req">*</span></label>
+                    <textarea id="message" name="message" spellcheck="false" rows="4" cols="50" tabindex="3" onkeyup="" placeholder="Message" required></textarea>
+                </div>
+
+                <input type="hidden" name="form_submitted" value="1" />
+
+                <div class="buttons">
+                    <input name="submit" class="submit" type="submit" value="Send"/>
+                </div>
+            </form>
+
+      <?php endif; ?>
+
     </div>
   </div>
 </section>

@@ -19,7 +19,7 @@
 
             <div class="logo-container">
 
-                <?php include('logo/andyknapp.svg'); ?>
+                <?php include('logo/andyknapp-test.svg'); ?>
 
                 <span class="position">Web Developer</span>
             </div>
@@ -53,7 +53,6 @@
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
   <script src="js/scroll.js"></script>
-  <script src="js/wufoo.js"></script>
 
   <?php include('icons/svg-defs.svg'); ?>
 

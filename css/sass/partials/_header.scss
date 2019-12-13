@@ -129,6 +129,10 @@
             stroke: $color-black;
         }
 
+        .upper.a {
+            transform: translate3d(1px, 0, 0);
+        }
+
         .lower,
         .upper.k {
             transform-origin: 12% 7%;

@@ -44,8 +44,6 @@ function checkPosition() {
     const trigger = height - vh - 40;
     const vw = window.innerWidth;
 
-    console.log(vw);
-
     // initial logo transition
     if(scroll > logoTrigger) {
         logo.classList.add('reveal');

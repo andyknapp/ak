@@ -840,27 +840,30 @@ body {
   content: '';
   display: block;
   position: absolute;
-  left: 0;
+  left: 2em;
   right: 0;
   top: calc(50% - 0.5px);
-  width: 100%;
+  width: calc(100% - 4em);
   height: 1px;
   background-color: #444;
   z-index: -2;
 }
 /* line 187, sass/base/_global.scss */
-.divider .headline {
+.divider .headline-sub {
   position: relative;
   margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
 }
-/* line 191, sass/base/_global.scss */
-.divider .headline::before {
+/* line 194, sass/base/_global.scss */
+.divider .headline-sub::before {
   content: '';
   display: block;
   position: absolute;
   top: -1px;
-  left: -0.5em;
-  width: calc(100% + 1em);
+  left: -1.5em;
+  width: calc(100% + 3em);
   height: calc(100% + 2px);
   background-color: #fafafa;
   z-index: -1;
@@ -1057,31 +1060,37 @@ body {
     stroke: #212121;
   }
   /* line 132, sass/partials/_header.scss */
+  .logo .upper.a {
+    -webkit-transform: translate3d(1px, 0, 0);
+    -ms-transform: translate3d(1px, 0, 0);
+    transform: translate3d(1px, 0, 0);
+  }
+  /* line 136, sass/partials/_header.scss */
   .logo .lower,
   .logo .upper.k {
     -webkit-transform-origin: 12% 7%;
     -ms-transform-origin: 12% 7%;
     transform-origin: 12% 7%;
   }
-  /* line 137, sass/partials/_header.scss */
+  /* line 141, sass/partials/_header.scss */
   .logo .clone.k {
     fill: transparent;
     -webkit-transform: translate3d(-35%, 0, 0);
     -ms-transform: translate3d(-35%, 0, 0);
     transform: translate3d(-35%, 0, 0);
   }
-  /* line 143, sass/partials/_header.scss */
+  /* line 147, sass/partials/_header.scss */
   .logo.reveal .lower,
   .logo.reveal .upper.k {
     -webkit-animation: fadeOut3d 0.35s ease-in forwards;
     animation: fadeOut3d 0.35s ease-in forwards;
   }
-  /* line 148, sass/partials/_header.scss */
+  /* line 152, sass/partials/_header.scss */
   .logo.reveal .upper.a {
     -webkit-animation: fadeDraw 3s ease forwards;
     animation: fadeDraw 3s ease forwards;
   }
-  /* line 152, sass/partials/_header.scss */
+  /* line 156, sass/partials/_header.scss */
   .logo.reveal .clone.k {
     -webkit-animation: draw 3s 0.665s ease forwards;
     animation: draw 3s 0.665s ease forwards;
@@ -1165,7 +1174,7 @@ body {
 }
 /* line 12, sass/partials/_contact.scss */
 .contact .project .flex-child {
-  width: calc(50% - 0.5em);
+  width: calc(50% - 0.4em);
 }
 
 /* line 18, sass/partials/_contact.scss */
@@ -1180,10 +1189,10 @@ textarea {
 .submit {
   display: block;
   width: 100%;
-  max-width: 13.21429em;
-  padding: 1.28571em 0;
+  max-width: 11.42857em;
+  padding: 0.57143em 0;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #6B6B6B;
   border-radius: 2px;
   -webkit-transition: color .2s ease, background-color .2s ease;
   transition: color .2s ease, background-color .2s ease;
@@ -1193,13 +1202,13 @@ textarea {
 input,
 textarea {
   width: 100%;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.8em;
   padding: 0.5em 0.875em;
   -webkit-transition: background-color .2s ease-out, color .2s ease-out;
   transition: background-color .2s ease-out, color .2s ease-out;
   -webkit-appearance: none;
-  border: 1px solid #212121;
-  border-radius: 0;
+  border: 1px solid #6B6B6B;
+  border-radius: 2px;
 }
 /* line 7, sass/utils/_mixins.scss */
 input,
@@ -1247,7 +1256,12 @@ textarea::-webkit-input-placeholder {
   color: #6B6B6B;
 }
 
-/* line 63, sass/partials/_contact.scss */
+/* line 61, sass/partials/_contact.scss */
+textarea {
+  display: block;
+}
+
+/* line 67, sass/partials/_contact.scss */
 label:not(.placeholder) {
   position: absolute;
   bottom: 1em;
@@ -1260,11 +1274,11 @@ label:not(.placeholder) {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-/* line 73, sass/partials/_contact.scss */
+/* line 77, sass/partials/_contact.scss */
 label:not(.placeholder).visible {
   opacity: 1;
 }
-/* line 77, sass/partials/_contact.scss */
+/* line 81, sass/partials/_contact.scss */
 label.placeholder {
   position: absolute;
   top: 9px;
@@ -1273,12 +1287,12 @@ label.placeholder {
   font-size: 1em;
   color: #6B6B6B;
 }
-/* line 84, sass/partials/_contact.scss */
+/* line 88, sass/partials/_contact.scss */
 label.placeholder.filled {
   visibility: hidden;
 }
 
-/* line 90, sass/partials/_contact.scss */
+/* line 94, sass/partials/_contact.scss */
 .hide {
   display: none !important;
 }

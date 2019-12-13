@@ -15,20 +15,16 @@
     </g>
 
     <linearGradient id="Gradient1">
-        <stop offset="0%" stop-color="#000"/>
-        <stop offset="50%" stop-color="blue" />
-        <stop offset="100%" stop-color="blue" />
+        <stop offset="0%" stop-color="#90489D"/>
+        <stop offset="100%" stop-color="#0D25B9" />
     </linearGradient>
 
     <linearGradient id="Gradient2">
-        <stop offset="10%" stop-color="#FFA6B7" />
-        <stop offset="100%" stop-color="#1E2AD2" />
+        <stop offset="10%" stop-color="#FD6585" />
+        <stop offset="100%" stop-color="#90489D" />
     </linearGradient>
 
     <style type="text/css"><![CDATA[
         #rect1 { stroke: url(#Gradient1); }
         #rect2 { stroke: url(#Gradient2); }
     ]]></style>
-</svg>
-
-background-image: linear-gradient( 135deg, #FFA6B7 10%, #1E2AD2 100%);

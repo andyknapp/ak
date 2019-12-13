@@ -54,7 +54,7 @@
     </section>
 
     <section class="divider">
-        <h2 class="headline">Prior Work Experience</h2>
+        <h2 class="headline-sub">Prior Work Experience</h2>
     </section>
 
     <section class="experience-block">
