@@ -31,7 +31,7 @@
       </header>
 
       <div class="experience-description">
-          <p>As I transitioned from an advertising professional to a self taught developer, this period in my career was invaluable as I was able to hone my skills (including design) by working on many small websites. Working in a freelance capacity, as well as a solo designer/developer for small clients provided a wide range of experience, and enabled me to improve my technical skills.</p>
+          <p>Working as a freelance developer and a solo designer / developer was an invaluable experience for several reasons. During this time, I was able to greatly improve my technical skills and understanding of how WordPress and the web works. Finding and working with clients taught me how the web can work for smaller businesses and entrepreneurs, and the design work I did positively influences me as a developer to this day.</p>
       </div>
     </section>
 
@@ -61,24 +61,16 @@
         <header class="section-title experience-header">
             <div class="header-group">
                 <h2 class="headline-xs">Advertising Professional</h2>
-                <h3 class="title-m">Media Planning & Strategy</h3>
+                <h3 class="title-m">Media Strategy & Planning</h3>
             </div>
 
             <p class="headline-sub">September 2000 - August 2011</p>
-
-
         </header>
 
         <div class="experience-description">
-            <ul>
-                <li>maxus NYC 1/08 - 8/11</li>
-                <li>MindShare Chicago, IL 9/05 - 3/07</li>
-                <li>Mediaedge NYC 3/03 - 8/05</li>
-                <li>Brouillard Communications NYC 9/00 - 3/03</li>
-            </ul>
             <p>I worked in the Advertising industry, Media Planning specifically, for over 10 years. This experience enabled me to develop skills such as client & team management, public speaking, and an analytical thought process. I strongly believe that my background in the fast-paced and demanding advertising agency world remains a valuable and relevant experience as it relates to my current work as a Web Developer.</p>
             <p>The last position I held in advertising was at maxus in NYC where I led a team working primarily on Church & Dwight consumer brands. In that role as a Partner, Group Planning Director, I was the senior client contact responsible for strategic development and implementation oversight.</p>
-            <p>Over the course of my career, I gained extensive experience working in the digital advertising space, including social media strategy and custom program development, along with traditional media such as TV and print. Prior to my position at maxus, I worked at Mediaedge, MindShare and Brouillard Communications (all current or former WPP companies).</p>
+            <p>Over the course of my career, I gained extensive experience working in the digital advertising space, including social media strategy and custom program development, along with traditional media such as TV and print. Prior to my position at maxus in NYC from 1/08 to 8/11, I worked at MindShare (Chicago 9/05 - 3/07), Mediaedge NYC (3/03 - 8/05), and Brouillard Communications (NYC 9/00 - 3/03). All current or former WPP companies.</p>
         </div>
     </section>
 
