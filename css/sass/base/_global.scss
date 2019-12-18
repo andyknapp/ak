@@ -84,7 +84,7 @@ body {
 
 @media (min-width: $bp-m) {
     .main-content {
-        padding: 0 $gap $footer;
+        padding: 0 $gap 7em;
         @include fluid(padding-left, 43em, 100em, 2em, 10em);
     }
 }
@@ -118,7 +118,7 @@ body {
 	margin-bottom: 5em;
 
 	@media (min-width: $bp-bg) {
-		margin-bottom: 10em;
+		margin-bottom: 13em;
 	}
 }
 
@@ -132,6 +132,11 @@ body {
 
     .headline-xs {
         margin-bottom: 0.75em;
+        color: $color-gray;
+    }
+
+    .headline-sub {
+        color: $color-gray;
     }
 
     @media (min-width: $bp-bg) {
@@ -139,7 +144,7 @@ body {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: flex-end;
-        margin-bottom: 2em;
+        margin-bottom: 3em;
 
         .header-group {
             padding-bottom: 0;
@@ -152,13 +157,6 @@ body {
         .headline-xs {
             margin-bottom: 0.5em;
         }
-    }
-}
-
-
-.experience-description {
-    a {
-        color: $color-blue;
     }
 }
 
@@ -180,7 +178,7 @@ body {
         top: calc(50% - 0.5px);
         width: calc(100% - 4em);
         height: 1px;
-        background-color: $gray-1;
+        background-color: $color-gray;
         z-index: -2;
     }
 
@@ -190,6 +188,7 @@ body {
         font-family: $rubik;
         font-weight: 700;
         letter-spacing: 0;
+        color: $color-gray;
 
         &::before {
             content: '';
@@ -206,6 +205,6 @@ body {
 
 
     @media (min-width: $bp-bg) {
-        margin-bottom: 10em;
+        margin-bottom: 13em;
     }
 }

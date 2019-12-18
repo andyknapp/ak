@@ -79,15 +79,17 @@ body {
 
 // links
 a {
-	color: blue;
+	color: $color-blue;
 	background-color: transparent;
 	text-decoration: none;
-	transition: color 0.2s ease-out;
+	transition: color 0.2s ease;
+
 	&:hover,
 	&:focus {
-		color: red;
+		color: $color-orange;
 		text-decoration: none;
 	}
+
 	&:hover,
 	&:visited,
 	&:active,
@@ -100,20 +102,20 @@ p,
 li {
 	margin: 0 0 1em;
 	@include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
-	line-height: 1.6;
+	line-height: 1.7;
 
 	a {
-		color: $gray-lightest;
+		color: $color-blue;
 	}
 }
 
 // misc
 b,
 strong {
-	font-weight: bold;
-  font-weight: 600;
+    font-weight: bold;
+    font-weight: 600;
 }
 
 i {
-	font-style: italic;
+    font-style: italic;
 }
