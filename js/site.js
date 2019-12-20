@@ -8,6 +8,7 @@ const logo = document.querySelector('#logo');
 const logoContainer = document.querySelector('.logo-container');
 const header = document.querySelector('#header');
 const nav = document.querySelector('.site-nav');
+const position = document.querySelector('.position');
 
 const logoRect = logo.getBoundingClientRect();
 const logoHeight = Math.round(logoRect.height);
@@ -19,26 +20,6 @@ const navExp = document.querySelector('.nav-item-exp');
 const navContact = document.querySelector('.nav-item-contact');
 
 const divider = document.querySelector('.divider');
-
-
-function debounce(func, wait = 10, immediate = true) {
-    var timeout;
-
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-
-            if(!immediate) func.apply(context, args);
-        };
-
-        var callNow = immediate && !timeout;
-
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
 
 // check if element is fully in viewport
 function isInViewport(elem) {
@@ -72,12 +53,14 @@ function checkPosition() {
     if(scroll > logoTrigger) {
         logo.classList.add('reveal');
         logoContainer.classList.add('fade-out');
-        nav.classList.add('bottom-header');
+        //nav.classList.add('bottom-header');
+        position.classList.add('reveal');
 
     } else {
         logo.classList.remove('reveal');
         logoContainer.classList.remove('fade-out');
-        nav.classList.remove('bottom-header');
+        position.classList.remove('reveal');
+        //nav.classList.remove('bottom-header');
     }
 
     if( (scroll > 68) && (isInView( contact )) ) {

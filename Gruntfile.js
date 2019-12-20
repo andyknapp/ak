@@ -35,22 +35,12 @@ module.exports = function(grunt) {
           },
         },
 
-        criticalcss: {
-          'home' : {
-            options: {
-              outputfile : 'css/critical/critical.css',
-              filename : 'css/style.css',
-              url : 'http://ak.test/'
-            }
-          }
-        },
-
         // minify css
         cssmin: {
           target: {
             files: {
-              'css/style.min.css': ['css/style.css'],
-              'css/critical.min.css': ['css/critical/home.css']
+              'css/style.min.css': ['css/style.css']
+              //'css/critical.min.css': ['css/critical.css']
             }
           }
         },
@@ -66,12 +56,22 @@ module.exports = function(grunt) {
           },
           css: {
             files: ['css/sass/**/*.scss'],
-            tasks: ['sass', 'autoprefixer', 'cssmin'],
+            tasks: ['sass', 'autoprefixer'],
             options: {
                 spawn: false,
             }
           }
         },
+
+        // criticalcss: {
+        //     options: {
+        //         url : 'http://ak.test',
+        //         width: 1200,
+        //         height: 2900,
+        //         filename : 'http://ak.test/css/style.css',
+        //         outputfile : 'http://ak.test/css/critical.css',
+        //     }
+        // },
 
         // Live reload of style sheet in browser
         browserSync: {
@@ -81,6 +81,7 @@ module.exports = function(grunt) {
             },
             options: {
               watchTask: true,
+              open: false,
               ghostMode: {
                 clicks: true,
                 forms: true,
@@ -102,5 +103,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'browserSync', 'criticalcss', 'watch']);
+    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'browserSync', 'watch']);
 };

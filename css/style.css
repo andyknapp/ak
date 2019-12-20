@@ -777,11 +777,13 @@ body {
 
 /* line 94, sass/base/_global.scss */
 .position {
-  display: block;
   letter-spacing: 3px;
   text-transform: lowercase;
   font-weight: 900;
   color: #212121;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 /* line 7, sass/utils/_mixins.scss */
 .position {
@@ -799,37 +801,41 @@ body {
     font-size: 1.125em;
   }
 }
+/* line 104, sass/base/_global.scss */
+.position.reveal {
+  opacity: 1;
+}
 
-/* line 105, sass/base/_global.scss */
+/* line 111, sass/base/_global.scss */
 .experience-block {
   margin-bottom: 5em;
 }
 @media (min-width: 50em) {
-  /* line 105, sass/base/_global.scss */
+  /* line 111, sass/base/_global.scss */
   .experience-block {
     margin-bottom: 13em;
   }
 }
 
-/* line 114, sass/base/_global.scss */
+/* line 120, sass/base/_global.scss */
 .experience-header {
   margin-bottom: 1em;
 }
-/* line 117, sass/base/_global.scss */
+/* line 123, sass/base/_global.scss */
 .experience-header .header-group {
   padding-bottom: 0.5em;
 }
-/* line 121, sass/base/_global.scss */
+/* line 127, sass/base/_global.scss */
 .experience-header .headline-xs {
   margin-bottom: 0.75em;
   color: #5d5c5c;
 }
-/* line 126, sass/base/_global.scss */
+/* line 132, sass/base/_global.scss */
 .experience-header .headline-sub {
   color: #5d5c5c;
 }
 @media (min-width: 50em) {
-  /* line 114, sass/base/_global.scss */
+  /* line 120, sass/base/_global.scss */
   .experience-header {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -845,21 +851,21 @@ body {
     align-items: flex-end;
     margin-bottom: 3em;
   }
-  /* line 137, sass/base/_global.scss */
+  /* line 143, sass/base/_global.scss */
   .experience-header .header-group {
     padding-bottom: 0;
   }
-  /* line 141, sass/base/_global.scss */
+  /* line 147, sass/base/_global.scss */
   .experience-header .headline-sub {
     margin-bottom: 0.25em;
   }
-  /* line 145, sass/base/_global.scss */
+  /* line 151, sass/base/_global.scss */
   .experience-header .headline-xs {
     margin-bottom: 0.5em;
   }
 }
 
-/* line 152, sass/base/_global.scss */
+/* line 158, sass/base/_global.scss */
 .divider {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -880,14 +886,14 @@ body {
   -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-/* line 163, sass/base/_global.scss */
+/* line 169, sass/base/_global.scss */
 .divider.in-view {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
   -ms-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
-/* line 169, sass/base/_global.scss */
+/* line 175, sass/base/_global.scss */
 .divider::after {
   content: '';
   display: block;
@@ -900,7 +906,7 @@ body {
   background-color: #5d5c5c;
   z-index: -2;
 }
-/* line 182, sass/base/_global.scss */
+/* line 188, sass/base/_global.scss */
 .divider .headline-sub {
   position: relative;
   margin: 0;
@@ -909,7 +915,7 @@ body {
   letter-spacing: 0;
   color: #5d5c5c;
 }
-/* line 190, sass/base/_global.scss */
+/* line 196, sass/base/_global.scss */
 .divider .headline-sub::before {
   content: '';
   display: block;
@@ -922,32 +928,32 @@ body {
   z-index: -1;
 }
 @media (min-width: 50em) {
-  /* line 152, sass/base/_global.scss */
+  /* line 158, sass/base/_global.scss */
   .divider {
     margin-bottom: 13em;
   }
 }
 
-/* line 212, sass/base/_global.scss */
+/* line 218, sass/base/_global.scss */
 .contact {
   padding: 2.5em 0;
 }
-/* line 215, sass/base/_global.scss */
+/* line 221, sass/base/_global.scss */
 .contact .project {
   max-width: 51em;
 }
-/* line 218, sass/base/_global.scss */
+/* line 224, sass/base/_global.scss */
 .contact .project .flex-row {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-/* line 222, sass/base/_global.scss */
+/* line 228, sass/base/_global.scss */
 .contact .project .flex-child {
   width: calc(50% - 0.4em);
 }
 
-/* line 228, sass/base/_global.scss */
+/* line 234, sass/base/_global.scss */
 button,
 input,
 textarea {
@@ -955,60 +961,60 @@ textarea {
   border-radius: 0;
 }
 
-/* line 237, sass/base/_global.scss */
+/* line 243, sass/base/_global.scss */
 .submit {
   display: block;
   width: 100%;
-  max-width: 11.42857em;
-  padding: 0.57143em 0;
+  max-width: 11.4285714286em;
+  padding: 0.5714285714em 0;
   text-align: center;
   border: 1px solid #1765BF;
   border-radius: 2px;
   -webkit-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
-/* line 247, sass/base/_global.scss */
+/* line 253, sass/base/_global.scss */
 .submit:focus {
   outline: 1px solid #B72B28;
   border-color: #B72B28;
 }
-/* line 252, sass/base/_global.scss */
+/* line 258, sass/base/_global.scss */
 .submit:hover {
   border-color: #B72B28;
   color: #B72B28;
 }
 
-/* line 260, sass/base/_global.scss */
+/* line 266, sass/base/_global.scss */
 .site-footer {
   width: 100%;
   padding: 0.5em;
   background-color: #fafafa;
 }
-/* line 265, sass/base/_global.scss */
+/* line 271, sass/base/_global.scss */
 .site-footer ul {
   position: relative;
   z-index: 2;
 }
-/* line 270, sass/base/_global.scss */
+/* line 276, sass/base/_global.scss */
 .site-footer li {
   display: inline-block;
   margin: 0 1em 0 0;
 }
-/* line 275, sass/base/_global.scss */
+/* line 281, sass/base/_global.scss */
 .site-footer a {
   color: #212121;
 }
-/* line 278, sass/base/_global.scss */
+/* line 284, sass/base/_global.scss */
 .site-footer a:hover {
   color: #B72B28;
 }
 @media (min-width: 43em) {
-  /* line 260, sass/base/_global.scss */
+  /* line 266, sass/base/_global.scss */
   .site-footer {
     padding-bottom: 1em;
     padding-left: 0;
   }
-  /* line 288, sass/base/_global.scss */
+  /* line 294, sass/base/_global.scss */
   .site-footer ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1020,7 +1026,7 @@ textarea {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  /* line 295, sass/base/_global.scss */
+  /* line 301, sass/base/_global.scss */
   .site-footer li:first-of-type {
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -1028,10 +1034,10 @@ textarea {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    margin-right: 0.66667em;
+    margin-right: 0.6666666667em;
     font-size: 12px;
   }
-  /* line 302, sass/base/_global.scss */
+  /* line 308, sass/base/_global.scss */
   .site-footer li:last-of-type {
     -webkit-order: 0;
     -ms-flex-order: 0;

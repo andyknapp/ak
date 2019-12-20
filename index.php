@@ -6,10 +6,7 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.min.css"> -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Rubik:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
@@ -58,11 +55,22 @@
 
   </div>
 
-  <script type="text/javascript">
-    <?php include('js/loadCSS.min.js'); ?>
-    <?php include('js/cssrelpreload.min.js'); ?>
-  </script>
-  <script src="js/site.js"></script>
+    <script src="js/site.js"></script>
+
+    <script>
+        // load webfonts async
+        WebFontConfig = {
+        google: { families: [ 'Open+Sans:300,400,600', 'Rubik:300,400,500,700,900' ] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
 
 </body>
 </html>
