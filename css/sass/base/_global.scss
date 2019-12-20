@@ -93,16 +93,19 @@ body {
 
 .position {
     @include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
-    //display: block;
+    display: block;
     letter-spacing: 3px;
     text-transform: lowercase;
     font-weight: 900;
     color: $color-black;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transform: translateY(1em);
+    // transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
 
     &.reveal {
         opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
     }
 }
 

@@ -81,7 +81,7 @@ module.exports = function(grunt) {
             },
             options: {
               watchTask: true,
-              open: false,
+              //sopen: false,
               ghostMode: {
                 clicks: true,
                 forms: true,
@@ -103,5 +103,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'browserSync', 'watch']);
 };

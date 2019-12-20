@@ -6,7 +6,7 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     <script>
         // load webfonts async
         WebFontConfig = {
-        google: { families: [ 'Open+Sans:300,400,600', 'Rubik:300,400,500,700,900' ] }
+        google: { families: [ 'Open+Sans:300,400,600', 'Rubik:400,500,700' ] }
         };
         (function() {
             var wf = document.createElement('script');
