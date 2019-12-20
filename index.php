@@ -55,7 +55,7 @@
 
   </div>
 
-    <script src="js/site.js?ver=1.0"></script>
+    <script src="js/site.js?ver=1.1"></script>
 
     <script>
         // load webfonts async
