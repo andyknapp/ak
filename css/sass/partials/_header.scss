@@ -40,7 +40,12 @@
     padding: $gap / 2 $gap / 2 $gap / 2;
     background-color: $color-white;
     z-index: 3;
-    transition: justify-content 0.2s ease;
+    transform: translateY(0);
+    transition: justify-content 0.2s ease, transform 0.2s ease;
+
+    &.bottomed-out {
+        transform: translateY(-40px);
+    }
 }
 
 .nav-item {

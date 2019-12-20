@@ -6,7 +6,7 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.0">
 </head>
 
 <body>
@@ -55,7 +55,7 @@
 
   </div>
 
-    <script src="js/site.js?ver=1.1"></script>
+    <script src="js/site.js?ver=1.01"></script>
 
     <script>
         // load webfonts async

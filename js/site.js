@@ -53,15 +53,15 @@ function checkPosition() {
     // move footer nav up to reveal actual footer
     if( vw < 688 ) {
         if( scroll > trigger ) {
-            nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
+            //nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
             nav.classList.add('bottomed-out');
 
         } else {
-            nav.style.transform = "translateY(0)";
+            //nav.style.transform = "translateY(0)";
             nav.classList.remove('bottomed-out');
         }
     } else {}
-    
+
 
     // initial logo transition
     if(scroll > logoTrigger) {
