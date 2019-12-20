@@ -19,7 +19,7 @@
 
             <div class="logo-container">
 
-                <?php include('logo/andyknapp-test.svg'); ?>
+                <?php include('logo/andyknapp.svg'); ?>
 
                 <span class="position">Web Developer</span>
             </div>
@@ -27,16 +27,26 @@
 
         <nav class="site-nav">
             <span class="nav-logo"><?php include('logo/ak.svg'); ?></span>
-            <a href="#lead-block" class="nav-item">Experience</a>
-            <a href="#contact" class="nav-item">Contact</a>
+            <a href="#lead-block" class="nav-item nav-item-exp">Experience</a>
+            <a href="#contact" class="nav-item nav-item-contact">Contact</a>
         </nav>
 
         <main class="main-content">
 
-            <?php
-                include('components/experience.php');
-                include('components/contact.php');
-            ?>
+            <?php include('components/experience.php'); ?>
+
+            <section id="contact" class="experience-block">
+                <header class="section-title experience-header">
+                    <div class="header-group">
+                        <h2 class="headline-xs">comments / inquiries</h2>
+                        <h3 class="title-m">Contact Me</h3>
+                    </div>
+                </header>
+
+                <div class="experience-description">
+                    <p>Have a question? Want to work together? You can reach me over <a href="mailto:aknapp1@gmail.com" target="_blank">email</a> or <a href="https://twitter.com/_aknapp" target="_blank" >Twitter DM</a>.</p>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer" role="contentinfo">
@@ -52,9 +62,7 @@
     <?php include('js/loadCSS.min.js'); ?>
     <?php include('js/cssrelpreload.min.js'); ?>
   </script>
-  <script src="js/scroll.js"></script>
-
-  <?php include('icons/svg-defs.svg'); ?>
+  <script src="js/site.js"></script>
 
 </body>
 </html>

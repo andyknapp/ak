@@ -3,23 +3,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Concats javascript files
-        // concat: {
-        //   basic: {
-        //     src: [
-        //       'js/global/*.js',
-        //       '!js/global.js',
-        //       '!js/global.min.js'
-        //     ],
-        //     dest: 'js/global.js',
-        //   },
-        // },
-
         // Minifies javascript files
         uglify: {
           build: {
-            src: 'js/global.js',
-            dest: 'js/global.min.js'
+            src: 'js/site.js',
+            dest: 'js/site.min.js'
           }
         },
 
@@ -50,9 +38,9 @@ module.exports = function(grunt) {
         criticalcss: {
           'home' : {
             options: {
-              outputfile : 'css/critical/home.css',
+              outputfile : 'css/critical/critical.css',
               filename : 'css/style.css',
-              url : 'http://ak.dev/'
+              url : 'http://ak.test/'
             }
           }
         },
@@ -63,22 +51,6 @@ module.exports = function(grunt) {
             files: {
               'css/style.min.css': ['css/style.css'],
               'css/critical.min.css': ['css/critical/home.css']
-            }
-          }
-        },
-
-        // svg sprite system
-        svgstore: {
-          options: {
-            prefix : 'icon-',
-            cleanup : ['fill'],
-            svg: {
-              style : 'display:none;'
-            }
-          },
-          default : {
-            files: {
-              'icons/svg-defs.svg': ['icons/svg/*.svg'],
             }
           }
         },
@@ -125,11 +97,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    //grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-svgstore');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'browserSync', 'criticalcss', 'watch']);
 };

@@ -7,18 +7,6 @@ html, body {
 body {
     position: relative;
     background-color: $color-white;
-
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     position: fixed;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     width: 0.75em;
-    //     height: 100%;
-    //     background-image: linear-gradient(top, rgba($color-blue, 1) 0%, rgba($color-orange, 1) 50%, rgba($color-red, 1) 100%);
-    // }
 }
 
 
@@ -168,6 +156,15 @@ body {
     margin-bottom: 5em;
     position: relative;
     text-align: center;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+    &.in-view {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+
+    }
 
     &::after {
         content: '';
@@ -206,5 +203,111 @@ body {
 
     @media (min-width: $bp-bg) {
         margin-bottom: 13em;
+    }
+}
+
+
+
+// contact section
+.contact {
+    padding: 2.5em 0;
+
+    .project {
+        max-width: 51em;
+
+        .flex-row {
+            justify-content: space-between;
+        }
+
+        .flex-child {
+            width: calc(50% - 0.4em);
+        }
+    }
+}
+
+button,
+input,
+textarea {
+    border: none;
+    border-radius: 0;
+}
+
+
+// buttons
+.submit {
+    display: block;
+    width: 100%;
+    max-width: (160 / 14)*1em;
+    padding: (8/14) * 1em 0;
+    text-align: center;
+    border: 1px solid $color-blue;
+    border-radius: 2px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:focus {
+        outline: 1px solid $color-orange;
+        border-color: $color-orange;
+    }
+
+    &:hover {
+        border-color: $color-orange;
+        color: $color-orange;
+    }
+}
+
+
+
+.site-footer {
+    width: 100%;
+    padding: $gap / 4;
+    background-color: $color-white;
+
+    ul {
+        position: relative;
+        z-index: 2;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+    }
+
+    a {
+        color: $color-black;
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
+
+
+    @media (min-width: $bp-m) {
+        padding-bottom: 1em;
+        padding-left: 0;
+
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        li {
+            &:first-of-type {
+                order: 1;
+                align-self: center;
+                margin-right: (8 / 12) * 1em;
+                font-size: 12px;
+            }
+
+            &:last-of-type {
+                order: 0;
+                margin-right: 0;
+                line-height: 1.5;
+                color: $color-black;
+                font-size: 1em;
+                font-family: $rubik;
+                font-weight: 400;
+            }
+        }
     }
 }

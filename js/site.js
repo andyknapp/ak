@@ -14,9 +14,11 @@ const logoHeight = Math.round(logoRect.height);
 const logoBottom = Math.round(logoRect.bottom);
 const logoTrigger = (logoBottom - logoHeight);
 
-const leadBlock = document.querySelector('#lead-block');
-const secondaryBlock = document.querySelector('#secondary-block');
-const tertiaryBlock = document.querySelector('#tertiary-block');
+const contact = document.querySelector('#contact');
+const navExp = document.querySelector('.nav-item-exp');
+const navContact = document.querySelector('.nav-item-contact');
+
+const divider = document.querySelector('.divider');
 
 
 function debounce(func, wait = 10, immediate = true) {
@@ -38,6 +40,28 @@ function debounce(func, wait = 10, immediate = true) {
     };
 };
 
+// check if element is fully in viewport
+function isInViewport(elem) {
+    var bounding = elem.getBoundingClientRect();
+
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+
+// check if element is above bottom of viewport
+function isInView(elem) {
+    var bounding = elem.getBoundingClientRect();
+
+    return (
+        bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
+
 
 function checkPosition() {
     const scroll = window.scrollY;
@@ -56,17 +80,22 @@ function checkPosition() {
         nav.classList.remove('bottom-header');
     }
 
-    // move footer nav up to reveal actual footer
-    if( vw < 688 ) {
-        if( scroll > trigger ) {
-            nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
-            nav.classList.add('bottomed-out');
+    if( (scroll > 68) && (isInView( contact )) ) {
+        navContact.classList.add('active');
+        navExp.classList.remove('active');
 
-        } else {
-            nav.style.transform = "translateY(0)";
-            nav.classList.remove('bottomed-out');
-        }
-    } else {}
+    } else if( scroll > 68 ) {
+        navExp.classList.add('active');
+        navContact.classList.remove('active');
+
+    } else {
+        navExp.classList.remove('active');
+        navContact.classList.remove('active');
+    }
+
+    if( isInViewport(divider) ) {
+        divider.classList.add('in-view');
+    }
 }
 
 
