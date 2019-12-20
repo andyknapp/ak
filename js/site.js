@@ -53,14 +53,12 @@ function checkPosition() {
     if(scroll > logoTrigger) {
         logo.classList.add('reveal');
         logoContainer.classList.add('fade-out');
-        //nav.classList.add('bottom-header');
         position.classList.add('reveal');
 
     } else {
         logo.classList.remove('reveal');
         logoContainer.classList.remove('fade-out');
         position.classList.remove('reveal');
-        //nav.classList.remove('bottom-header');
     }
 
     if( (scroll > 68) && (isInView( contact )) ) {
