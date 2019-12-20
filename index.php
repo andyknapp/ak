@@ -6,7 +6,7 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
