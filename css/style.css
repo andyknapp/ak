@@ -359,27 +359,27 @@ img {
 }
 @-webkit-keyframes fadeOut3d {
   0% {
-    -webkit-transform: scale3d(1, 1, 1) skewX(0) translateX(0);
-    transform: scale3d(1, 1, 1) skewX(0) translateX(0);
+    -webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+    transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
-    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
+    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
+    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
     opacity: 0;
   }
 }
 @keyframes fadeOut3d {
   0% {
-    -webkit-transform: scale3d(1, 1, 1) skewX(0) translateX(0);
-    -ms-transform: scale3d(1, 1, 1) skewX(0) translateX(0);
-    transform: scale3d(1, 1, 1) skewX(0) translateX(0);
+    -webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+    -ms-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+    transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
-    -ms-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
-    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translateX(-10%);
+    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
+    -ms-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
+    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
     opacity: 0;
   }
 }
@@ -1267,26 +1267,29 @@ textarea {
     -webkit-transform-origin: 12% 7%;
     -ms-transform-origin: 12% 7%;
     transform-origin: 12% 7%;
+    -webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+    -ms-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+    transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
   }
-  /* line 150, sass/partials/_header.scss */
+  /* line 151, sass/partials/_header.scss */
   .logo .clone.k {
     fill: transparent;
     -webkit-transform: translate3d(-35%, 0, 0);
     -ms-transform: translate3d(-35%, 0, 0);
     transform: translate3d(-35%, 0, 0);
   }
-  /* line 156, sass/partials/_header.scss */
+  /* line 157, sass/partials/_header.scss */
   .logo.reveal .lower,
   .logo.reveal .upper.k {
     -webkit-animation: fadeOut3d 0.35s ease-in forwards;
     animation: fadeOut3d 0.35s ease-in forwards;
   }
-  /* line 161, sass/partials/_header.scss */
+  /* line 162, sass/partials/_header.scss */
   .logo.reveal .upper.a {
     -webkit-animation: fadeDraw 3s ease forwards;
     animation: fadeDraw 3s ease forwards;
   }
-  /* line 165, sass/partials/_header.scss */
+  /* line 166, sass/partials/_header.scss */
   .logo.reveal .clone.k {
     -webkit-animation: draw 3s 0.665s ease forwards;
     animation: draw 3s 0.665s ease forwards;

@@ -145,6 +145,7 @@
         .lower,
         .upper.k {
             transform-origin: 12% 7%;
+            transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
         }
 
         .clone.k {
