@@ -6,7 +6,7 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.0458">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38353868-1"></script>
