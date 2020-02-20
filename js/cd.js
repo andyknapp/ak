@@ -1,26 +1,44 @@
 function renderResults(response, rawResponse) {
-    var el = document.getElementById('results');
+    var results = document.querySelector('#results');
 
     if(!response || response.error) {
-        el.appendChild(document.createTextNode('Error trying to fetch representative data'));
+        results.appendChild(document.createTextNode('Error trying to fetch representative data'));
         return;
     }
 
-    // queried address
-    var normalizedAddress = response.normalizedInput.line1 + ' ' +
-        response.normalizedInput.city + ', ' +
+    var divisions = response.divisions,
+        offices = response.offices,
+        officials = response.officials,
+        state = response.normalizedInput.state,
+        zip = response.normalizedInput.zip,
+        normalizedAddress = response.normalizedInput.line1 + ' ' + response.normalizedInput.city + ', ' +
         response.normalizedInput.state + ' ' +
         response.normalizedInput.zip;
 
 
+    function getDivisions() {
+        for (var key in divisions) {
+            var divisionName = divisions[key].name;
+        }
+    }
 
-    var divisions = response.divisions,
-        offices = response.offices,
-        officials = response.officials;
+    function outputContent(data) {
+        var source = document.querySelector('#office-block-template').innerHTML,
+            template = Handlebars.compile(source),
+            markup = template(data);
+        console.log(data);
 
+        results.innerHTML = markup;
+    }
 
     // build object for each office
-    function office() {
+    function buildOffice() {
+        var queriedOffices = {};
+
+        queriedOffices = {
+            offices: [],
+        }
+
         for (var i = 0; i < offices.length; i++) {
             var officeObj = {};
 
@@ -54,36 +72,14 @@ function renderResults(response, rawResponse) {
                 }
 
                 if( offices[i].officialIndices.includes(r) ) {
-                    //officeObj['officials'] = officialsObj;
                     officeObj.officials.push(officialsObj);
                 }
             }
-
-            console.log(officeObj);
+            queriedOffices.offices[i] = officeObj;
         }
+
+        outputContent(queriedOffices);
     }
 
-    office();
-
-}
-
-function showProps(obj, objName) {
-  var result = ``;
-  for (var i in obj) {
-    // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
-    if (obj.hasOwnProperty(i)) {
-      result += `${objName}.${i} = ${obj[i]}\n`;
-    }
-  }
-  return result;
-}
-
-
-function contains(a, obj) {
-    for (var i = 0; i < a.length; i++) {
-        if (a[i] === obj) {
-            return true;
-        }
-    }
-    return false;
+    buildOffice();
 }

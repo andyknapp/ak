@@ -59,11 +59,7 @@
     </header>
 
 
-    <main id="results" class="main-content">
-        <section class="state-level">
-
-        </section>
-    </main>
+    <main id="results" class="main-content"></main>
 
     <footer class="site-footer" role="contentinfo">
         <ul>
@@ -71,7 +67,18 @@
         </ul>
     </footer>
 
+    <script src="js/handlebars-v4.7.3.js"></script>
     <script src="js/cd.js"></script>
+
+    <script id="office-block-template" type="text/x-handlebars-template">
+    	{{#each offices}}
+    		<div class="grid-item">
+                <p>{{officeName}}</p>
+
+    		</div>
+    	{{/each}}
+
+    </script>
 
     <script>
         // load webfonts async
