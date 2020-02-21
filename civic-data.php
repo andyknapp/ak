@@ -9,57 +9,52 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01">
 
     <script>
-    /**
-    * Build and execute request to look up voter info for provided address.
-    * @param {string} address Address for which to fetch voter info.
-    * @param {function(Object)} callback Function which takes the
-    *     response object as a parameter.
-    */
+        /**
+        * Build and execute request to look up voter info for provided address.
+        * @param {string} address Address for which to fetch voter info.
+        * @param {function(Object)} callback Function which takes the
+        *     response object as a parameter.
+        */
 
-    function lookup(address, callback) {
-    /**
-      * Election ID for which to fetch voter info.
-      * @type {number}
-      */
+        function lookup(address, callback) {
+            /**
+              * Election ID for which to fetch voter info.
+              * @type {number}
+              */
+             var electionId = 2000;
 
-     var electionId = 2000;
+             /**
+              * Request object for given parameters.
+              * @type {gapi.client.HttpRequest}
+              */
 
-     /**
-      * Request object for given parameters.
-      * @type {gapi.client.HttpRequest}
-      */
+             var req = gapi.client.request({
+                 'path' : '/civicinfo/v2/representatives',
+                 'params' : {'address' : address}
+             });
 
-     var req = gapi.client.request({
-         'path' : '/civicinfo/v2/representatives',
-         'params' : {'address' : address}
-     });
+            req.execute(callback);
+        }
 
-    req.execute(callback);
-   }
+        /**
+           * Initialize the API client and make a request.
+         */
 
-
-    /**
-       * Initialize the API client and make a request.
-     */
-
-      function load() {
-        gapi.client.setApiKey('AIzaSyAShkkEK7y2pbgdOsGeBBLbT6RxLze9Unw');
-        lookup('304 Spalding Rd. Wilmington DE', renderResults);
-      }
+        function load() {
+            gapi.client.setApiKey('AIzaSyAShkkEK7y2pbgdOsGeBBLbT6RxLze9Unw');
+            lookup('304 Spalding Rd. Wilmington DE', renderResults);
+        }
     </script>
-
-
     <script src="https://apis.google.com/js/client.js?onload=load"></script>
-
 </head>
 
 <body>
-    <header id="header" class="site-header">
-        <h1>WTF Do these People Do?</h1>
+    <header id="header" class="cd-header">
+        <h1 class="title-l">WTF Do these People Do?</h1>
     </header>
 
 
-    <main id="results" class="main-content"></main>
+    <main id="results" class="results-content"></main>
 
     <footer class="site-footer" role="contentinfo">
         <ul>
@@ -71,11 +66,17 @@
     <script src="js/cd.js"></script>
 
     <script id="office-block-template" type="text/x-handlebars-template">
-    	{{#each offices}}
-    		<div class="grid-item">
-                <p>{{officeName}}</p>
+    	{{#each divisions}}
+            <section class="division">
+                <h2 class="title-m">{{divisionName}}</h2>
 
-    		</div>
+                {{#each divisionOffices}}
+                    <div class="office" data-office-level="{{officeLevel}}">
+                        <h3 class="title-s">{{officeName}}</h3>
+                    </div>
+                {{/each}}
+            </section>
+
     	{{/each}}
 
     </script>

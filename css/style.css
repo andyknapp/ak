@@ -1295,5 +1295,9 @@ textarea {
     animation: draw 3s 0.665s ease forwards;
   }
 }
+/* line 1, sass/pages/_civic-data.scss */
+.cd-header {
+  padding: 1em;
+}
 
 /*# sourceMappingURL=style.css.map */

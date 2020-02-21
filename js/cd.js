@@ -6,6 +6,8 @@ function renderResults(response, rawResponse) {
         return;
     }
 
+    console.log(response);
+
     var divisions = response.divisions,
         offices = response.offices,
         officials = response.officials,
@@ -16,29 +18,54 @@ function renderResults(response, rawResponse) {
         response.normalizedInput.zip;
 
 
-    function getDivisions() {
-        for (var key in divisions) {
-            var divisionName = divisions[key].name;
-        }
-    }
+    // function getDivisions() {
+    //     for (var key in divisions) {
+    //         var divisionName = divisions[key].name;
+    //     }
+    // }
 
     function outputContent(data) {
         var source = document.querySelector('#office-block-template').innerHTML,
             template = Handlebars.compile(source),
             markup = template(data);
-        console.log(data);
 
         results.innerHTML = markup;
+    }
+
+    function count(obj) {
+        var count = 0;
+
+        for(var prop in obj) {
+            if(obj.hasOwnProperty(prop))
+            ++count;
+        }
+
+        return count;
     }
 
     // build object for each office
     function buildOffice() {
         var queriedOffices = {};
-
+        // set up main object
         queriedOffices = {
             offices: [],
+            divisions: [],
         }
 
+        // get each division and set up array for offices
+        for (var key in divisions) {
+            var divisionObj = {};
+
+            divisionObj = {
+                divisionName: divisions[key].name,
+                divisionFormal: key,
+                divisionOffices: [],
+            }
+
+            queriedOffices['divisions'].push(divisionObj);
+        }
+
+        // create office level data
         for (var i = 0; i < offices.length; i++) {
             var officeObj = {};
 
@@ -48,13 +75,6 @@ function renderResults(response, rawResponse) {
                 officeRoles: offices[i].roles,
                 officeOfficials: offices[i].officialIndices,
                 officials: [],
-            }
-
-            // check division and assign to office
-            for (var key in divisions) {
-                if( divisions[key].officeIndices.includes(i) ) {
-                    officeObj['division'] = divisions[key].name;
-                }
             }
 
             // loop through officials and assign to office object
@@ -75,8 +95,30 @@ function renderResults(response, rawResponse) {
                     officeObj.officials.push(officialsObj);
                 }
             }
+
+            for (var key in divisions) {
+                // assign div name to office object
+                if( divisions[key].officeIndices.includes(i) ) {
+                    officeObj['division'] = divisions[key].name;
+                }
+            }
+
+            // add offices to offices object
             queriedOffices.offices[i] = officeObj;
         }
+
+        // loop through divisions and add offices
+        for (var d = 0; d < queriedOffices.divisions.length; d++) {
+            var division = queriedOffices.divisions[d].divisionName;
+
+            for (var f = 0; f < queriedOffices.offices.length; f++) {
+                if( queriedOffices.divisions[d].divisionName === queriedOffices.offices[f].division ) {
+                    queriedOffices.divisions[d].divisionOffices.push(queriedOffices.offices[f]);
+                }
+            }
+        }
+
+        console.log(queriedOffices);
 
         outputContent(queriedOffices);
     }
