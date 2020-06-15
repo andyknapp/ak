@@ -1,3 +1,60 @@
 .cd-header {
     padding: 1em;
 }
+
+.results-content {
+    padding: 1em 0 1em 1em;
+}
+
+.division-grid {
+    @media (min-width: 500px) {
+        display: flex;
+        flex-flow: row wrap;
+
+        .office {
+            width: calc(50% - 1em);
+            max-width: 800px;
+        }
+    }
+}
+
+.office {
+    margin: 0 1em 1em 0;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.office-header {
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+.office-title {
+    margin: 0;
+}
+
+
+.official-grid {
+    @media (min-width: 1400px) {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.official-block {
+    padding: 1em;
+
+    @media (min-width: 1400px) {
+        width: 50%;
+    }
+}
+
+.official-title {
+    margin: 0;
+}
+
+.official-meta {
+    span {
+        display: block;
+    }
+}

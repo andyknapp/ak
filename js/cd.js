@@ -1,3 +1,13 @@
+function getState() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const st = urlParams.get('st');
+
+    console.log(st);
+}
+
+getState();
+
+
 function renderResults(response, rawResponse) {
     var results = document.querySelector('#results');
 
@@ -32,17 +42,6 @@ function renderResults(response, rawResponse) {
         results.innerHTML = markup;
     }
 
-    function count(obj) {
-        var count = 0;
-
-        for(var prop in obj) {
-            if(obj.hasOwnProperty(prop))
-            ++count;
-        }
-
-        return count;
-    }
-
     // build object for each office
     function buildOffice() {
         var queriedOffices = {};
@@ -54,15 +53,17 @@ function renderResults(response, rawResponse) {
 
         // get each division and set up array for offices
         for (var key in divisions) {
-            var divisionObj = {};
+            if( key !== 'ocd-division/country:us') {
+                var divisionObj = {};
 
-            divisionObj = {
-                divisionName: divisions[key].name,
-                divisionFormal: key,
-                divisionOffices: [],
+                divisionObj = {
+                    divisionName: divisions[key].name,
+                    divisionFormal: key,
+                    divisionOffices: [],
+                }
+
+                queriedOffices['divisions'].push(divisionObj);
             }
-
-            queriedOffices['divisions'].push(divisionObj);
         }
 
         // create office level data
@@ -110,6 +111,7 @@ function renderResults(response, rawResponse) {
         // loop through divisions and add offices
         for (var d = 0; d < queriedOffices.divisions.length; d++) {
             var division = queriedOffices.divisions[d].divisionName;
+            //console.log(queriedOffices.divisions[d].divisionFormal);
 
             for (var f = 0; f < queriedOffices.offices.length; f++) {
                 if( queriedOffices.divisions[d].divisionName === queriedOffices.offices[f].division ) {

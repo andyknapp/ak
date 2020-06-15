@@ -6,8 +6,18 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01">
+    <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.01">
+</head>
 
+<body>
+    <?php
+        if( isset( $GET_['st'] ) ) {
+            $state = $_GET['st'];
+        } else {
+            $state = 'delaware';
+        }
+
+    ?>
     <script>
         /**
         * Build and execute request to look up voter info for provided address.
@@ -36,21 +46,17 @@
             req.execute(callback);
         }
 
-        /**
-           * Initialize the API client and make a request.
-         */
-
-        function load() {
+         //Initialize the API client and make a request.
+        function loadState() {
             gapi.client.setApiKey('AIzaSyAShkkEK7y2pbgdOsGeBBLbT6RxLze9Unw');
-            lookup('304 Spalding Rd. Wilmington DE', renderResults);
+            lookup('<?php echo $state; ?>', renderResults);
         }
     </script>
-    <script src="https://apis.google.com/js/client.js?onload=load"></script>
-</head>
 
-<body>
+
     <header id="header" class="cd-header">
-        <h1 class="title-l">WTF Do these People Do?</h1>
+        <h1 class="title-l"><?php echo $state; ?></h1>
+        <h2 class="headline-xs">WTF Do these People Do?</h2>
     </header>
 
 
@@ -62,6 +68,11 @@
         </ul>
     </footer>
 
+
+
+
+
+    <script src="https://apis.google.com/js/client.js?onload=loadState"></script>
     <script src="js/handlebars-v4.7.3.js"></script>
     <script src="js/cd.js"></script>
 
@@ -70,11 +81,37 @@
             <section class="division">
                 <h2 class="title-m">{{divisionName}}</h2>
 
-                {{#each divisionOffices}}
-                    <div class="office" data-office-level="{{officeLevel}}">
-                        <h3 class="title-s">{{officeName}}</h3>
-                    </div>
-                {{/each}}
+                <div class="division-grid">
+                    {{#each divisionOffices}}
+                        <div class="office" data-office-level="{{officeLevel}}">
+
+                            <header class="office-header">
+                                <h3 class="title-s office-title">{{officeName}}</h3>
+                                <p><strong>What does a {{officeName}} do?</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <a href="/">more...</a></p>
+
+                                <p><strong>Why should you care?</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <a href="/">more...</a></p>
+                            </header>
+
+                            <div class="official-grid">
+
+                                {{#each officials}}
+                                    <div class="official-block">
+                                        <h4 class="official-title">{{officialName}}</h4>
+                                        <div class="official-meta">
+                                            <span>{{officialParty}}</span>
+                                            <span>{{officialUrls}}</span>
+                                            <span>{{officialPhones}}</span>
+
+                                            {{#each officialChannels}}
+                                                <span>{{this.type}} {{this.id}}</span>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
             </section>
 
     	{{/each}}
@@ -84,7 +121,7 @@
     <script>
         // load webfonts async
         WebFontConfig = {
-        google: { families: [ 'Open+Sans:300,400,600', 'Rubik:400,500,700' ] }
+            google: { families: [ 'Open+Sans:300,400,600', 'Rubik:400,500,700' ] }
         };
         (function() {
             var wf = document.createElement('script');
