@@ -15,7 +15,10 @@ const logoHeight = Math.round(logoRect.height);
 const logoBottom = Math.round(logoRect.bottom);
 const logoTrigger = (logoBottom - logoHeight);
 
+const work = document.querySelector('#work');
 const contact = document.querySelector('#contact');
+const experience = document.querySelector('#experience');
+const navWork = document.querySelector('.nav-item-work');
 const navExp = document.querySelector('.nav-item-exp');
 const navContact = document.querySelector('.nav-item-contact');
 
@@ -39,7 +42,8 @@ function isInView(elem) {
     var bounding = elem.getBoundingClientRect();
 
     return (
-        bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
+        bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.bottom >= ((window.innerHeight / 2) || (document.documentElement.clientHeight / 2))
     );
 };
 
@@ -77,18 +81,28 @@ function checkPosition() {
         nav.classList.remove('bottom-header');
     }
 
-    if( (scroll > 68) && (isInView( contact )) ) {
-        navContact.classList.add('active');
+    // highlight active nav item
+    if ( isInView( work ) ) {
+        navWork.classList.add('active');
         navExp.classList.remove('active');
-
-    } else if( scroll > 68 ) {
-        navExp.classList.add('active');
         navContact.classList.remove('active');
 
+    } else if ( isInView( experience ) ) {
+        navExp.classList.add('active');
+        navWork.classList.remove('active');
+        navContact.classList.remove('active');
+
+    } else if ( isInView( contact ) ) {
+        navContact.classList.add('active');
+        navExp.classList.remove('active');
+        navWork.classList.remove('active');
+
     } else {
+        navWork.classList.remove('active');
         navExp.classList.remove('active');
         navContact.classList.remove('active');
     }
+
 
     if( isInViewport(divider) ) {
         divider.classList.add('in-view');

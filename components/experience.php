@@ -1,7 +1,5 @@
-
-<div class="container-content">
-
-    <section id="lead-block" class="experience-block">
+<section id="experience">
+    <section class="experience-block">
         <header class="section-title experience-header">
             <div class="header-group">
                 <h2 class="headline-xs">Web Developer</h2>
@@ -86,4 +84,4 @@
             <p>Bachelor of Science, Marketing</p>
         </div>
     </section>
-</div>
+</section>

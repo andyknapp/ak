@@ -1145,6 +1145,7 @@ textarea {
 
 /* line 51, sass/partials/_header.scss */
 .nav-item {
+  margin-right: 2em;
   line-height: 1.5;
   color: #212121;
   font-family: "Rubik", sans-serif;
@@ -1156,27 +1157,24 @@ textarea {
   -webkit-transition: -webkit-transform 0.2s ease, color 0.2s ease;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-/* line 60, sass/partials/_header.scss */
-.nav-item:first-of-type {
-  margin-right: 2em;
-}
-/* line 64, sass/partials/_header.scss */
+/* line 61, sass/partials/_header.scss */
 .nav-item:last-of-type {
+  margin-right: 0;
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
 }
-/* line 68, sass/partials/_header.scss */
+/* line 66, sass/partials/_header.scss */
 .bottom-header .nav-item {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
-/* line 72, sass/partials/_header.scss */
+/* line 70, sass/partials/_header.scss */
 .nav-item.active, .nav-item:hover {
   color: #B72B28;
 }
 
-/* line 78, sass/partials/_header.scss */
+/* line 76, sass/partials/_header.scss */
 .nav-logo {
   display: block;
   width: 2em;
@@ -1189,7 +1187,7 @@ textarea {
   -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-/* line 87, sass/partials/_header.scss */
+/* line 85, sass/partials/_header.scss */
 .bottom-header .nav-logo {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -1198,13 +1196,13 @@ textarea {
 }
 
 @media (min-width: 43em) {
-  /* line 96, sass/partials/_header.scss */
+  /* line 94, sass/partials/_header.scss */
   .site-header {
     width: auto;
     padding: 0 0 1em 2em;
   }
 
-  /* line 101, sass/partials/_header.scss */
+  /* line 99, sass/partials/_header.scss */
   .site-nav {
     width: 15em;
     padding-left: 2em;
@@ -1212,30 +1210,26 @@ textarea {
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
-  /* line 106, sass/partials/_header.scss */
+  /* line 104, sass/partials/_header.scss */
   .bottom-header .site-nav {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
 
-  /* line 111, sass/partials/_header.scss */
+  /* line 109, sass/partials/_header.scss */
   .nav-item {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
-  /* line 114, sass/partials/_header.scss */
-  .nav-item:first-of-type {
-    margin-right: 3em;
-  }
 
-  /* line 119, sass/partials/_header.scss */
+  /* line 113, sass/partials/_header.scss */
   .nav-logo {
     display: none;
   }
 
-  /* line 124, sass/partials/_header.scss */
+  /* line 118, sass/partials/_header.scss */
   .logo-container.fade-out {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1243,25 +1237,25 @@ textarea {
     transform: scale(1);
   }
 
-  /* line 130, sass/partials/_header.scss */
+  /* line 124, sass/partials/_header.scss */
   .logo {
     stroke: transparent;
     stroke-width: 2px;
   }
-  /* line 134, sass/partials/_header.scss */
+  /* line 128, sass/partials/_header.scss */
   .logo .upper.a,
   .logo .clone.k {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke: #212121;
   }
-  /* line 141, sass/partials/_header.scss */
+  /* line 135, sass/partials/_header.scss */
   .logo .upper.a {
     -webkit-transform: translate3d(1px, 0, 0);
     -ms-transform: translate3d(1px, 0, 0);
     transform: translate3d(1px, 0, 0);
   }
-  /* line 145, sass/partials/_header.scss */
+  /* line 139, sass/partials/_header.scss */
   .logo .lower,
   .logo .upper.k {
     -webkit-transform-origin: 12% 7%;
@@ -1271,29 +1265,39 @@ textarea {
     -ms-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
     transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
   }
-  /* line 151, sass/partials/_header.scss */
+  /* line 145, sass/partials/_header.scss */
   .logo .clone.k {
     fill: transparent;
     -webkit-transform: translate3d(-35%, 0, 0);
     -ms-transform: translate3d(-35%, 0, 0);
     transform: translate3d(-35%, 0, 0);
   }
-  /* line 157, sass/partials/_header.scss */
+  /* line 151, sass/partials/_header.scss */
   .logo.reveal .lower,
   .logo.reveal .upper.k {
     -webkit-animation: fadeOut3d 0.35s ease-in forwards;
     animation: fadeOut3d 0.35s ease-in forwards;
   }
-  /* line 162, sass/partials/_header.scss */
+  /* line 156, sass/partials/_header.scss */
   .logo.reveal .upper.a {
     -webkit-animation: fadeDraw 3s ease forwards;
     animation: fadeDraw 3s ease forwards;
   }
-  /* line 166, sass/partials/_header.scss */
+  /* line 160, sass/partials/_header.scss */
   .logo.reveal .clone.k {
     -webkit-animation: draw 3s 0.665s ease forwards;
     animation: draw 3s 0.665s ease forwards;
   }
+}
+@media (min-width: 66em) {
+  /* line 169, sass/partials/_header.scss */
+  .nav-item {
+    margin-right: 3em;
+  }
+}
+/* line 1, sass/section/_work.scss */
+.showcase {
+  margin-bottom: 10em;
 }
 
 /*# sourceMappingURL=style.css.map */

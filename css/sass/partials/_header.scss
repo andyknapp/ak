@@ -49,6 +49,7 @@
 }
 
 .nav-item {
+    margin-right: 2em;
     line-height: 1.5;
     color: $color-black;
     font-family: $rubik;
@@ -57,11 +58,8 @@
     transform: translateX(-64px);
     transition: transform 0.2s ease, color 0.2s ease;
 
-    &:first-of-type {
-        margin-right: 2em;
-    }
-
     &:last-of-type {
+        margin-right: 0;
         transition-delay: 0.05s;
     }
 
@@ -110,10 +108,6 @@
 
     .nav-item {
         transform: translateX(0);
-
-        &:first-of-type {
-            margin-right: 3em;
-        }
     }
 
     .nav-logo {
@@ -167,5 +161,12 @@
                 @include k-draw;
             }
         }
+    }
+}
+
+
+@media (min-width: $bp-nav) {
+    .nav-item {
+        margin-right: 3em;
     }
 }
