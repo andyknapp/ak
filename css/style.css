@@ -1297,7 +1297,13 @@ textarea {
 }
 /* line 1, sass/section/_work.scss */
 .showcase {
-  margin-bottom: 10em;
+  margin-bottom: 5em;
+}
+@media (min-width: 50em) {
+  /* line 1, sass/section/_work.scss */
+  .showcase {
+    margin-bottom: 13em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

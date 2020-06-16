@@ -77,11 +77,11 @@ module.exports = function(grunt) {
         browserSync: {
           dev: {
             bsFiles: {
-              src : 'css/style.css'
+              src : 'css/style.min.css'
             },
             options: {
               watchTask: true,
-              //sopen: false,
+              open: false,
               ghostMode: {
                 clicks: true,
                 forms: true,

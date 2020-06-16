@@ -1,3 +1,7 @@
 .showcase {
-    margin-bottom: 10em;
+    margin-bottom: 5em;
+
+	@media (min-width: $bp-bg) {
+		margin-bottom: 13em;
+	}
 }

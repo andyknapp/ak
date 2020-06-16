@@ -47,11 +47,30 @@ function isInView(elem) {
     );
 };
 
+function logoState() {
+    var scroll = window.scrollY;
+    var trigger = height - vh - 40;
+    var vw = window.innerWidth;
+
+    if(scroll > logoTrigger) {
+        logo.classList.add('reveal');
+        logoContainer.classList.add('fade-out');
+        position.classList.add('reveal');
+        nav.classList.add('bottom-header');
+
+    } else {
+        logo.classList.remove('reveal');
+        logoContainer.classList.remove('fade-out');
+        position.classList.remove('reveal');
+        nav.classList.remove('bottom-header');
+    }
+}
+
 
 function checkPosition() {
-    const scroll = window.scrollY;
-    const trigger = height - vh - 40;
-    const vw = window.innerWidth;
+    var scroll = window.scrollY;
+    var trigger = height - vh - 40;
+    var vw = window.innerWidth;
 
 
     // move footer nav up to reveal actual footer
@@ -68,18 +87,20 @@ function checkPosition() {
 
 
     // initial logo transition
-    if(scroll > logoTrigger) {
-        logo.classList.add('reveal');
-        logoContainer.classList.add('fade-out');
-        position.classList.add('reveal');
-        nav.classList.add('bottom-header');
+    // if(scroll > logoTrigger) {
+    //     logo.classList.add('reveal');
+    //     logoContainer.classList.add('fade-out');
+    //     position.classList.add('reveal');
+    //     nav.classList.add('bottom-header');
+    //
+    // } else {
+    //     logo.classList.remove('reveal');
+    //     logoContainer.classList.remove('fade-out');
+    //     position.classList.remove('reveal');
+    //     nav.classList.remove('bottom-header');
+    // }
 
-    } else {
-        logo.classList.remove('reveal');
-        logoContainer.classList.remove('fade-out');
-        position.classList.remove('reveal');
-        nav.classList.remove('bottom-header');
-    }
+    logoState();
 
     // highlight active nav item
     if ( isInView( work ) ) {
@@ -109,6 +130,8 @@ function checkPosition() {
     }
 }
 
+
+logoState();
 
 window.addEventListener('scroll', checkPosition);
 window.addEventListener('resize', checkPosition);
