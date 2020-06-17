@@ -1,7 +1,56 @@
 .showcase {
     margin-bottom: 5em;
 
+    .container-content {
+        max-width: 100em;
+    }
+
 	@media (min-width: $bp-bg) {
 		margin-bottom: 13em;
 	}
+}
+
+.showcase-grid {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.work-example {
+    min-width: (240 / 16) * 1em;
+    width: 100%;
+    margin-bottom: 1em;
+
+    @media (min-width: $bp-s) {
+        width: calc(50% - 0.5em);
+    }
+
+    @media (min-width: $bp-m) {
+        width: 100%;
+    }
+
+    @media (min-width: $bp-nav) {
+        width: calc(50% - 0.5em);
+    }
+
+    @media (min-width: 100em) {
+        width: calc(33.3% - 0.5em);
+    }
+}
+
+.work-image {
+    margin-bottom: 0.25em;
+
+    img {
+        display: block;
+    }
+}
+
+.work-details {
+    .title-s {
+        margin: 0 0 0.25em;
+    }
+
+    li {
+        @extend .headline-sub;
+    }
 }

@@ -41,13 +41,13 @@
         </nav>
 
         <main class="main-content">
-            <div class="container-content">
+            <!-- <div class="container-content"> -->
 
                 <?php
                     include('components/work.php');
                     include('components/experience.php');
                 ?>
-            </div>
+            <!-- </div> -->
 
             <section id="contact" class="experience-block">
                 <header class="section-title experience-header">

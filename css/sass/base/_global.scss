@@ -16,7 +16,7 @@ body {
     margin-top: 100vh;
     padding: 0 $gap / 2 $footer;
     z-index: 2;
-    background-color: $color-white;
+    background-color: transparent;
 }
 
 .container-content {
@@ -46,23 +46,16 @@ body {
     }
 
     .main-content {
-        display: grid;
         grid-area: main;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'resume'
-            'contact';
-        grid-column-gap: $gap;
     }
 
     .resume {
         grid-area: resume;
     }
-
-    .timeline {
-        grid-area: timeline;
-    }
+    //
+    // .timeline {
+    //     grid-area: timeline;
+    // }
 
     .contact {
         grid-area: contact;
