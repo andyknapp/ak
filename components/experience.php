@@ -1,5 +1,9 @@
-<section id="experience">
+<section id="experience" class="offset-left">
     <div class="container-content">
+
+        <section class="divider lead animation-element" data-trigger="0.75">
+            <h2 class="headline-sub">Web Design & Development Experience</h2>
+        </section>
 
         <section class="experience-block">
             <header class="section-title experience-header">
@@ -51,7 +55,7 @@
             </div>
         </section>
 
-        <section class="divider">
+        <section class="divider animation-element" data-trigger="0.75">
             <h2 class="headline-sub">Marketing & Advertising Experience</h2>
         </section>
 

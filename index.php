@@ -41,15 +41,13 @@
         </nav>
 
         <main class="main-content">
-            <!-- <div class="container-content"> -->
 
-                <?php
-                    include('components/work.php');
-                    include('components/experience.php');
-                ?>
-            <!-- </div> -->
+            <?php
+                include('components/work.php');
+                include('components/experience.php');
+            ?>
 
-            <section id="contact" class="experience-block">
+            <section id="contact" class="experience-block offset-left">
                 <header class="section-title experience-header">
                     <div class="header-group">
                         <h2 class="headline-xs">comments / inquiries</h2>
@@ -70,9 +68,10 @@
             </ul>
         </footer>
 
-  </div>
+    </div>
 
     <script src="js/site.js?ver=1.01"></script>
+    <script src="js/animation-driver.js?ver=1.01"></script>
 
     <script>
         // load webfonts async
