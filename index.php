@@ -56,7 +56,7 @@
                 </header>
 
                 <div class="experience-description">
-                    <p>Have a question? Want to work together? You can reach me over <a href="mailto:aknapp1@gmail.com" target="_blank">email</a> or <a href="https://twitter.com/_aknapp" target="_blank" >Twitter DM</a>.</p>
+                    <p>Have a question? Want to work together? You can reach me over <a href="mailto:aknapp1@gmail.com" target="_blank" class="fancy-link">email</a> or <a href="https://twitter.com/_aknapp" target="_blank" class="fancy-link">Twitter DM</a>.</p>
                 </div>
             </section>
         </main>

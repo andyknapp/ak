@@ -1,51 +1,82 @@
 .showcase {
     margin-bottom: 5em;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 6em;
+    padding-bottom: 2em;
     background-color: $color-gray-light;
 
     .container-content {
         max-width: 100em;
     }
 
+    @media (min-width: $bp-m) {
+        padding-top: 10em;
+        padding-bottom: 2em;
+    }
+
 	@media (min-width: $bp-bg) {
-		margin-bottom: 13em;
+		margin-bottom: 8em;
+	}
+
+    @media (min-width: 1800px) {
+        padding-top: 12em;
+        padding-bottom: 4em;
 	}
 }
 
 .showcase-grid {
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media (min-width: $bp-l) {
+        padding-right: 2em;
+    }
 }
 
 .work-example {
     min-width: (240 / 16) * 1em;
     width: 100%;
     margin-bottom: 2em;
-    background-color: $color-white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: transparent;
+    border-radius: 0.125em;
+    overflow: visible;
 
     @media (min-width: $bp-s) {
         width: calc(50% - 1em);
     }
 
     @media (min-width: $bp-m) {
-        margin-bottom: 4em;
+        margin-bottom: 6em;
         width: 100%;
     }
 
-    @media (min-width: $bp-nav) {
-        width: calc(50% - 1em);
+
+    @media (min-width: $bp-l) {
+        width: calc(50% - 2em);
     }
 
-    @media (min-width: 100em) {
-        width: calc(33.3% - 2em);
+
+    @media (min-width: 1800px) {
+        width: calc(50% - 3em);
+    }
+
+
+    @media (min-width: 2400px) {
+        width: calc(33.33% - 3em);
+    }
+
+    .fancy-link {
+        @extend .headline-xs;
+        display: inline-block;
+        margin-top: 0.45em;
+        font-weight: 400;
+        letter-spacing: (2 / 18) * 1em;
     }
 }
 
 .work-image {
-    margin-bottom: 0.35em;
+    margin-bottom: 0.5em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    overflow: visible;
 
     img {
         display: block;
@@ -60,9 +91,19 @@
         line-height: 1.2;
     }
 
+    ul {
+        padding-left: 0.125em;
+    }
+
     li {
         @extend .headline-sub;
         margin-bottom: 0.5em;
         line-height: 1.2;
+        list-style: circle;
+        list-style-position: inside;
+    }
+
+    .copy-1 {
+        margin-bottom: 1.125em;
     }
 }

@@ -81,7 +81,7 @@ body {
 a {
 	background-color: transparent;
 	text-decoration: none;
-	transition: color 0.2s ease;
+	transition: color 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
 
 	&:hover,
 	&:focus {
@@ -96,43 +96,30 @@ a {
 	}
 }
 
-p {
-    a {
-        position: relative;
+.fancy-link {
+    position: relative;
+    color: $color-black;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        opacity: 0.5;
+        background-color: $color-orange;
+        transition: 0.15s cubic-bezier(0.47, 0, 0.75, 0.72);
+
+    }
+
+    &:hover {
         color: $color-black;
 
-        &::after,
         &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: 0.125em;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 0.25em;
-            opacity: 0.2;
-        }
-
-        &::after {
-            z-index: -2;
-            background-color: $color-blue;
-        }
-
-        &::before {
-            z-index: -1;
-            background-color: $color-orange;
-            transform: scale3d(0, 0, 0);
-            transform-origin: left bottom;
-            transition: transform 0.15s ease;
-        }
-
-        &:hover {
-            color: $color-black;
-
-            &::before {
-                transform: scale3d(1, 1, 1);
-            }
+            opacity: 1;
         }
     }
 }
@@ -142,6 +129,19 @@ li {
 	margin: 0 0 1em;
 	@include fluid(font-size, 20em, 68em, 0.875em, 1.125em);
 	line-height: 1.7;
+
+    a {
+        @extend .fancy-link;
+
+        &::before {
+            background-color: $color-blue;
+        }
+    }
+}
+
+.copy-1 {
+    @include fluid(font-size, 20em, 68em, 0.8em, 1em);
+    line-height: 1.4;
 }
 
 // misc

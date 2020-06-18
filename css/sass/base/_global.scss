@@ -82,7 +82,7 @@ body {
 	margin-bottom: 5em;
 
 	@media (min-width: $bp-bg) {
-		margin-bottom: 13em;
+		margin-bottom: 8em;
 	}
 }
 
@@ -177,10 +177,10 @@ body {
 
 
     @media (min-width: $bp-bg) {
-        margin-bottom: 13em;
+        margin-bottom: 8em;
 
         &.lead {
-            margin-bottom: 5em;
+            margin-bottom: 8em;
         }
     }
 }
@@ -262,12 +262,12 @@ textarea {
 
     @media (min-width: $bp-m) {
         padding-bottom: 1em;
-        padding-left: 0;
 
         ul {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
+            padding-left: 21em;
         }
 
         li {
@@ -286,6 +286,13 @@ textarea {
                 font-size: 1em;
                 font-family: $rubik;
                 font-weight: 400;
+            }
+        }
+
+        a {
+            &::before,
+            &::after {
+                display: none;
             }
         }
     }
