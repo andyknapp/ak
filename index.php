@@ -22,51 +22,23 @@
 
 <body>
     <div class="site-container">
-        <header id="header" class="site-header">
-            <h1 class="screen-reader-text">Andy Knapp</h1>
 
-            <div class="logo-container">
-
-                <?php include('logo/andyknapp.svg'); ?>
-
-                <span class="position">Web Developer</span>
-            </div>
-        </header>
-
-        <nav class="site-nav">
-            <span class="nav-logo"><?php include('logo/ak.svg'); ?></span>
-            <a href="#work" class="nav-item nav-item-work">Work</a>
-            <a href="#experience" class="nav-item nav-item-exp">Experience</a>
-            <a href="#contact" class="nav-item nav-item-contact">Contact</a>
-        </nav>
+        <?php
+            include( 'components/header.php' );
+            include( 'components/nav.php' );
+        ?>
 
         <main class="main-content">
 
             <?php
-                include('components/work.php');
-                include('components/experience.php');
+                include( 'components/work.php' );
+                include( 'components/experience.php' );
+                include( 'components/contact.php' );
             ?>
 
-            <section id="contact" class="experience-block offset-left">
-                <header class="section-title experience-header">
-                    <div class="header-group">
-                        <h2 class="headline-xs">comments / inquiries</h2>
-                        <h3 class="title-m">Contact Me</h3>
-                    </div>
-                </header>
-
-                <div class="experience-description">
-                    <p>Have a question? Want to work together? You can reach me over <a href="mailto:aknapp1@gmail.com" target="_blank" class="fancy-link">email</a> or <a href="https://twitter.com/_aknapp" target="_blank" class="fancy-link">Twitter DM</a>.</p>
-                </div>
-            </section>
         </main>
 
-        <footer class="site-footer" role="contentinfo">
-            <ul>
-                <li class="headline-sub">&copy; <?php echo date('Y');?> | Andy Knapp</li>
-                <li class="headline-sub"><a href="/andy-knapp-resume.pdf" target="_blank">resume pdf</a></li>
-            </ul>
-        </footer>
+        <?php include( 'components/footer.php' ); ?>
 
     </div>
 

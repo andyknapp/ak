@@ -6,7 +6,6 @@
     width: 100%;
     height: 100%;
     padding: 0 0 $gap / 2 $gap / 2;
-    z-index: 3;
 }
 
 
@@ -94,6 +93,7 @@
     .site-header {
         width: $nav-width;
         padding: 0 0 $gap / 2 $gap;
+        z-index: 3;
     }
 
     .site-nav {

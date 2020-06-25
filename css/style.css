@@ -722,7 +722,7 @@ body {
 @media (min-width: 50em) {
   /* line 37, sass/base/_global.scss */
   .main-content {
-    padding: 0 0 7em;
+    padding: 0 0 2em;
   }
 
   /* line 7, sass/utils/_mixins.scss */
@@ -942,86 +942,36 @@ li .work-example .experience-header a {
   }
 }
 
-/* line 191, sass/base/_global.scss */
-.contact {
-  padding: 2.5em 0;
-}
-/* line 194, sass/base/_global.scss */
-.contact .project {
-  max-width: 51em;
-}
-/* line 197, sass/base/_global.scss */
-.contact .project .flex-row {
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-/* line 201, sass/base/_global.scss */
-.contact .project .flex-child {
-  width: calc(50% - 0.4em);
-}
-
-/* line 207, sass/base/_global.scss */
-button,
-input,
-textarea {
-  border: none;
-  border-radius: 0;
-}
-
-/* line 216, sass/base/_global.scss */
-.submit {
-  display: block;
-  width: 100%;
-  max-width: 11.4285714286em;
-  padding: 0.5714285714em 0;
-  text-align: center;
-  border: 1px solid #1765BF;
-  border-radius: 2px;
-  -webkit-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-/* line 226, sass/base/_global.scss */
-.submit:focus {
-  outline: 1px solid #B72B28;
-  border-color: #B72B28;
-}
-/* line 231, sass/base/_global.scss */
-.submit:hover {
-  border-color: #B72B28;
-  color: #B72B28;
-}
-
-/* line 239, sass/base/_global.scss */
+/* line 190, sass/base/_global.scss */
 .site-footer {
   width: 100%;
   padding: 0.5em;
   background-color: #fafafa;
 }
-/* line 244, sass/base/_global.scss */
+/* line 195, sass/base/_global.scss */
 .site-footer ul {
   position: relative;
   z-index: 2;
 }
-/* line 249, sass/base/_global.scss */
+/* line 200, sass/base/_global.scss */
 .site-footer li {
   display: inline-block;
   margin: 0 1em 0 0;
 }
-/* line 254, sass/base/_global.scss */
+/* line 205, sass/base/_global.scss */
 .site-footer a {
   color: #212121;
 }
-/* line 257, sass/base/_global.scss */
+/* line 208, sass/base/_global.scss */
 .site-footer a:hover {
   color: #B72B28;
 }
 @media (min-width: 50em) {
-  /* line 239, sass/base/_global.scss */
+  /* line 190, sass/base/_global.scss */
   .site-footer {
     padding-bottom: 1em;
   }
-  /* line 266, sass/base/_global.scss */
+  /* line 217, sass/base/_global.scss */
   .site-footer ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1034,7 +984,7 @@ textarea {
     justify-content: space-between;
     padding-left: 21em;
   }
-  /* line 274, sass/base/_global.scss */
+  /* line 225, sass/base/_global.scss */
   .site-footer li:first-of-type {
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -1045,7 +995,7 @@ textarea {
     margin-right: 0.6666666667em;
     font-size: 12px;
   }
-  /* line 281, sass/base/_global.scss */
+  /* line 232, sass/base/_global.scss */
   .site-footer li:last-of-type {
     -webkit-order: 0;
     -ms-flex-order: 0;
@@ -1057,7 +1007,7 @@ textarea {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
   }
-  /* line 293, sass/base/_global.scss */
+  /* line 244, sass/base/_global.scss */
   .site-footer a::before, .site-footer a::after {
     display: none;
   }
@@ -1074,10 +1024,9 @@ textarea {
   width: 100%;
   height: 100%;
   padding: 0 0 1em 1em;
-  z-index: 3;
 }
 
-/* line 13, sass/partials/_header.scss */
+/* line 12, sass/partials/_header.scss */
 .logo-container {
   margin: auto 0;
   opacity: 1;
@@ -1087,7 +1036,7 @@ textarea {
   -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-/* line 19, sass/partials/_header.scss */
+/* line 18, sass/partials/_header.scss */
 .logo-container.fade-out {
   opacity: 0;
   -webkit-transform: scale(0.7);
@@ -1095,7 +1044,7 @@ textarea {
   transform: scale(0.7);
 }
 
-/* line 25, sass/partials/_header.scss */
+/* line 24, sass/partials/_header.scss */
 .logo {
   width: 100%;
   fill: #212121;
@@ -1117,7 +1066,7 @@ textarea {
   }
 }
 
-/* line 32, sass/partials/_header.scss */
+/* line 31, sass/partials/_header.scss */
 .site-nav {
   position: fixed;
   display: -webkit-flex;
@@ -1141,14 +1090,14 @@ textarea {
   -webkit-transition: justify-content 0.2s ease, -webkit-transform 0.2s ease;
   transition: justify-content 0.2s ease, transform 0.2s ease;
 }
-/* line 46, sass/partials/_header.scss */
+/* line 45, sass/partials/_header.scss */
 .site-nav.bottomed-out {
   -webkit-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   transform: translateY(-40px);
 }
 
-/* line 51, sass/partials/_header.scss */
+/* line 50, sass/partials/_header.scss */
 .nav-item {
   margin-right: 2em;
   line-height: 1.5;
@@ -1162,24 +1111,24 @@ textarea {
   -webkit-transition: -webkit-transform 0.2s ease, color 0.2s ease;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-/* line 61, sass/partials/_header.scss */
+/* line 60, sass/partials/_header.scss */
 .nav-item:last-of-type {
   margin-right: 0;
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
 }
-/* line 66, sass/partials/_header.scss */
+/* line 65, sass/partials/_header.scss */
 .bottom-header .nav-item {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
-/* line 70, sass/partials/_header.scss */
+/* line 69, sass/partials/_header.scss */
 .nav-item.active, .nav-item:hover {
   color: #B72B28;
 }
 
-/* line 76, sass/partials/_header.scss */
+/* line 75, sass/partials/_header.scss */
 .nav-logo {
   display: block;
   width: 2em;
@@ -1192,7 +1141,7 @@ textarea {
   -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-/* line 85, sass/partials/_header.scss */
+/* line 84, sass/partials/_header.scss */
 .bottom-header .nav-logo {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -1201,10 +1150,11 @@ textarea {
 }
 
 @media (min-width: 50em) {
-  /* line 94, sass/partials/_header.scss */
+  /* line 93, sass/partials/_header.scss */
   .site-header {
     width: 18em;
     padding: 0 0 1em 2em;
+    z-index: 3;
   }
 
   /* line 99, sass/partials/_header.scss */
@@ -1434,6 +1384,230 @@ li .work-example a {
 /* line 106, sass/section/_work.scss */
 .work-details .copy-1 {
   margin-bottom: 1.125em;
+}
+
+/* line 2, sass/section/_contact.scss */
+.contact-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 66.67vh;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-color: #e8e8e8;
+}
+/* line 9, sass/section/_contact.scss */
+.contact-block .container-content {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  /* line 2, sass/section/_contact.scss */
+  .contact-block {
+    padding-top: 10em;
+    padding-bottom: 10em;
+  }
+}
+@media (min-width: 1800px) {
+  /* line 2, sass/section/_contact.scss */
+  .contact-block {
+    padding-top: 10em;
+    padding-bottom: 10em;
+  }
+}
+
+/* line 25, sass/section/_contact.scss */
+input,
+textarea {
+  width: 100%;
+  padding: 0.9em 1em 0.15em 0.35em;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #858585;
+  background-color: transparent;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.2;
+  color: #212121;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+}
+/* line 7, sass/utils/_mixins.scss */
+input,
+textarea {
+  font-size: 0.8em;
+}
+@media screen and (min-width: 20em) {
+  /* line 7, sass/utils/_mixins.scss */
+  input,
+  textarea {
+    font-size: calc(0.8em + 0.2 * (100vw - 20em) / 48);
+  }
+}
+@media screen and (min-width: 68em) {
+  /* line 7, sass/utils/_mixins.scss */
+  input,
+  textarea {
+    font-size: 1em;
+  }
+}
+/* line 41, sass/section/_contact.scss */
+input:focus,
+textarea:focus {
+  border-color: #212121;
+}
+
+/* line 47, sass/section/_contact.scss */
+.field-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 53, sass/section/_contact.scss */
+.field {
+  position: relative;
+  width: 100%;
+}
+/* line 57, sass/section/_contact.scss */
+.field-group .field {
+  margin-bottom: 1em;
+  width: calc(50% - 0.25em);
+}
+@media (min-width: 37.5em) {
+  /* line 57, sass/section/_contact.scss */
+  .field-group .field {
+    width: calc(50% - 1em);
+  }
+}
+
+/* line 67, sass/section/_contact.scss */
+.floating-label {
+  position: absolute;
+  top: -0.25em;
+  left: 0.5em;
+  cursor: text;
+  overflow: hidden;
+  font-size: 12px;
+  color: #878787;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
+}
+/* line 71, sass/utils/_mixins.scss */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #878787;
+  opacity: 0;
+  transition: inherit;
+}
+/* line 72, sass/utils/_mixins.scss */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #878787;
+  opacity: 0;
+  transition: inherit;
+}
+/* line 73, sass/utils/_mixins.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #878787;
+  opacity: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+/* line 71, sass/utils/_mixins.scss */
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  opacity: 1;
+}
+/* line 72, sass/utils/_mixins.scss */
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+/* line 73, sass/utils/_mixins.scss */
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/* line 97, sass/section/_contact.scss */
+input:placeholder-shown + .floating-label,
+textarea:placeholder-shown + .floating-label {
+  cursor: text;
+  max-width: 66.66%;
+  color: #545454;
+  color: #858585;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transform: translate(0, 1.875em) scale(1.35);
+  -ms-transform: translate(0, 1.875em) scale(1.35);
+  transform: translate(0, 1.875em) scale(1.35);
+}
+/* line 110, sass/section/_contact.scss */
+input:not(:placeholder-shown) + .floating-label, input:focus + .floating-label,
+textarea:not(:placeholder-shown) + .floating-label,
+textarea:focus + .floating-label {
+  -webkit-transform: translate(0, 0) scale(1);
+  -ms-transform: translate(0, 0) scale(1);
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+/* line 117, sass/section/_contact.scss */
+textarea {
+  height: 12.5em;
+  border-width: 1px;
+}
+/* line 121, sass/section/_contact.scss */
+textarea + .floating-label {
+  top: -0.75em;
+}
+/* line 125, sass/section/_contact.scss */
+textarea:focus {
+  padding-top: 2em;
+}
+/* line 129, sass/section/_contact.scss */
+textarea:not(:placeholder-shown) + .floating-label, textarea:focus + .floating-label {
+  -webkit-transform: translate(0, 1em) scale(1);
+  -ms-transform: translate(0, 1em) scale(1);
+  transform: translate(0, 1em) scale(1);
+}
+
+/* line 138, sass/section/_contact.scss */
+.submit {
+  display: block;
+  width: 11.4285714286em;
+  padding: 0.5714285714em 0;
+  text-align: center;
+  border: 1px solid #1765BF;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+/* line 147, sass/section/_contact.scss */
+.submit:focus {
+  outline: 1px solid #B72B28;
+  border-color: #B72B28;
+}
+/* line 152, sass/section/_contact.scss */
+.submit:hover {
+  border-color: #B72B28;
+  color: #B72B28;
 }
 
 /*# sourceMappingURL=style.css.map */

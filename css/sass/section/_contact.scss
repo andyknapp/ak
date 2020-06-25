@@ -1,0 +1,156 @@
+// contact section
+.contact-block {
+    display: flex;
+    min-height: 66.67vh;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    background-color: $color-gray-light;
+
+    .container-content {
+        width: 100%;
+    }
+
+    @media (min-width: $bp-m) {
+        padding-top: 10em;
+        padding-bottom: 10em;
+    }
+
+    @media (min-width: 1800px) {
+        padding-top: 10em;
+        padding-bottom: 10em;
+	}
+}
+
+
+%input {
+    @include fluid(font-size, 20em, 68em, 0.8em, 1em);
+	width: 100%;
+	padding: 0.9em 1em 0.15em 0.35em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: darken($color-gray-med, 20);
+	background-color: transparent;
+	border-radius: 2px;
+    font-family: $open-sans;
+	line-height: 1.2;
+	color: $color-black;
+	outline: none;
+	-webkit-appearance: none;//sass-lint:disable-line no-vendor-prefixes
+	transition: border-color 0.2s ease-out;
+
+	&:focus {
+		border-color: $color-black;
+	}
+}
+
+
+.field-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.field {
+    position: relative;
+    width: 100%;
+
+    .field-group & {
+        margin-bottom: 1em;
+    	width: calc(50% - 0.25em);
+
+        @media (min-width: $bp-s) {
+            width: calc(50% - 1em);
+        }
+    }
+}
+
+.floating-label {
+    position: absolute;
+    top: -0.25em;
+    left: 0.5em;
+    cursor: text;
+    overflow: hidden;
+    font-size: 12px;
+    color: lighten($color-black, 40%);
+    transform-origin: left top;
+    will-change: transform;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
+}
+
+input,
+textarea {
+	@extend %input;
+
+	@include placeholder {
+		color: lighten($color-black, 40%);
+        opacity: 0;
+        transition: inherit;
+	}
+
+    &:focus {
+        @include placeholder {
+            opacity: 1;
+        }
+    }
+
+    // label as faux-placeholder
+    &:placeholder-shown + .floating-label {
+        cursor: text;
+        max-width: 66.66%;
+        color: lighten($color-black, 20);
+        color: darken($color-gray-med, 20);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform-origin: left bottom;
+        transform: translate(0, 1.875em) scale(1.35);
+    }
+
+    // label positioned above input
+    &:not(:placeholder-shown) + .floating-label,
+    &:focus + .floating-label {
+        transform: translate(0, 0) scale(1);
+        cursor: pointer;
+    }
+}
+
+textarea {
+    height: (200 / 16) * 1em;
+    border-width: 1px;
+
+    &+ .floating-label {
+        top: -0.75em;
+    }
+
+    &:focus {
+        padding-top: 2em;
+    }
+
+    &:not(:placeholder-shown) + .floating-label,
+    &:focus + .floating-label {
+        transform: translate(0, 1em) scale(1);
+    }
+}
+
+
+
+// buttons
+.submit {
+    display: block;
+    width: (160 / 14)*1em;
+    padding: (8/14) * 1em 0;
+    text-align: center;
+    border: 1px solid $color-blue;
+    border-radius: 2px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:focus {
+        outline: 1px solid $color-orange;
+        border-color: $color-orange;
+    }
+
+    &:hover {
+        border-color: $color-orange;
+        color: $color-orange;
+    }
+}

@@ -35,7 +35,7 @@ body {
 
 @media (min-width: $bp-m) {
     .main-content {
-        padding: 0 0 7em;
+        padding: 0 0 2em;
         // @include fluid(padding-left, 43em, 100em, 2em, 10em);
     }
 
@@ -182,55 +182,6 @@ body {
         &.lead {
             margin-bottom: 8em;
         }
-    }
-}
-
-
-
-// contact section
-.contact {
-    padding: 2.5em 0;
-
-    .project {
-        max-width: 51em;
-
-        .flex-row {
-            justify-content: space-between;
-        }
-
-        .flex-child {
-            width: calc(50% - 0.4em);
-        }
-    }
-}
-
-button,
-input,
-textarea {
-    border: none;
-    border-radius: 0;
-}
-
-
-// buttons
-.submit {
-    display: block;
-    width: 100%;
-    max-width: (160 / 14)*1em;
-    padding: (8/14) * 1em 0;
-    text-align: center;
-    border: 1px solid $color-blue;
-    border-radius: 2px;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-
-    &:focus {
-        outline: 1px solid $color-orange;
-        border-color: $color-orange;
-    }
-
-    &:hover {
-        border-color: $color-orange;
-        color: $color-orange;
     }
 }
 
