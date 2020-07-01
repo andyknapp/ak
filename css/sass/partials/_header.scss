@@ -1,5 +1,7 @@
 .site-header {
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +12,7 @@
 
 
 .logo-container {
-    margin: auto 0;
+    margin: 0;
     opacity: 1;
     transform: scale(1);
     transition: transform 0.25s ease, opacity 0.25s ease;
@@ -70,6 +72,10 @@
     &:hover {
         color: $color-orange;
     }
+
+    .dark-mode & {
+        color: $color-white;
+    }
 }
 
 .nav-logo {
@@ -91,16 +97,33 @@
 
 @media (min-width: $bp-m) {
     .site-header {
-        width: $nav-width;
+        position: static;
+        width: auto;
         padding: 0 0 $gap / 2 $gap;
-        z-index: 3;
+        z-index: auto;
     }
 
     .site-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         width: $nav-width;
-        padding-left: 2em;
+        padding: 1em 2em;
         transform: translateX(0);
         background-color: transparent;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.25em;
+            background-color: $color-blue;
+            background: linear-gradient(90deg, rgba(23,101,191,1) 0%, rgba(105,72,114,1) 50%, rgba(183,43,40,1) 100%);
+
+        }
 
         .bottom-header & {
             transform: translateX(0);
@@ -108,6 +131,7 @@
     }
 
     .nav-item {
+        margin-right: 3em;
         transform: translateX(0);
     }
 
@@ -115,59 +139,76 @@
         display: none;
     }
 
-    .logo-container {
+    .logo-container,
+    .tag-container {
+        position: fixed;
+        top: 50%;
+        left: 2em;
+        transform: scale(1) translateY(-50%);
+
         &.fade-out {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) translateY(-50%);
         }
+    }
+
+    .logo-container {
+        z-index: 3;
+    }
+
+    .tag-container {
+        z-index: 1;
+        transform: scale(1) translateY( calc(-50% + 3em) );
     }
 
     .logo {
         stroke: transparent;
         stroke-width: 2px;
 
-        .upper.a,
-        .clone.k {
+        .upper {
+            &.a {
+                stroke-width: 0;
+            }
+        }
+
+        .clone {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             stroke: $color-black;
-        }
+            fill: transparent;
 
-        .upper.a {
-            transform: translate3d(1px, 0, 0);
+            &.k {
+                transform: translate3d(-35%, 0, 0);
+            }
+
+            &.a {
+                transform: translate3d(1px, 0, 0);
+            }
         }
 
         .lower,
-        .upper.k {
+        .upper.k,
+        .upper.a {
             transform-origin: 12% 7%;
             transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
         }
 
-        .clone.k {
-            fill: transparent;
-            transform: translate3d(-35%, 0, 0);
-        }
-
         &.reveal {
             .lower,
-            .upper.k {
-                @include fade-out-3d;
-            }
-
+            .upper.k,
             .upper.a {
-                @include fade-n-draw;
+                @include fade-out;
             }
 
-            .clone.k {
-                @include k-draw;
+            .clone {
+                &.a {
+                    @include a-draw;
+                }
+
+                &.k {
+                    @include k-draw;
+                }
             }
         }
-    }
-}
-
-
-@media (min-width: $bp-nav) {
-    .nav-item {
-        margin-right: 3em;
     }
 }

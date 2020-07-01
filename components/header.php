@@ -5,6 +5,9 @@
 
         <?php include('logo/andyknapp.svg'); ?>
 
-        <span class="position">Web Developer</span>
+    </div>
+
+    <div class="tag-container">
+        <span class="position">Web Development & Design</span>
     </div>
 </header>

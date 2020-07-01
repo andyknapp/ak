@@ -73,6 +73,22 @@ module.exports = function(grunt) {
         //     }
         // },
 
+        // svg sprite system
+		svgstore: {
+		 options: {
+			 prefix : 'icon-',
+			 cleanup : ['fill'],
+			 svg: {
+				 style : 'display:none;'
+			 }
+		 },
+		 default : {
+			 files: {
+				 'assets/svg-defs.svg': ['assets/svg/*.svg'],
+			 }
+		 }
+		},
+
         // Live reload of style sheet in browser
         browserSync: {
           dev: {
@@ -100,8 +116,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
 };

@@ -1,81 +1,30 @@
-$delay: 0.015s;
-$time: 0.35s;
-$drawTime: 3s;
-$animationTime: $time + 0.00s;
+$time: 1.2s;
+$delay: $time / 3;
 $dashOffset: 1000;
 
 @mixin fade-out {
-	animation: fadeOut $animationTime ease-out forwards;
-
-  &.p2 {
-    animation-delay: 0;
-  }
-
-  &.p {
-    animation-delay: $time;
-  }
-
-  &.a2 {
-    animation-delay: $time * 2;
-  }
-
-  &.n2 {
-    animation-delay: $time * 3;
-  }
-
-  &.y {
-    animation-delay: $time * 4;
-  }
-
-  &.d {
-    animation-delay: $time * 5;
-  }
-
-  &.n {
-    animation-delay: $time * 6;
-  }
+	animation: fadeOut $delay ease-out forwards;
 }
 
-
-@mixin fade-out-3d {
-	animation: fadeOut3d $animationTime ease-in forwards;
-}
-
-
-@mixin slide-left {
-  animation: slideLeft $animationTime * 3 $time * 4 ease-out forwards;
-}
-
-
-@mixin slide-left-sneak {
-  animation: slideLeftSneaky $animationTime * 3 $time * 4 ease-out forwards;
-}
-
-
-@mixin fade-n-draw {
-	animation: fadeDraw $drawTime ease forwards;
+@mixin a-draw {
+	animation: draw $time ease forwards;
 }
 
 @mixin k-draw {
-	animation: draw $drawTime $time * 1.9 ease forwards;
+	animation: draw $time ease $delay forwards;
 }
 
 
+
+
 @keyframes fadeOut {
-	0% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    0% {
+        fill: $color-black;
+    }
 
-	20% {
-		opacity: 1;
-		transform: translateY(20%);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateY(100%);
-	}
+    100% {
+        fill: transparent;
+    }
 }
 
 
@@ -121,7 +70,6 @@ $dashOffset: 1000;
 }
 
 
-
 @keyframes draw {
 	100% {
 		stroke-dashoffset: 0;
@@ -141,7 +89,7 @@ $dashOffset: 1000;
 	}
 
 	100% {
-		fill: transparent;
+        fill: transparent;
 		stroke-dashoffset: 0;
 	}
 }
@@ -158,16 +106,3 @@ $dashOffset: 1000;
 		opacity: 0;
 	}
 }
-
-
-// @-webkit-keyframes fadeOut3d {
-// 	0% {
-// 		-webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-// 		opacity: 1;
-// 	}
-//
-// 	100% {
-// 		-webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-// 		opacity: 0;
-// 	}
-// }

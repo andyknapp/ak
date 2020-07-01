@@ -10,7 +10,7 @@
         <div class="showcase-grid flex-row">
             <article class="work-example">
                 <div class="work-image">
-                    <img src="../images/changeoversales.jpg" alt="Changeover Sales">
+                    <img src="../assets/images/changeoversales.jpg" alt="Changeover Sales">
                 </div>
 
                 <div class="work-details">
@@ -29,7 +29,7 @@
 
             <article class="work-example">
                 <div class="work-image">
-                    <img src="../images/wj-molding.jpg" alt="WJ Molding website">
+                    <img src="../assets/images/wj-molding.jpg" alt="WJ Molding website">
                 </div>
 
                 <div class="work-details">
@@ -48,7 +48,7 @@
 
             <article class="work-example">
                 <div class="work-image">
-                    <img src="../images/wj-molding.jpg" alt="WJ Molding website">
+                    <img src="../assets/images/wj-molding.jpg" alt="WJ Molding website">
                 </div>
 
                 <div class="work-details">

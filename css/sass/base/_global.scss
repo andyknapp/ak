@@ -17,6 +17,7 @@ body {
     padding: 0 0 $footer;
     z-index: 2;
     background-color: transparent;
+    background-color: $color-white;
 }
 
 .offset-left {
@@ -35,12 +36,12 @@ body {
 
 @media (min-width: $bp-m) {
     .main-content {
-        padding: 0 0 2em;
+        padding: 0;
         // @include fluid(padding-left, 43em, 100em, 2em, 10em);
     }
 
     .offset-left {
-        @include fluid(padding-left, 43em, 100em, 20em, 30em);
+        @include fluid(padding-left, 50em, 100em, 24em, 32em);
     }
 }
 
@@ -65,15 +66,15 @@ body {
     text-transform: lowercase;
     font-weight: 900;
     color: $color-black;
-    opacity: 0;
-    transform: translateY(1em);
+    opacity: 1;
+    transform: translateY(0);
     // transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
 
-    &.reveal {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
-    }
+    // &.reveal {
+    //     opacity: 0;
+    //     transform: translateY(1em);
+    //     transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
+    // }
 }
 
 
@@ -190,7 +191,8 @@ body {
 .site-footer {
     width: 100%;
     padding: $gap / 4;
-    background-color: $color-white;
+    background-color: $color-black;
+    color: $color-gray-med;
 
     ul {
         position: relative;
@@ -203,7 +205,7 @@ body {
     }
 
     a {
-        color: $color-black;
+        color: $color-white;
 
         &:hover {
             color: $color-orange;
@@ -213,31 +215,23 @@ body {
 
     @media (min-width: $bp-m) {
         padding-bottom: 1em;
+        padding-right: 2em;
 
         ul {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-between;
+            justify-content: flex-end;
             padding-left: 21em;
         }
 
         li {
-            &:first-of-type {
-                order: 1;
-                align-self: center;
-                margin-right: (8 / 12) * 1em;
-                font-size: 12px;
-            }
-
-            &:last-of-type {
-                order: 0;
-                margin-right: 0;
-                line-height: 1.5;
-                color: $color-black;
-                font-size: 1em;
-                font-family: $rubik;
-                font-weight: 400;
-            }
+            order: 0;
+            margin-right: 0;
+            line-height: 1.5;
+            color: $color-gray-med;
+            font-size: 0.75em;
+            font-family: $rubik;
+            font-weight: 400;
         }
 
         a {
@@ -247,4 +241,9 @@ body {
             }
         }
     }
+}
+
+
+svg {
+    transition: fill 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
 }

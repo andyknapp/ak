@@ -24,26 +24,26 @@ const navContact = document.querySelector('.nav-item-contact');
 
 const dividers = document.querySelectorAll('.divider');
 
-// check if element is fully in viewport
-function isInViewport(elem) {
-    var bounding = elem.getBoundingClientRect();
-
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
+const textArea = document.querySelector('.text-area');
 
 
-// check if element is above bottom of viewport
+// check if element is within viewport
 function isInView(elem) {
     var bounding = elem.getBoundingClientRect();
 
     return (
         bounding.top < (window.innerHeight || document.documentElement.clientHeight) &&
         bounding.bottom >= ((window.innerHeight / 2) || (document.documentElement.clientHeight / 2))
+    );
+};
+
+
+// check if element is above bottom of viewport
+function isViewable(elem) {
+    var bounding = elem.getBoundingClientRect();
+
+    return (
+        bounding.top < ((window.innerHeight - 20) || (document.documentElement.clientHeight - 20))
     );
 };
 
@@ -64,6 +64,18 @@ function logoState() {
         position.classList.remove('reveal');
         nav.classList.remove('bottom-header');
     }
+}
+
+
+function emptyField() {
+    textArea.addEventListener('blur', function() {
+        if( textArea.value !== '') {
+            textArea.classList.add('not-empty');
+
+        } else {
+            textArea.classList.remove('not-empty');
+        }
+    });
 }
 
 
@@ -111,15 +123,18 @@ function checkPosition() {
         navContact.classList.remove('active');
     }
 
-    //
-    // if( isInViewport(divider) ) {
-    //     divider.classList.add('in-view');
-    // }
+    // contact (dark)
+    if ( isViewable( contact ) ) {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
 
 }
 
 
 logoState();
+emptyField();
 
 window.addEventListener('scroll', checkPosition);
 window.addEventListener('resize', checkPosition);

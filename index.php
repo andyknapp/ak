@@ -42,6 +42,8 @@
 
     </div>
 
+    <?php include( 'assets/svg-defs.svg' ); ?>
+
     <script src="js/site.js?ver=1.01"></script>
     <script src="js/animation-driver.js?ver=1.01"></script>
 
