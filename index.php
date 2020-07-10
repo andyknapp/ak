@@ -50,7 +50,7 @@
     <script>
         // load webfonts async
         WebFontConfig = {
-        google: { families: [ 'Open+Sans:300,400,600', 'Rubik:400,500,700' ] }
+        google: { families: [ 'Open+Sans:300,400,600,700', 'Rubik:400,500,700' ] }
         };
         (function() {
             var wf = document.createElement('script');

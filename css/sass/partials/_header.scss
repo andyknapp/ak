@@ -57,7 +57,8 @@
     font-weight: 400;
     text-transform: lowercase;
     transform: translateX(-64px);
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+
 
     &:last-of-type {
         margin-right: 0;
@@ -189,15 +190,35 @@
         .lower,
         .upper.k,
         .upper.a {
-            transform-origin: 12% 7%;
+            transform-origin: center 7%;
             transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+        }
+
+        .lower {
+            perspective: 300px;
+
+            // &.p {
+            //     animation-delay: 0.1s;
+            // }
+            //
+            // &.a2 {
+            //     animation-delay: 0.2s;
+            // }
+            //
+            // &.n2 {
+            //     animation-delay: 0.3s;
+            // }
         }
 
         &.reveal {
             .lower,
-            .upper.k,
+            //.upper.k,
             .upper.a {
                 @include fade-out;
+            }
+
+            .upper.k {
+                @include k-left;
             }
 
             .clone {

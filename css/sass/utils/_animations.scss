@@ -1,9 +1,9 @@
 $time: 1.2s;
-$delay: $time / 3;
+$delay: $time / 4;
 $dashOffset: 1000;
 
 @mixin fade-out {
-	animation: fadeOut $delay ease-out forwards;
+	animation: fadeOut $time / 4 cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 @mixin a-draw {
@@ -14,16 +14,25 @@ $dashOffset: 1000;
 	animation: draw $time ease $delay forwards;
 }
 
+@mixin k-left {
+	animation: slideLeft $time / 3 cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
 
 
 
 @keyframes fadeOut {
     0% {
-        fill: $color-black;
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+
+    90% {
+        opacity: 0;
     }
 
     100% {
-        fill: transparent;
+        opacity: 0;
+        transform: translate3d(-35%, 0, -10em) scale3d(1, 1, 0.7);
     }
 }
 
@@ -31,18 +40,20 @@ $dashOffset: 1000;
 @keyframes slideLeft {
 	0% {
 		transform: translate3d(0, 0, 0) skewX(0);
+        fill: $color-black;
 	}
 
-	80% {
-		transform: translate3d(-28%, 0, 0) skewX(-6deg);
-	}
-
-	90% {
-		transform: translate3d(-31.5%, 0, 0) skewX(2deg);
-	}
+	// 80% {
+	// 	transform: translate3d(-28%, 0, 0) skewX(-1deg);
+	// }
+    //
+	// 90% {
+	// 	transform: translate3d(-31.5%, 0, 0) skewX(0deg);
+	// }
 
 	100% {
 		transform: translate3d(-35%, 0, 0) skewX(0);
+        fill: transparent;
 	}
 }
 
