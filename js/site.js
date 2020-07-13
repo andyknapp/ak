@@ -13,7 +13,7 @@ const position = document.querySelector('.position');
 const logoRect = logo.getBoundingClientRect();
 const logoHeight = Math.round(logoRect.height);
 const logoBottom = Math.round(logoRect.bottom);
-const logoTrigger = (logoBottom - logoHeight);
+const logoTrigger = logoBottom;
 
 const work = document.querySelector('#work');
 const contact = document.querySelector('#contact');
