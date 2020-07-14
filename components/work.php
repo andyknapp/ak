@@ -10,7 +10,7 @@
         <div class="showcase-grid flex-row">
             <article class="work-example">
                 <div class="work-image">
-                    <img src="../assets/images/changeoversales.jpg" alt="Changeover Sales">
+                    <img src="../assets/images/changeoversales.jpg" alt="Changeover Sales website">
                 </div>
 
                 <div class="work-details">
@@ -20,21 +20,21 @@
                     <ul>
                         <li>Site design & development</li>
                         <li>WordPress custom theme development</li>
-                        <li>WooCommerce integration</li>
+                        <li>WooCommerce integration (comming soon)</li>
                     </ul>
 
-                    <a href="#" class="fancy-link">Visit Site</a>
+                    <a href="https://changeoversales.com/" class="fancy-link">Visit Site</a>
                 </div>
             </article>
 
-            <article class="work-example">
+            <article class="work-example coming-soon">
                 <div class="work-image">
-                    <img src="../assets/images/wj-molding.jpg" alt="WJ Molding website">
+                    <img src="../assets/images/wj-molding.jpg" alt="Acme Co website">
                 </div>
 
                 <div class="work-details">
-                    <h3 class="title-s">WJ Molding</h3>
-                    <p class="copy-1">res a customized e-commerce solution for the long time leveraging the power and flexibility of WordPress and Woocommerce. </p>
+                    <h3 class="title-s">Acme Co.</h3>
+                    <p class="copy-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
                     <ul>
                         <li>Site design & development</li>
@@ -46,17 +46,17 @@
                 </div>
             </article>
 
-            <article class="work-example">
+            <article class="work-example coming-soon">
                 <div class="work-image">
-                    <img src="../assets/images/wj-molding.jpg" alt="WJ Molding website">
+                    <img src="../assets/images/garrisons.jpg" alt="Acme Co website">
                 </div>
 
                 <div class="work-details">
-                    <h3 class="title-s">Garrisons Cyclery</h3>
-                    <p class="copy-1">This redesign features a customized e-commerce solution for the long time famil. </p>
+                    <h3 class="title-s">Acme Co.</h3>
+                    <p class="copy-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     <ul>
-                        <li>Design & development</li>
-                        <li>WordPress</li>
+                        <li>Site design & development</li>
+                        <li>WordPress custom theme development</li>
                     </ul>
 
                     <a href="#" class="fancy-link">Visit Site</a>

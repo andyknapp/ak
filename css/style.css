@@ -538,22 +538,22 @@ li .work-example a {
 }
 
 /* line 82, sass/base/_typography.scss */
-.headline-sub, .work-details li {
+.headline-sub, .work-example.coming-soon:after, .work-details li, .submit {
   letter-spacing: 1px;
 }
 /* line 7, sass/utils/_mixins.scss */
-.headline-sub, .work-details li {
+.headline-sub, .work-example.coming-soon:after, .work-details li, .submit {
   font-size: 0.75em;
 }
 @media screen and (min-width: 20em) {
   /* line 7, sass/utils/_mixins.scss */
-  .headline-sub, .work-details li {
+  .headline-sub, .work-example.coming-soon:after, .work-details li, .submit {
     font-size: calc(0.75em + 0.15 * (100vw - 20em) / 48);
   }
 }
 @media screen and (min-width: 68em) {
   /* line 7, sass/utils/_mixins.scss */
-  .headline-sub, .work-details li {
+  .headline-sub, .work-example.coming-soon:after, .work-details li, .submit {
     font-size: 0.9em;
   }
 }
@@ -819,7 +819,7 @@ li .work-example .experience-header a {
   color: #5d5c5c;
 }
 /* line 108, sass/base/_global.scss */
-.experience-header .headline-sub, .experience-header .work-details li, .work-details .experience-header li {
+.experience-header .headline-sub, .experience-header .work-example.coming-soon:after, .experience-header .work-details li, .work-details .experience-header li, .experience-header .submit {
   color: #5d5c5c;
 }
 @media (min-width: 50em) {
@@ -844,7 +844,7 @@ li .work-example .experience-header a {
     padding-bottom: 0;
   }
   /* line 123, sass/base/_global.scss */
-  .experience-header .headline-sub, .experience-header .work-details li, .work-details .experience-header li {
+  .experience-header .headline-sub, .experience-header .work-example.coming-soon:after, .experience-header .work-details li, .work-details .experience-header li, .experience-header .submit {
     margin-bottom: 0.25em;
   }
   /* line 127, sass/base/_global.scss */
@@ -899,7 +899,7 @@ li .work-example .experience-header a {
   z-index: -2;
 }
 /* line 163, sass/base/_global.scss */
-.divider .headline-sub, .divider .work-details li, .work-details .divider li {
+.divider .headline-sub, .divider .work-example.coming-soon:after, .divider .work-details li, .work-details .divider li, .divider .submit {
   position: relative;
   margin: 0;
   font-family: "Rubik", Sans-Serif;
@@ -908,7 +908,7 @@ li .work-example .experience-header a {
   color: #5d5c5c;
 }
 /* line 171, sass/base/_global.scss */
-.divider .headline-sub::before, .divider .work-details li::before, .work-details .divider li::before {
+.divider .headline-sub::before, .divider .work-details li::before, .work-details .divider li::before, .divider .submit::before {
   content: '';
   display: block;
   position: absolute;
@@ -1400,40 +1400,80 @@ li .work-example a {
   font-weight: 400;
   letter-spacing: 0.1111111111em;
 }
+/* line 75, sass/section/_work.scss */
+.work-example.coming-soon {
+  position: relative;
+  overflow: hidden;
+}
+/* line 79, sass/section/_work.scss */
+.work-example.coming-soon .work-image,
+.work-example.coming-soon .work-details {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+/* line 84, sass/section/_work.scss */
+.work-example.coming-soon .work-image {
+  position: relative;
+}
+/* line 87, sass/section/_work.scss */
+.work-example.coming-soon .work-image:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(250, 250, 250, 0.92);
+}
+/* line 100, sass/section/_work.scss */
+.work-example.coming-soon:after {
+  content: 'Coming Soon';
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 2;
+  font-weight: 700;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
-/* line 76, sass/section/_work.scss */
+/* line 114, sass/section/_work.scss */
 .work-image {
   margin-bottom: 0.5em;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: visible;
 }
-/* line 81, sass/section/_work.scss */
+/* line 119, sass/section/_work.scss */
 .work-image img {
   display: block;
 }
 
-/* line 86, sass/section/_work.scss */
+/* line 124, sass/section/_work.scss */
 .work-details {
   padding: 1em 1em 2em;
 }
-/* line 89, sass/section/_work.scss */
+/* line 127, sass/section/_work.scss */
 .work-details .title-s {
   margin: 0 0 0.5em;
   line-height: 1.2;
 }
-/* line 94, sass/section/_work.scss */
+/* line 132, sass/section/_work.scss */
 .work-details ul {
   padding-left: 0.125em;
 }
-/* line 98, sass/section/_work.scss */
+/* line 136, sass/section/_work.scss */
 .work-details li {
   margin-bottom: 0.5em;
   line-height: 1.2;
   list-style: circle;
   list-style-position: inside;
 }
-/* line 106, sass/section/_work.scss */
+/* line 144, sass/section/_work.scss */
 .work-details .copy-1 {
   margin-bottom: 1.125em;
 }
@@ -1460,25 +1500,31 @@ li .work-example a {
     padding-bottom: 14em;
   }
 }
-/* line 25, sass/section/_contact.scss */
-.contact-block .headline-sub svg, .contact-block .work-details li svg, .work-details .contact-block li svg {
+/* line 20, sass/section/_contact.scss */
+.contact-block .resume .headline-sub, .contact-block .resume .work-example.coming-soon:after, .contact-block .resume .work-details li, .work-details .contact-block .resume li, .contact-block .resume .submit {
   display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
 }
-/* line 31, sass/section/_contact.scss */
-.contact-block .headline-sub:hover, .contact-block .work-details li:hover, .work-details .contact-block li:hover {
+/* line 24, sass/section/_contact.scss */
+.contact-block .resume svg {
+  display: inline-block;
+  width: 1.125em;
+  height: 1.125em;
+  margin-left: 0.125em;
+  fill: #212121;
+}
+/* line 33, sass/section/_contact.scss */
+.contact-block .resume:hover .headline-sub, .contact-block .resume:hover .work-example.coming-soon:after, .contact-block .resume:hover .work-details li, .work-details .contact-block .resume:hover li, .contact-block .resume:hover .submit {
   color: #B72B28;
 }
-/* line 34, sass/section/_contact.scss */
-.contact-block .headline-sub:hover svg, .contact-block .work-details li:hover svg, .work-details .contact-block li:hover svg {
+/* line 37, sass/section/_contact.scss */
+.contact-block .resume:hover svg {
   fill: #B72B28;
 }
-/* line 41, sass/section/_contact.scss */
+/* line 45, sass/section/_contact.scss */
 .contact-block.dark-block .title-m {
   color: #fafafa;
 }
-/* line 45, sass/section/_contact.scss */
+/* line 49, sass/section/_contact.scss */
 .contact-block.dark-block .headline-xs, .contact-block.dark-block .work-example .fancy-link, .work-example .contact-block.dark-block .fancy-link, .contact-block.dark-block .work-example p a, .work-example p .contact-block.dark-block a, .contact-block.dark-block p .work-example a, p .work-example .contact-block.dark-block a,
 .contact-block.dark-block .work-example li a,
 .work-example li .contact-block.dark-block a,
@@ -1486,24 +1532,24 @@ li .work-example a {
 li .work-example .contact-block.dark-block a {
   color: #f0f0f0;
 }
-/* line 49, sass/section/_contact.scss */
-.contact-block.dark-block .headline-sub, .contact-block.dark-block .work-details li, .work-details .contact-block.dark-block li {
-  color: #f0f0f0;
-}
-/* line 52, sass/section/_contact.scss */
-.contact-block.dark-block .headline-sub svg, .contact-block.dark-block .work-details li svg, .work-details .contact-block.dark-block li svg {
+/* line 54, sass/section/_contact.scss */
+.contact-block.dark-block .resume svg {
   fill: #f0f0f0;
 }
-/* line 56, sass/section/_contact.scss */
-.contact-block.dark-block .headline-sub:hover, .contact-block.dark-block .work-details li:hover, .work-details .contact-block.dark-block li:hover {
+/* line 59, sass/section/_contact.scss */
+.contact-block.dark-block .resume:hover .headline-sub, .contact-block.dark-block .resume:hover .work-example.coming-soon:after, .contact-block.dark-block .resume:hover .work-details li, .work-details .contact-block.dark-block .resume:hover li, .contact-block.dark-block .resume:hover .submit {
   color: #1765BF;
 }
-/* line 59, sass/section/_contact.scss */
-.contact-block.dark-block .headline-sub:hover svg, .contact-block.dark-block .work-details li:hover svg, .work-details .contact-block.dark-block li:hover svg {
+/* line 63, sass/section/_contact.scss */
+.contact-block.dark-block .resume:hover svg {
   fill: #1765BF;
 }
+/* line 69, sass/section/_contact.scss */
+.contact-block.dark-block .headline-sub, .contact-block.dark-block .work-example.coming-soon:after, .contact-block.dark-block .work-details li, .work-details .contact-block.dark-block li, .contact-block.dark-block .submit {
+  color: #f0f0f0;
+}
 
-/* line 68, sass/section/_contact.scss */
+/* line 76, sass/section/_contact.scss */
 input,
 textarea {
   display: block;
@@ -1541,18 +1587,18 @@ textarea {
     font-size: 1em;
   }
 }
-/* line 85, sass/section/_contact.scss */
+/* line 93, sass/section/_contact.scss */
 input:focus,
 textarea:focus {
   border-color: #212121;
 }
-/* line 89, sass/section/_contact.scss */
+/* line 97, sass/section/_contact.scss */
 .dark-block input,
 .dark-block textarea {
   color: #fafafa;
 }
 
-/* line 95, sass/section/_contact.scss */
+/* line 103, sass/section/_contact.scss */
 .field-group {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1565,24 +1611,24 @@ textarea:focus {
   justify-content: space-between;
 }
 
-/* line 101, sass/section/_contact.scss */
+/* line 109, sass/section/_contact.scss */
 .field {
   position: relative;
   width: 100%;
   margin-bottom: 1.25em;
 }
-/* line 106, sass/section/_contact.scss */
+/* line 114, sass/section/_contact.scss */
 .field-group .field {
   width: calc(50% - 0.25em);
 }
 @media (min-width: 37.5em) {
-  /* line 106, sass/section/_contact.scss */
+  /* line 114, sass/section/_contact.scss */
   .field-group .field {
     width: calc(50% - 1em);
   }
 }
 
-/* line 116, sass/section/_contact.scss */
+/* line 124, sass/section/_contact.scss */
 .floating-label {
   position: absolute;
   top: -0.25em;
@@ -1598,7 +1644,7 @@ textarea:focus {
   -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
   transition: transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
 }
-/* line 128, sass/section/_contact.scss */
+/* line 136, sass/section/_contact.scss */
 .dark-block .floating-label {
   color: #fafafa;
 }
@@ -1608,7 +1654,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 0;
   transition: inherit;
 }
-/* line 142, sass/section/_contact.scss */
+/* line 150, sass/section/_contact.scss */
 .dark-block input::-moz-placeholder,
 .dark-block textarea::-moz-placeholder {
   color: #f0f0f0;
@@ -1619,7 +1665,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 0;
   transition: inherit;
 }
-/* line 142, sass/section/_contact.scss */
+/* line 150, sass/section/_contact.scss */
 .dark-block input:-ms-input-placeholder,
 .dark-block textarea:-ms-input-placeholder {
   color: #f0f0f0;
@@ -1631,7 +1677,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   -webkit-transition: inherit;
   transition: inherit;
 }
-/* line 142, sass/section/_contact.scss */
+/* line 150, sass/section/_contact.scss */
 .dark-block input::-webkit-input-placeholder,
 .dark-block textarea::-webkit-input-placeholder {
   color: #f0f0f0;
@@ -1651,12 +1697,12 @@ input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   opacity: 1;
 }
-/* line 152, sass/section/_contact.scss */
+/* line 160, sass/section/_contact.scss */
 .dark-block input:focus,
 .dark-block textarea:focus {
   border-color: #fafafa;
 }
-/* line 158, sass/section/_contact.scss */
+/* line 166, sass/section/_contact.scss */
 input:placeholder-shown + .floating-label, textarea:placeholder-shown + .floating-label {
   cursor: text;
   max-width: 66.66%;
@@ -1671,62 +1717,64 @@ input:placeholder-shown + .floating-label, textarea:placeholder-shown + .floatin
   -ms-transform: translate(0, 1.875em) scale(1.35);
   transform: translate(0, 1.875em) scale(1.35);
 }
-/* line 168, sass/section/_contact.scss */
+/* line 176, sass/section/_contact.scss */
 .dark-block input:placeholder-shown + .floating-label,
 .dark-block textarea:placeholder-shown + .floating-label {
   color: #b8b8b8;
 }
-/* line 174, sass/section/_contact.scss */
+/* line 182, sass/section/_contact.scss */
 input:not(:placeholder-shown) + .floating-label, input:focus + .floating-label, textarea:not(:placeholder-shown) + .floating-label, textarea:focus + .floating-label {
   -webkit-transform: translate(0, 0) scale(1);
   -ms-transform: translate(0, 0) scale(1);
   transform: translate(0, 0) scale(1);
   cursor: pointer;
 }
-/* line 179, sass/section/_contact.scss */
+/* line 187, sass/section/_contact.scss */
 .dark-block input:not(:placeholder-shown) + .floating-label, .dark-block input:focus + .floating-label,
 .dark-block textarea:not(:placeholder-shown) + .floating-label,
 .dark-block textarea:focus + .floating-label {
   color: #b8b8b8;
 }
 
-/* line 185, sass/section/_contact.scss */
+/* line 193, sass/section/_contact.scss */
 textarea {
   height: 12.5em;
   border-width: 1px;
 }
-/* line 189, sass/section/_contact.scss */
+/* line 197, sass/section/_contact.scss */
 textarea + .floating-label {
   top: -0.75em;
 }
-/* line 193, sass/section/_contact.scss */
+/* line 201, sass/section/_contact.scss */
 textarea:focus, textarea.not-empty {
   padding-top: 2em;
 }
-/* line 198, sass/section/_contact.scss */
+/* line 206, sass/section/_contact.scss */
 textarea:not(:placeholder-shown) + .floating-label, textarea:focus + .floating-label {
   -webkit-transform: translate(0, 1em) scale(1);
   -ms-transform: translate(0, 1em) scale(1);
   transform: translate(0, 1em) scale(1);
 }
 
-/* line 207, sass/section/_contact.scss */
+/* line 215, sass/section/_contact.scss */
 .submit {
   display: block;
-  width: 11.4285714286em;
-  padding: 0.5714285714em 0;
+  width: auto;
+  padding: 0.7142857143em 3.4285714286em;
   text-align: center;
+  text-transform: lowercase;
   border: 1px solid #1765BF;
   border-radius: 2px;
+  background-color: #1765BF;
   -webkit-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
-/* line 216, sass/section/_contact.scss */
+/* line 227, sass/section/_contact.scss */
 .submit:focus {
   outline: 1px solid #B72B28;
   border-color: #B72B28;
 }
-/* line 221, sass/section/_contact.scss */
+/* line 232, sass/section/_contact.scss */
 .submit:hover {
   border-color: #B72B28;
   color: #B72B28;

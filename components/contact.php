@@ -6,12 +6,15 @@
                 <h3 class="title-m">Contact Me</h3>
             </div>
 
-            <a href="/andy-knapp-resume.pdf" target="_blank" class="headline-sub">resume (pdf)
-                <span class="visually-hidden">Opens in separate tab</span>
+            <div class="resume">
+                <a href="/andy-knapp-resume.pdf" target="_blank" class="headline-sub" title="PDF Resume">resume
+                    <span class="visually-hidden">PDF opens in separate tab</span>
+                </a>
                 <svg>
-                    <use xlink:href="#icon-external-link"></use>
+                    <use xlink:href="#icon-pdf"></use>
                 </svg>
-            </a>
+            </div>
+
         </header>
 
         <div class="form-container">

@@ -71,6 +71,44 @@
         font-weight: 400;
         letter-spacing: (2 / 18) * 1em;
     }
+
+    &.coming-soon {
+        position: relative;
+        overflow: hidden;
+
+        .work-image,
+        .work-details {
+            filter: blur(5px);
+        }
+
+        .work-image {
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-color: rgba($color-white, 0.92);
+            }
+        }
+
+        &:after {
+            content: 'Coming Soon';
+            display: block;
+            @extend .headline-sub;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            z-index: 2;
+            font-weight: 700;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .work-image {
