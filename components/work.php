@@ -10,7 +10,10 @@
         <div class="showcase-grid flex-row">
             <article class="work-example">
                 <div class="work-image">
-                    <img src="../assets/images/changeoversales.jpg" alt="Changeover Sales website">
+                    <picture>
+                        <source srcset="../assets/images/changeoversales.webp" type="image/webp">
+                        <img src="../assets/images/changeoversales.jpg" alt="Changeover Sales website">
+                    </picture>
                 </div>
 
                 <div class="work-details">
@@ -29,7 +32,10 @@
 
             <article class="work-example coming-soon">
                 <div class="work-image">
-                    <img src="../assets/images/wj-molding.jpg" alt="Acme Co website">
+                    <picture>
+                        <source srcset="../assets/images/wj-molding.webp" type="image/webp">
+                        <img src="../assets/images/wj-molding.jpg" alt="Acme Co website">
+                    </picture>
                 </div>
 
                 <div class="work-details">
@@ -48,7 +54,10 @@
 
             <article class="work-example coming-soon">
                 <div class="work-image">
-                    <img src="../assets/images/garrisons.jpg" alt="Acme Co website">
+                    <picture>
+                        <source srcset="../assets/images/garrisons.webp" type="image/webp">
+                        <img src="../assets/images/garrisons.jpg" alt="Acme Co website">
+                    </picture>
                 </div>
 
                 <div class="work-details">
