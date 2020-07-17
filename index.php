@@ -62,7 +62,7 @@
         })();
     </script>
 
-    <script src="https://kwes.io/js/kwes.js"></script>
+    <script src="https://kwes.io/js/kwes.js" async></script>
 
 </body>
 </html>
