@@ -208,11 +208,12 @@ body {
     }
 
     li {
-        margin: auto 0;
+        margin: 0;
     }
 
     .headline-sub {
-        @include fluid(font-size, 20em, 68em, 0.65em, 0.9em);
+        @include fluid(font-size, 20em, 68em, 0.65em, 0.75em);
+        line-height: 1;
     }
 
     a {
@@ -243,18 +244,9 @@ body {
 
         ul {
             justify-content: flex-end;
-            padding-left: 21em;
+            align-items: flex-start;
         }
 
-        li {
-            order: 0;
-            margin-right: 0;
-            line-height: 1.5;
-            color: $color-gray-med;
-            font-size: 0.75em;
-            font-family: $rubik;
-            font-weight: 400;
-        }
 
         a {
             &::before,

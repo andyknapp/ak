@@ -956,7 +956,11 @@ li .work-example .experience-header a {
 }
 /* line 210, sass/base/_global.scss */
 .site-footer li {
-  margin: auto 0;
+  margin: 0;
+}
+/* line 214, sass/base/_global.scss */
+.site-footer .headline-sub, .site-footer .work-example.coming-soon:after, .site-footer .work-details li, .work-details .site-footer li {
+  line-height: 1;
 }
 /* line 7, sass/utils/_mixins.scss */
 .site-footer .headline-sub, .site-footer .work-example.coming-soon:after, .site-footer .work-details li, .work-details .site-footer li {
@@ -965,24 +969,24 @@ li .work-example .experience-header a {
 @media screen and (min-width: 20em) {
   /* line 7, sass/utils/_mixins.scss */
   .site-footer .headline-sub, .site-footer .work-example.coming-soon:after, .site-footer .work-details li, .work-details .site-footer li {
-    font-size: calc(0.65em + 0.25 * (100vw - 20em) / 48);
+    font-size: calc(0.65em + 0.1 * (100vw - 20em) / 48);
   }
 }
 @media screen and (min-width: 68em) {
   /* line 7, sass/utils/_mixins.scss */
   .site-footer .headline-sub, .site-footer .work-example.coming-soon:after, .site-footer .work-details li, .work-details .site-footer li {
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
 }
-/* line 218, sass/base/_global.scss */
+/* line 219, sass/base/_global.scss */
 .site-footer a {
   color: #fafafa;
 }
-/* line 221, sass/base/_global.scss */
+/* line 222, sass/base/_global.scss */
 .site-footer a:hover {
   color: #B72B28;
 }
-/* line 227, sass/base/_global.scss */
+/* line 228, sass/base/_global.scss */
 .dark-mode .site-footer:before {
   content: '';
   display: block;
@@ -999,32 +1003,22 @@ li .work-example .experience-header a {
   .site-footer {
     padding-right: 2em;
   }
-  /* line 244, sass/base/_global.scss */
+  /* line 245, sass/base/_global.scss */
   .site-footer ul {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding-left: 21em;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
-  /* line 249, sass/base/_global.scss */
-  .site-footer li {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    margin-right: 0;
-    line-height: 1.5;
-    color: #b8b8b8;
-    font-size: 0.75em;
-    font-family: "Rubik", Sans-Serif;
-    font-weight: 400;
-  }
-  /* line 260, sass/base/_global.scss */
+  /* line 252, sass/base/_global.scss */
   .site-footer a::before, .site-footer a::after {
     display: none;
   }
 }
 
-/* line 269, sass/base/_global.scss */
+/* line 261, sass/base/_global.scss */
 svg {
   -webkit-transition: fill 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
   transition: fill 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
