@@ -3,12 +3,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        // concat js files
+        concat: {
+            basic: {
+                src: ['js/src/*js'],
+                dest: 'js/site-js.js',
+            },
+        },
+
         // Minifies javascript files
         uglify: {
-          build: {
-            src: 'js/site.js',
-            dest: 'js/site.min.js'
-          }
+            my_target: {
+                files: {
+                    'js/site-js.min.js': ['js/site-js.js'],
+                }
+            }
         },
 
         // Compiles Sass
@@ -47,13 +56,13 @@ module.exports = function(grunt) {
 
         // Watches for changes then executes tasks
         watch: {
-          scripts: {
-            files: ['js/**/*.js'],
-            tasks: ['uglify'],
-            options: {
-                spawn: false,
-            },
-          },
+          // scripts: {
+          //   files: 'js/src/*.js',
+          //   tasks: ['concat', 'uglify'],
+          //   options: {
+          //       spawn: false,
+          //   },
+          // },
           css: {
             files: ['css/sass/**/*.scss'],
             tasks: ['sass', 'autoprefixer', 'cssmin'],
@@ -110,7 +119,7 @@ module.exports = function(grunt) {
 
     });
 
-    //grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -120,5 +129,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'svgstore', 'browserSync', 'watch']);
 };

@@ -7,7 +7,7 @@
         <?php //include('css/critical.min.css'); ?>
     </style>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01"> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.02">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.2">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38353868-1"></script>
@@ -45,8 +45,7 @@
 
     <?php include( 'assets/svg-defs.svg' ); ?>
 
-    <script src="js/site.js?ver=1.01"></script>
-    <script src="js/animation-driver.js?ver=1.01"></script>
+    <script src="js/site-js.min.js?ver=1.2"></script>
 
     <script>
         // load webfonts async
