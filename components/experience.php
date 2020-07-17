@@ -45,6 +45,7 @@
         <div class="experience-description">
             <ul>
                 <li>HTML, Javascript, jQuery, React, PHP, CSS</li>
+                <li>WordPress theme development and plugins</li>
                 <li>Git, SVN, Grunt, NPM</li>
                 <li>Sketch, Photoshop, Illustrator</li>
             </ul>
