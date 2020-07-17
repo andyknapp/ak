@@ -58,27 +58,27 @@ $dashOffset: 1000;
 }
 
 
-@keyframes slideLeftSneaky {
-	0% {
-		opacity: 0;
-		transform: translate3d(0, 0, 0);
-	}
-
-	10% {
-		opacity: 0;
-		transform: translate3d(0, 0, 0);
-	}
-
-	75% {
-		opacity: 0;
-		transform: translate3d(-35%, 0, 0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate3d(-35%, 0, 0);
-	}
-}
+// @keyframes slideLeftSneaky {
+// 	0% {
+// 		opacity: 0;
+// 		transform: translate3d(0, 0, 0);
+// 	}
+//
+// 	10% {
+// 		opacity: 0;
+// 		transform: translate3d(0, 0, 0);
+// 	}
+//
+// 	75% {
+// 		opacity: 0;
+// 		transform: translate3d(-35%, 0, 0);
+// 	}
+//
+// 	100% {
+// 		opacity: 1;
+// 		transform: translate3d(-35%, 0, 0);
+// 	}
+// }
 
 
 @keyframes draw {
@@ -88,32 +88,32 @@ $dashOffset: 1000;
 }
 
 
-@keyframes fadeDraw {
-	0% {
-		fill: $color-black;
-		stroke-dashoffset: $dashOffset;
-	}
-
-	10% {
-		fill: transparent;
-		stroke-dashoffset: $dashOffset;
-	}
-
-	100% {
-        fill: transparent;
-		stroke-dashoffset: 0;
-	}
-}
-
-
-@keyframes fadeOut3d {
-	0% {
-		transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-		opacity: 1;
-	}
-
-	100% {
-		transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-		opacity: 0;
-	}
-}
+// @keyframes fadeDraw {
+// 	0% {
+// 		fill: $color-black;
+// 		stroke-dashoffset: $dashOffset;
+// 	}
+//
+// 	10% {
+// 		fill: transparent;
+// 		stroke-dashoffset: $dashOffset;
+// 	}
+//
+// 	100% {
+//         fill: transparent;
+// 		stroke-dashoffset: 0;
+// 	}
+// }
+//
+//
+// @keyframes fadeOut3d {
+// 	0% {
+// 		transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
+// 		opacity: 1;
+// 	}
+//
+// 	100% {
+// 		transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
+// 		opacity: 0;
+// 	}
+// }

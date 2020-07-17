@@ -254,54 +254,6 @@ img {
     fill: transparent;
   }
 }
-@-webkit-keyframes slideLeftSneaky {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  10% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  75% {
-    opacity: 0;
-    -webkit-transform: translate3d(-35%, 0, 0);
-    transform: translate3d(-35%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-35%, 0, 0);
-    transform: translate3d(-35%, 0, 0);
-  }
-}
-@keyframes slideLeftSneaky {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  10% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  75% {
-    opacity: 0;
-    -webkit-transform: translate3d(-35%, 0, 0);
-    -ms-transform: translate3d(-35%, 0, 0);
-    transform: translate3d(-35%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-35%, 0, 0);
-    -ms-transform: translate3d(-35%, 0, 0);
-    transform: translate3d(-35%, 0, 0);
-  }
-}
 @-webkit-keyframes draw {
   100% {
     stroke-dashoffset: 0;
@@ -310,60 +262,6 @@ img {
 @keyframes draw {
   100% {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes fadeDraw {
-  0% {
-    fill: #212121;
-    stroke-dashoffset: 1000;
-  }
-  10% {
-    fill: transparent;
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    fill: transparent;
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fadeDraw {
-  0% {
-    fill: #212121;
-    stroke-dashoffset: 1000;
-  }
-  10% {
-    fill: transparent;
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    fill: transparent;
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes fadeOut3d {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-    transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-    opacity: 0;
-  }
-}
-@keyframes fadeOut3d {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-    -ms-transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-    transform: scale3d(1, 1, 1) skewX(0) translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-    -ms-transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-    transform: scale3d(0.25, 0.25, 0) skewX(6deg) translate3d(-10%, 0, 0);
-    opacity: 0;
   }
 }
 /* line 5, sass/base/_typography.scss */
