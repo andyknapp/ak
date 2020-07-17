@@ -56,7 +56,7 @@ module.exports = function(grunt) {
           },
           css: {
             files: ['css/sass/**/*.scss'],
-            tasks: ['sass', 'cssmin', 'autoprefixer'],
+            tasks: ['sass', 'autoprefixer', 'cssmin'],
             options: {
                 spawn: false,
             }
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
         browserSync: {
           dev: {
             bsFiles: {
-              src : 'css/style.min.css'
+              src : 'css/style.css'
             },
             options: {
               watchTask: true,

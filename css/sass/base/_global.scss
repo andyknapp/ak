@@ -16,7 +16,6 @@ body {
     margin-top: 100vh;
     padding: 0 0 $footer;
     z-index: 2;
-    background-color: transparent;
     background-color: $color-white;
 }
 
@@ -37,7 +36,6 @@ body {
 @media (min-width: $bp-m) {
     .main-content {
         padding: 0;
-        // @include fluid(padding-left, 43em, 100em, 2em, 10em);
     }
 
     .offset-left {
@@ -73,12 +71,12 @@ body {
         letter-spacing: (4 / 18) * 1em;
         font-weight: 600;
     }
-    // transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
+    // transition: opacity 0.3s $easing-fn 1.125s, transform 0.3s $easing-fn 1.125s;
 
     // &.reveal {
     //     opacity: 0;
     //     transform: translateY(1em);
-    //     transition: opacity 0.3s ease 1.125s, transform 0.3s ease 1.125s;
+    //     transition: opacity 0.3s $easing-fn 1.125s, transform 0.3s $easing-fn 1.125s;
     // }
 }
 
@@ -140,7 +138,7 @@ body {
     text-align: center;
     opacity: 0;
     transform: scale3d(0.5, 0.5, 0.5);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s $easing-fn, transform 0.2s $easing-fn;
 
     &.animate {
         opacity: 1;
@@ -194,19 +192,27 @@ body {
 
 
 .site-footer {
+    position: relative;
     width: 100%;
-    padding: $gap / 4;
+    height: $footer;
+    padding: 0 $gap / 4;
     background-color: $color-black;
     color: $color-gray-med;
 
     ul {
+        display: flex;
+        align-items: center;
         position: relative;
+        height: 100%;
         z-index: 2;
     }
 
     li {
-        display: inline-block;
-        margin: 0 1em 0 0;
+        margin: auto 0;
+    }
+
+    .headline-sub {
+        @include fluid(font-size, 20em, 68em, 0.65em, 0.9em);
     }
 
     a {
@@ -217,14 +223,25 @@ body {
         }
     }
 
+    .dark-mode & {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: - $footer;
+            left: 0;
+            width: 100%;
+            height: $footer;
+            z-index: 2;
+            background-color: $color-black;
+        }
+    }
+
 
     @media (min-width: $bp-m) {
-        padding-bottom: 1em;
         padding-right: 2em;
 
         ul {
-            display: flex;
-            flex-flow: row nowrap;
             justify-content: flex-end;
             padding-left: 21em;
         }
@@ -250,5 +267,5 @@ body {
 
 
 svg {
-    transition: fill 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
+    transition: fill 0.2s $easing-fn;
 }

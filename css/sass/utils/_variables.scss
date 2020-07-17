@@ -4,6 +4,7 @@ $color-black: #212121;
 $color-white: #fafafa;
 $color-blue: #1765BF;
 $color-orange: #B72B28;
+$color-orange-light: lighten($color-orange, 25);
 $color-gray: #5d5c5c;
 $color-gray-med: #b8b8b8;
 $color-gray-light: #f0f0f0;
@@ -11,7 +12,7 @@ $color-gray-dark: #6B6B6B;
 
 
 // Sizes
-$footer: 5.5em;
+$footer: (24/16) * 1em;
 $header: (48/16)*1em;
 $header-l: 5em;
 $nav-width: 22em;
@@ -28,6 +29,6 @@ $bp-max-font: 68em;
 $bp-nav-big: 83em;
 $bp-l: 87.5em; //1400
 
-
-
 $bp-res: 30em;
+
+$easing-fn: cubic-bezier(0.47, 0, 0.75, 0.72);

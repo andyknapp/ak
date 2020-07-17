@@ -81,12 +81,13 @@ function emptyField() {
 
 function checkPosition() {
     var scroll = window.scrollY;
-    var trigger = height - vh - 40;
+    var trigger = height - 24;
     var vw = window.innerWidth;
 
 
     // move footer nav up to reveal actual footer
-    if( vw < 800 ) {
+    if( vw < 800 ) { // $bp-m
+
         if( scroll > trigger ) {
             //nav.style.transform = "translateY(-" + (scroll - trigger) + "px)";
             nav.classList.add('bottomed-out');

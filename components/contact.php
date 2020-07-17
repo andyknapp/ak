@@ -9,36 +9,43 @@
             <div class="resume">
                 <a href="/andy-knapp-resume.pdf" target="_blank" class="headline-sub" title="PDF Resume">resume
                     <span class="visually-hidden">PDF opens in separate tab</span>
+
+                    <svg>
+                        <use xlink:href="#icon-pdf"></use>
+                    </svg>
                 </a>
-                <svg>
-                    <use xlink:href="#icon-pdf"></use>
-                </svg>
+
             </div>
 
         </header>
 
-        <div class="form-container">
-            <form method="post" action="../form/contactengine.php">
+        <div class="form-container kwes-form">
+            <form
+                method="POST"
+                action="https://kwes.io/api/foreign/forms/GvlHqEdqs2gqkKaArnJB"
+                success-message="Thanks! I'll get back to you as soon as possible."
+                error-message="Oh no, there was an error"
+                no-reload
+            >
                 <div class="field-group">
+                    <div class="field kw-floating-label-wrapper">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required rules="required|max:255" />
+                        <label for="name" class="floating-label">Name</label>
 
-                    <div class="field">
-        				<input type="text" name="Name" id="Name" placeholder="Your Name" required />
-                        <label for="Name" class="floating-label">Name</label>
                     </div>
 
-                    <div class="field">
-        				<input type="text" name="Email" id="Email" placeholder="your email" required />
-                        <label for="Email" class="floating-label">Email</label>
+                    <div class="field kw-floating-label-wrapper">
+                        <label for="email" class="floating-label">Email</label>
+        				<input type="email" name="email" id="email" placeholder="your email" required rules="required|email" />
                     </div>
-
                 </div>
 
-                <div class="field floating">
-                    <textarea name="Message" rows="10" cols="20" id="Message" placeholder="Hello!" class="text-area"></textarea>
-                    <label for="Message" class="floating-label">Message</label>
+                <div class="field floating kw-floating-label-wrapper field-textarea">
+                    <textarea name="message" rows="10" cols="20" id="message" placeholder="Hello!" class="text-area" rules="required"></textarea>
+                    <label for="message" class="floating-label">Message</label>
                 </div>
 
-				<input type="submit" name="submit" value="Send" class="submit" />
+				<button type="submit" class="submit">Submit</button>
 			</form>
 
         </div>

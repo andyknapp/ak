@@ -15,12 +15,12 @@
     margin: 0;
     opacity: 1;
     transform: scale(1);
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transition: transform 0.25s $easing-fn, opacity 0.25s $easing-fn;
 
-    &.fade-out {
-        opacity: 0;
-        transform: scale(0.7);
-    }
+    // &.fade-out {
+    //     opacity: 0;
+    //     transform: scale(0.7);
+    // }
 }
 
 .logo {
@@ -42,10 +42,19 @@
     background-color: $color-white;
     z-index: 3;
     transform: translateY(0);
-    transition: justify-content 0.2s ease, transform 0.2s ease;
+    transition: justify-content 0.2s $easing-fn, transform 0.2s $easing-fn;
 
     &.bottomed-out {
-        transform: translateY(-40px);
+        transform: translateY(-$footer);
+    }
+
+    &.bottom-header {
+        box-shadow: 0 -1px 1px $color-gray-light;
+    }
+
+    .dark-mode & {
+        background-color: $color-black;
+        box-shadow: 0 -1px 1px lighten($color-black, 10);
     }
 }
 
@@ -57,7 +66,7 @@
     font-weight: 400;
     text-transform: lowercase;
     transform: translateX(-64px);
-    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s $easing-fn, color 0.2s $easing-fn, background-color 0.2s $easing-fn;
 
 
     &:last-of-type {
@@ -76,6 +85,11 @@
 
     .dark-mode & {
         color: $color-white;
+
+        &:hover,
+        &.active {
+            color: $color-orange-light;
+        }
     }
 }
 
@@ -86,11 +100,15 @@
     margin-top: 0.25em;;
     opacity: 0;
     transform: scale(0.7);
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transition: transform 0.25s $easing-fn, opacity 0.25s $easing-fn;
 
     .bottom-header & {
         opacity: 1;
         transform: translateX(0);
+    }
+
+    .dark-mode & {
+        fill: $color-white;
     }
 }
 
@@ -126,7 +144,8 @@
 
         }
 
-        .bottom-header & {
+        &.bottom-header {
+            box-shadow: none;
             transform: translateX(0);
         }
     }

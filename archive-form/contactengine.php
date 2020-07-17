@@ -12,7 +12,7 @@
 //        "(reCAPTCHA said: " . $resp->error . ")");
 // }
 
-$EmailFrom = "server@andyknapp.com";
+$EmailFrom = "email@andyknapp.com";
 $EmailTo = "aknapp1@gmail.com";
 $Subject = "Contact form entry";
 $Name = Trim(stripslashes($_POST['Name']));
@@ -39,11 +39,11 @@ $Body .= $Message;
 $Body .= "\n";
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+$success = mail($EmailTo, $Subject, $Body, $EmailFrom);
 
 // redirect to success page
 if ($success){
-    print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
+    print "<meta http-equiv=\"refresh\" content=\"0;URL=/#contact\">";
 }
 else{
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";

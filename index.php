@@ -6,7 +6,8 @@
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.min.css?ver=1.01"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.02">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38353868-1"></script>
@@ -61,6 +62,8 @@
             s.parentNode.insertBefore(wf, s);
         })();
     </script>
+
+    <script src="https://kwes.io/js/kwes.js"></script>
 
 </body>
 </html>

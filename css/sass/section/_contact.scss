@@ -11,6 +11,28 @@
         width: 100%;
     }
 
+    .experience-header {
+        @media (min-width: 412px) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3em;
+
+            .header-group {
+                padding-bottom: 0;
+            }
+
+            .headline-sub {
+                margin-bottom: 0.25em;
+            }
+
+            .headline-xs {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+
     @media (min-width: $bp-m) {
         padding-top: 14em;
         padding-bottom: 14em;
@@ -52,16 +74,16 @@
 
         .resume {
             svg {
-                fill: $color-gray-light;
+                fill: $color-gray-med;
             }
 
             &:hover {
                 .headline-sub {
-                    color: $color-blue;
+                    color: $color-orange-light;
                 }
 
                 svg {
-                    fill: $color-blue;
+                    fill: $color-orange-light;
                 }
             }
         }
@@ -70,7 +92,82 @@
             color: $color-gray-light;
         }
     }
+
+    .form-container {
+        position: relative;
+    }
+
+    //kwes stuff outside of form element
+    [class*='kw-message'] {
+        padding: 0 0.25em 0.25em 0.5em;
+        border-radius: 2px;
+        border-color: $color-orange;
+        color: $color-orange;
+
+        &.kw-message-error {
+            display: inline-block;
+            width: auto;
+            margin-bottom: 3em;
+            padding-right: 0.5em;
+            background-color: transparent;
+            border-bottom: 0.125em solid $color-orange;
+            border-radius: 0;
+            color: $color-white;
+        }
+
+        &.kw-message-success {
+            background-color: transparent;
+            border: 0;
+            color: $color-gray-light;
+
+            span {
+                @extend .headline-s;
+            }
+
+            &+ form {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        line-height: 1.2;
+    }
+
+    [id*='credit-']:not(a) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        a {
+            opacity: 0.25;
+            text-decoration: none!important;
+            text-transform: lowercase;
+            transition: opacity 0.2s $easing-fn;
+
+            &:hover {
+                opacity: 0.45;
+            }
+        }
+    }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid transparent;
+  background-color: transparent;
+  -webkit-text-fill-color: $color-white;
+  -webkit-box-shadow: 0 0 0 0 #000 inset;
+  transition: background-color 5000s $easing-fn 0s;
+}
+
 
 
 %input {
@@ -88,14 +185,35 @@
 	color: $color-black;
 	outline: none;
 	-webkit-appearance: none;//sass-lint:disable-line no-vendor-prefixes
-	transition: border-color 0.2s ease-out;
+	transition: border-color 0.2s $easing-fn;
 
 	&:focus {
 		border-color: $color-black;
 	}
 
     .dark-block & {
-        color: $color-white;
+        &:not(.submit) {
+            color: $color-white;
+        }
+    }
+
+    .kw-field-wrapper & {
+        &[class*='kw-'] {
+            border-width: 0 0 1px;
+
+            &[class*='is-success'],
+            &[class*='is-danger'] {
+                border-color: darken($color-gray-med, 20);
+            }
+
+            &:focus {
+                border-color: $color-white;
+            }
+        }
+    }
+
+    &:-internal-autofill-selected {
+        background-color: transparent!important;
     }
 }
 
@@ -112,12 +230,16 @@
     margin-bottom: 1.25em;
 
     .field-group & {
-        // margin-bottom: 1em;
     	width: calc(50% - 0.25em);
 
         @media (min-width: $bp-s) {
             width: calc(50% - 1em);
         }
+    }
+
+    // adjustments for kwes
+    &.kw-floating-label-wrapper {
+        margin-bottom: 1.25em;
     }
 }
 
@@ -127,16 +249,78 @@
     left: 0.5em;
     cursor: text;
     overflow: hidden;
-    font-size: 12px;
+    @include fluid(font-size, 20em, 68em, 0.65em, 0.75em);
     color: lighten($color-black, 40%);
     transform-origin: left top;
     will-change: transform;
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out, color 0.15s ease-out;
+    transition: transform 0.15s $easing-fn, opacity 0.15s $easing-fn, color 0.15s $easing-fn;
 
     .dark-block & {
         color: $color-white;
     }
+
+    // adjustments for kwes
+    .kw-floating-label-wrapper & {
+        &.kw-floating-label {
+            opacity: 1;
+            visibility: visible;
+            top: 1.65em;
+            left: 0.5em;
+            max-width: 66.66%;
+            padding: 0;
+            color: lighten($color-black, 40%);
+            line-height: 1.5;
+            border-radius: 0;
+            cursor: text;
+            @include fluid(font-size, 20em, 68em, 0.65em, 0.75em);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0, -0.25em) scale(1.35);
+            transition: transform 0.15s $easing-fn, opacity 0.15s $easing-fn, color 0.15s $easing-fn;
+
+            .dark-block & {
+                color: $color-gray-med;
+            }
+
+            &.is-focused,
+            &.is-active {
+                transform: translate(0, -2.15em) scale(1);
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &.is-active {
+                top: 1.6em;
+                left: 0.5em;
+                padding: 0;
+            }
+        }
+    }
+
+    .field-textarea & {
+        &.kw-floating-label {
+            top: 1em;
+            transform-origin: left top;
+
+            &.is-focused,
+            &.is-active {
+                transform: translate(0, -0.35em) scale(1);
+            }
+
+            &.is-active {
+                top: 1em;
+                left: 0.5em;
+                padding: 0;
+            }
+        }
+
+    }
 }
+
 
 input,
 textarea {
@@ -192,20 +376,25 @@ textarea {
 
 textarea {
     height: (200 / 16) * 1em;
+    padding-top: 2em;
     border-width: 1px;
 
     &+ .floating-label {
         top: -0.75em;
     }
 
-    &:focus,
-    &.not-empty {
-        padding-top: 2em;
-    }
-
     &:not(:placeholder-shown) + .floating-label,
     &:focus + .floating-label {
         transform: translate(0, 1em) scale(1);
+    }
+
+    // kwes adjustmenmts
+
+    .field-textarea & {
+        &[class*='is-success'],
+        &[class*='is-danger'] {
+            border-color: darken($color-gray-med, 20);
+        }
     }
 }
 
@@ -213,24 +402,30 @@ textarea {
 
 // buttons
 .submit {
-    @extend .headline-sub;
     display: block;
     width: auto;
-    padding: (10/14) * 1em (48/14) * 1em;
+    padding: (10/14) * 1em (48/14) * 1em (12/14) * 1em;
+    @include fluid(font-size, 20em, 68em, 0.75em, 0.9em);
+    color: $color-white;
+	letter-spacing: 1px;
     text-align: center;
     text-transform: lowercase;
     border: 1px solid $color-blue;
     border-radius: 2px;
     background-color: $color-blue;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s $easing-fn, color 0.2s $easing-fn, border-color 0.2s $easing-fn;
 
-    &:focus {
-        outline: 1px solid $color-orange;
-        border-color: $color-orange;
-    }
+    .dark-block & {
+        &:focus {
+            outline: 1px solid darken($color-gray-med, 20);
+            border-color: darken($color-blue, 10);
+            background-color: darken($color-blue, 10);
+            color: $color-gray-med;
+        }
 
-    &:hover {
-        border-color: $color-orange;
-        color: $color-orange;
+        &:hover {
+            border-color: darken($color-blue, 10);
+            background-color: darken($color-blue, 10);
+        }
     }
 }

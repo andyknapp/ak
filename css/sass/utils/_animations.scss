@@ -7,11 +7,11 @@ $dashOffset: 1000;
 }
 
 @mixin a-draw {
-	animation: draw $time ease forwards;
+	animation: draw $time $easing-fn forwards;
 }
 
 @mixin k-draw {
-	animation: draw $time ease $delay forwards;
+	animation: draw $time $easing-fn $delay forwards;
 }
 
 @mixin k-left {
