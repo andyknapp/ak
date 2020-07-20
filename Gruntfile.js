@@ -56,13 +56,13 @@ module.exports = function(grunt) {
 
         // Watches for changes then executes tasks
         watch: {
-          // scripts: {
-          //   files: 'js/src/*.js',
-          //   tasks: ['concat', 'uglify'],
-          //   options: {
-          //       spawn: false,
-          //   },
-          // },
+          scripts: {
+            files: 'js/src/*.js',
+            tasks: ['concat', 'uglify'],
+            options: {
+                spawn: false,
+            },
+          },
           css: {
             files: ['css/sass/**/*.scss'],
             tasks: ['sass', 'autoprefixer', 'cssmin'],
