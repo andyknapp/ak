@@ -3,6 +3,21 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Andy Knapp | Web Developer</title>
+    <title>Home - Changover Sales</title>
+	<meta name="description" content="I am a freelance web developer and designer located in Wilmington DE, just outside of Philadelphia. I have extensive experience as a WordPress developer which includes custom theme & plugin development, and working with plugins such as Woocommerce, Gravity Forms, and Advanced Custom Fields. I have over 20 years combined experience in web development and marketing." />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://andyknapp.com/" />
+    <meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Andy Knapp | Web Developer" />
+	<meta property="og:description" content="I am a freelance web developer and designer located in Wilmington DE, just outside of Philadelphia. I have extensive experience as a WordPress developer which includes custom theme & plugin development, and working with plugins such as Woocommerce, Gravity Forms, and Advanced Custom Fields. I have over 20 years combined experience in web development and marketing." />
+	<meta property="og:url" content="https://andyknapp.com/" />
+	<meta property="og:site_name" content="Andy Knapp | Web Developer" />
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+
     <style type="text/css">
         <?php //include('css/critical.min.css'); ?>
     </style>
