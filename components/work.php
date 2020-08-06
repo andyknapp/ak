@@ -18,12 +18,12 @@
 
                 <div class="work-details">
                     <h3 class="title-s">Changeover Sales</h3>
-                    <p class="copy-1">This redesign features a customized e-commerce solution for the long time family-owned estate sale business, leveraging the power and flexibility of WordPress and Woocommerce. </p>
+                    <p class="copy-1">This redesign features a customized e-commerce solution for the long time family-owned estate sale business, leveraging the power and flexibility of WordPress and Woocommerce.</p>
 
                     <ul>
                         <li>Site design & development</li>
                         <li>WordPress custom theme development</li>
-                        <li>WooCommerce integration (comming soon)</li>
+                        <li>WooCommerce integration</li>
                     </ul>
 
                     <a href="https://changeoversales.com/" class="fancy-link">Visit Site</a>
