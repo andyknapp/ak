@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --color-text: #212121;
+  --color-bg: #fafafa;
+  --color-bg-mid: #f0f0f0;
+  --color-muted: #5d5c5c;
+  --color-subtle: #b8b8b8;
+  --color-accent-red: #b72b28;
+  --color-accent-blue: #1765bf;
+  --color-accent-purple: #694872;
+  --color-red-light: #e27e7c;
+  --color-focus-bg: #f1f1f1;
+  --color-focus-text: #21759b;
+
+  /* Typography */
+  --font-sans: sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-display: "Rubik", sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.47, 0, 0.75, 0.72);
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-fast: 0.15s;
+  --dur-base: 0.2s;
+  --dur-slow: 0.25s;
+
+  /* Z-index */
+  --z-above: 2;
+  --z-overlay: 3;
+}

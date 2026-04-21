@@ -1,0 +1,155 @@
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.wf-active body {
+  font-family: var(--font-body);
+}
+
+[class*="title-"] {
+  display: block;
+  margin: 0 0 1em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.wf-active [class*="title-"] {
+  font-family: var(--font-display);
+}
+
+[class*="title-"] a {
+  color: var(--color-text);
+}
+
+[class*="headline-"] {
+  display: block;
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+}
+
+[class*="headline-"] a {
+  color: var(--color-text);
+}
+
+.title-intro {
+  font-weight: 900;
+  font-size: clamp(2.5em, calc(2.5em + 1.5 * (100vw - 20em) / 48), 4em);
+}
+
+.title-l {
+  font-size: clamp(1.75em, calc(1.75em + 1 * (100vw - 20em) / 48), 2.75em);
+}
+
+.title-m {
+  line-height: 1;
+}
+
+.title-m,
+.headline-m {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: clamp(1em, calc(1em + 0.75 * (100vw - 20em) / 48), 1.75em);
+}
+
+.title-s,
+.headline-s {
+  margin: 1.5em 0 0.5em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: clamp(1em, calc(1em + 0.25 * (100vw - 20em) / 48), 1.25em);
+}
+
+.headline-xs {
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  font-size: clamp(0.75em, calc(0.75em + 0.375 * (100vw - 20em) / 48), 1.125em);
+}
+
+.headline-sub {
+  letter-spacing: 1px;
+  font-size: clamp(0.75em, calc(0.75em + 0.15 * (100vw - 20em) / 48), 0.9em);
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:visited,
+a:active {
+  outline: 0;
+}
+
+.fancy-link,
+p a,
+li a {
+  position: relative;
+  color: var(--color-text);
+}
+
+.fancy-link::before,
+p a::before,
+li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0.5;
+  background-color: var(--color-accent-red);
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.fancy-link:hover,
+p a:hover,
+li a:hover {
+  color: var(--color-text);
+}
+
+.fancy-link:hover::before,
+p a:hover::before,
+li a:hover::before {
+  opacity: 1;
+}
+
+p,
+li {
+  margin: 0 0 1em;
+  line-height: 1.7;
+  font-size: clamp(0.875em, calc(0.875em + 0.25 * (100vw - 20em) / 48), 1.125em);
+}
+
+p a::before,
+li a::before {
+  background-color: var(--color-accent-blue);
+}
+
+.copy-1 {
+  line-height: 1.4;
+  font-size: clamp(0.8em, calc(0.8em + 0.2 * (100vw - 20em) / 48), 1em);
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}

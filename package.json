@@ -23,5 +23,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
     "lightningcss": "^1.32.0"
+  },
+  "devDependencies": {
+    "prettier": "3.8.3"
   }
 }
