@@ -38,6 +38,9 @@ body {
 body {
   position: relative;
   background-color: var(--color-bg);
+  transition:
+    background-color var(--dur-slow) ease,
+    color var(--dur-slow) ease;
 }
 
 @supports (animation-timeline: scroll()) {
@@ -62,11 +65,11 @@ svg {
 }
 
 .container {
-  width: min(100%, 680px);
+  width: min(100%, var(--container-width));
   margin: 0 auto;
 
   @media (min-width: 50em) {
-    width: min(78vw, 680px);
+    width: min(78vw, var(--container-width));
     margin: 0;
   }
 
@@ -83,7 +86,6 @@ svg {
     padding: 0 1.5em 1.5em;
   }
 }
-
 
 .container-content {
   max-width: 50em;

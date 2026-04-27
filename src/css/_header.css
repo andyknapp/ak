@@ -153,8 +153,8 @@
         animation-fill-mode: none, none;
         animation-timeline: --showcase-tl, --footer-tl;
         animation-range:
-          entry 3% exit 100%,
-          entry 0% exit 100%;
+          entry calc(var(--footer-height) / 4) exit 100%,
+          entry calc(var(--footer-height) / 4) exit 100%;
       }
 
       .nav-item-contact {
