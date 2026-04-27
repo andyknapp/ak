@@ -1,0 +1,22 @@
+<section id="current" class="showcase">
+  <div class="container-content lead">
+    {% for item in collections.current %}
+    <section class="experience-block">
+      <header class="experience-header">
+        <div class="header-group">
+          {% if item.data.company %}
+          <h2 class="headline-xs">{{ item.data.title }}</h2>
+          <h3 class="title-m">{{ item.data.company }}</h3>
+          {% else %}
+          <h2 class="title-m">{{ item.data.title }}</h2>
+          {% endif %}
+        </div>
+        <p class="headline-sub">{{ item.data.dates }}</p>
+      </header>
+      <div class="experience-description">
+        {{ item.templateContent | safe }}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</section>

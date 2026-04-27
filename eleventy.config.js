@@ -56,6 +56,18 @@ export default (eleventyConfig) => {
   // 	return [...collection.getFilteredByGlob('./src/posts/*.md')];
   // });
 
+  eleventyConfig.addCollection("experience", (collection) =>
+    collection
+      .getFilteredByGlob("./src/content/experience/*.md")
+      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+  );
+
+  eleventyConfig.addCollection("current", (collection) =>
+    collection
+      .getFilteredByGlob("./src/content/current/*.md")
+      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+  );
+
   /*
 		Watch targets
 		By default Eleventy will watch for template changes, but depending on your configuration additional watch targets may be necessary
@@ -78,11 +90,6 @@ export default (eleventyConfig) => {
 		Supported in JavaScript, Liquid, Nunjucks, and Handlebars templates
 		Usage: {% year %}
 	*/
-  eleventyConfig.addCollection("experience", (collection) =>
-    collection
-      .getFilteredByGlob("./src/content/experience/*.md")
-      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
-  );
 
   eleventyConfig.addFilter("where", (arr, key, val) =>
     arr.filter((item) => item.data[key] === val),
