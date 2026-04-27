@@ -1,0 +1,58 @@
+.site-footer {
+  view-timeline-name: --footer-tl;
+  position: relative;
+  width: 100%;
+  height: var(--footer-height);
+  padding: 0 0.5em;
+  background-color: var(--color-text);
+  color: var(--color-subtle);
+  z-index: -1;
+}
+
+.site-footer ul {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  z-index: var(--z-above);
+}
+
+.site-footer li {
+  margin: 0;
+}
+
+.site-footer .headline-sub {
+  line-height: 1;
+  font-size: clamp(0.65em, calc(0.65em + 0.1 * (100vw - 20em) / 48), 0.75em);
+}
+
+.site-footer a {
+  color: var(--color-bg);
+}
+
+.site-footer a:hover {
+  color: var(--color-accent-red);
+}
+
+.site-footer a::before,
+.site-footer a::after {
+  display: none;
+}
+
+
+@media (min-width: 50em) {
+  /* .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    padding-right: 2em;
+    z-index: 1;
+  } */
+
+  .site-footer ul {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}

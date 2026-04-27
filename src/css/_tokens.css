@@ -13,7 +13,7 @@
   --color-focus-text: #21759b;
 
   /* Typography */
-  --font-sans: sans-serif;
+  --font-sans: "Open Sans", sans-serif;
   --font-body: "Open Sans", sans-serif;
   --font-display: "Rubik", sans-serif;
 
@@ -27,4 +27,8 @@
   /* Z-index */
   --z-above: 2;
   --z-overlay: 3;
+
+  --col-width: 25em;
+
+  --footer-height: 5em;
 }

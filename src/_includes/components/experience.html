@@ -1,18 +1,18 @@
-<section id="experience" class="offset-left">
+<section id="experience" class="">
   <div class="container-content">
-    <section class="divider lead animation-element" data-trigger="0.95">
+    <section class="divider lead">
       <h2 class="headline-sub">Web Design & Development Experience</h2>
     </section>
 
     {% for item in collections.experience | where("section", "web") %}
     <section class="experience-block">
-      <header class="section-title experience-header">
+      <header class="experience-header">
         <div class="header-group">
           {% if item.data.company %}
-            <h2 class="headline-xs">{{ item.data.title }}</h2>
-            <h3 class="title-m">{{ item.data.company }}</h3>
+          <h2 class="headline-xs">{{ item.data.title }}</h2>
+          <h3 class="title-m">{{ item.data.company }}</h3>
           {% else %}
-            <h2 class="title-m">{{ item.data.title }}</h2>
+          <h2 class="title-m">{{ item.data.title }}</h2>
           {% endif %}
         </div>
         <p class="headline-sub">{{ item.data.dates }}</p>
@@ -23,19 +23,19 @@
     </section>
     {% endfor %}
 
-    <section class="divider animation-element" data-trigger="0.95">
+    <section class="divider">
       <h2 class="headline-sub">Marketing & Advertising Experience</h2>
     </section>
 
     {% for item in collections.experience | where("section", "marketing") %}
     <section class="experience-block">
-      <header class="section-title experience-header">
+      <header class="experience-header">
         <div class="header-group">
           {% if item.data.company %}
-            <h2 class="headline-xs">{{ item.data.title }}</h2>
-            <h3 class="title-m">{{ item.data.company }}</h3>
+          <h2 class="headline-xs">{{ item.data.title }}</h2>
+          <h3 class="title-m">{{ item.data.company }}</h3>
           {% else %}
-            <h2 class="title-m">{{ item.data.title }}</h2>
+          <h2 class="title-m">{{ item.data.title }}</h2>
           {% endif %}
         </div>
         <p class="headline-sub">{{ item.data.dates }}</p>

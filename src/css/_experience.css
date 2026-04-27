@@ -54,16 +54,6 @@
   margin-bottom: 5em;
   position: relative;
   text-align: center;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  transition:
-    opacity var(--dur-base) var(--ease),
-    transform var(--dur-base) var(--ease);
-}
-
-.divider.animate {
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
 }
 
 .divider::after {

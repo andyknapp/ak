@@ -36,33 +36,14 @@ body {
   color: var(--color-text);
 }
 
-.title-intro {
-  font-weight: 900;
-  font-size: clamp(2.5em, calc(2.5em + 1.5 * (100vw - 20em) / 48), 4em);
-}
-
-.title-l {
-  font-size: clamp(1.75em, calc(1.75em + 1 * (100vw - 20em) / 48), 2.75em);
-}
-
 .title-m {
   line-height: 1;
 }
 
-.title-m,
-.headline-m {
+.title-m {
   margin: 0;
   letter-spacing: 1px;
   font-size: clamp(1em, calc(1em + 0.75 * (100vw - 20em) / 48), 1.75em);
-}
-
-.title-s,
-.headline-s {
-  margin: 1.5em 0 0.5em;
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: clamp(1em, calc(1em + 0.25 * (100vw - 20em) / 48), 1.25em);
 }
 
 .headline-xs {
@@ -94,38 +75,10 @@ a:active {
   outline: 0;
 }
 
-.fancy-link,
 p a,
 li a {
   position: relative;
   color: var(--color-text);
-}
-
-.fancy-link::before,
-p a::before,
-li a::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  opacity: 0.5;
-  background-color: var(--color-accent-red);
-  transition: opacity var(--dur-fast) var(--ease);
-}
-
-.fancy-link:hover,
-p a:hover,
-li a:hover {
-  color: var(--color-text);
-}
-
-.fancy-link:hover::before,
-p a:hover::before,
-li a:hover::before {
-  opacity: 1;
 }
 
 p,
@@ -138,11 +91,6 @@ li {
 p a::before,
 li a::before {
   background-color: var(--color-accent-blue);
-}
-
-.copy-1 {
-  line-height: 1.4;
-  font-size: clamp(0.8em, calc(0.8em + 0.2 * (100vw - 20em) / 48), 1em);
 }
 
 b,
