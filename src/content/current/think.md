@@ -1,5 +1,5 @@
 ---
-title: Web Developer
+title: Senior UX Engineer
 company: Think Company
 dates: December 2020 - current
 order: 1
