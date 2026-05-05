@@ -35,6 +35,10 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background-color: var(--color-bg);
@@ -55,6 +59,12 @@ body {
 
 svg {
   transition: fill var(--dur-base) var(--ease);
+}
+
+.icon {
+  display: block;
+  width: 1.5rem;
+  height: auto;
 }
 
 .main-content {

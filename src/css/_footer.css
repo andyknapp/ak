@@ -6,19 +6,43 @@
   padding: 0 1em;
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
-  z-index: -1;
 
   @media (min-width: 50em) {
+    /* display: flex;
+    flex-flow: column nowrap;
+    justify-content: end; */
     display: grid;
-    grid-template-columns: 1fr min(100%, var(--container-width)) 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr auto;
     align-items: end;
-    align-content: end;
-    padding-bottom: 1.5em;
+    padding-bottom: var(--sticky-offset);
+    padding-left: 18em;
   }
+
+  .footer-content {
+    position: relative;
+    z-index: var(--z-overlay);
+
+    @media (min-width: 50em) {
+      position: sticky;
+      bottom: var(--sticky-offset);
+      display: grid;
+      grid-template-columns: min(50%, var(--container-width)) 1fr auto;
+      grid-template-rows: auto;
+      align-items: center;
+      align-content: end;
+    }
+  }
+
+  /* @media (min-width: 75em) {
+    grid-template-columns: 1fr min(100%, var(--container-width)) auto auto;
+  } */
 
   .headline-sub {
     font-size: clamp(0.65em, calc(0.65em + 0.1 * (100vw - 20em) / 48), 0.75em);
+
+     @media (min-width: 50em) {
+      justify-self: end;
+    }
   }
 
   a {
@@ -32,17 +56,15 @@
 
 .contact-info {
   @media (min-width: 50em) {
-    grid-column-start: 2;
-    grid-row-start: 2;
+    /* grid-row-start: 2; */
   }
 }
 
-.fine-print {
-  @media (min-width: 50em) {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    justify-self: end;
-  }
+.contact-email {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1em;
 }
 
 .theme-toggle {
@@ -57,9 +79,8 @@
   z-index: var(--z-above);
 
   @media (min-width: 50em) {
-    grid-column-start: 3;
-    grid-row-start: 1;
     justify-self: end;
+    margin-right: 2em;
   }
 }
 
@@ -67,15 +88,6 @@
   color: var(--color-footer-link);
 }
 
-/* Icon reflects current theme — JS always sets data-theme on <html> */
-[data-theme="light"] .theme-toggle::before {
-  content: "◑";
-}
-[data-theme="dark"] .theme-toggle::before {
-  content: "◐";
-}
-
-/* Fallback before JS runs */
-.theme-toggle::before {
-  content: "◑";
+.fine-print {
+  padding-bottom: 0.625em;
 }

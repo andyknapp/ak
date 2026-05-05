@@ -24,12 +24,14 @@ export default (eleventyConfig) => {
 	*/
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
-    compile: async (_inputContent, inputPath) => {
+    compile: async function (_inputContent, inputPath) {
       if (inputPath.includes("_includes")) return;
       if (basename(inputPath).startsWith("_")) return;
 
+      const addDependencies = this.addDependencies.bind(this);
+
       return async () => {
-        const { code } = bundle({
+        const result = bundle({
           filename: inputPath,
           minify: process.env.NODE_ENV === "production",
           sourceMap: false,
@@ -39,7 +41,8 @@ export default (eleventyConfig) => {
             safari: 14 << 16,
           },
         });
-        return code.toString();
+        addDependencies(inputPath, result.sources);
+        return result.code.toString();
       };
     },
   });

@@ -34,7 +34,8 @@
   --z-overlay: 3;
 
   --container-width: 42.5em;
-  --footer-height: 10em;
+  --footer-height: 14em;
+  --sticky-offset: 1em;
 }
 
 @media (prefers-color-scheme: dark) {

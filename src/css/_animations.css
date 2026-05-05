@@ -36,6 +36,11 @@
   }
 }
 
+@keyframes nav-bg-fade {
+  from { background-color: var(--color-bg); }
+  to { background-color: transparent; }
+}
+
 @keyframes reveal-element {
   from {
     opacity: 0;
@@ -68,7 +73,7 @@
 }
 
 /* Scroll-driven mobile nav nudge at page bottom */
-@media (max-width: 49.99em) {
+/* @media (max-width: 49.99em) {
   @supports (animation-timeline: scroll()) {
     @media (prefers-reduced-motion: no-preference) {
       .site-nav {
@@ -81,4 +86,4 @@
       }
     }
   }
-}
+} */
