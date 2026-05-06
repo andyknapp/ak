@@ -1,19 +1,19 @@
 .screen-reader-text,
 .visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  word-wrap: normal !important;
+  overflow-wrap: normal !important;
 }
 
 .screen-reader-text:focus,
 .visually-hidden:focus {
   background-color: var(--color-focus-bg);
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
+  box-shadow: 0 0 2px 2px rgb(0 0 0 / 60%);
+  clip-path: none !important;
   color: var(--color-focus-text);
   display: block;
   font-size: 0.875rem;
@@ -78,17 +78,17 @@ svg {
   width: min(100%, var(--container-width));
   margin: 0 auto;
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     width: min(78vw, var(--container-width));
     margin: 0;
   }
 
-  @media (min-width: 62em) {
+  @media (width >= 62em) {
     margin: 0 auto;
   }
 }
 
-@media (min-width: 50em) {
+@media (width >= 50em) {
   .main-content {
     display: flex;
     justify-content: flex-end;

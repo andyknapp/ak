@@ -7,7 +7,7 @@
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     /* display: flex;
     flex-flow: column nowrap;
     justify-content: end; */
@@ -22,7 +22,7 @@
     position: relative;
     z-index: var(--z-overlay);
 
-    @media (min-width: 50em) {
+    @media (width >= 50em) {
       position: sticky;
       bottom: var(--sticky-offset);
       display: grid;
@@ -40,7 +40,7 @@
   .headline-sub {
     font-size: clamp(0.65em, calc(0.65em + 0.1 * (100vw - 20em) / 48), 0.75em);
 
-     @media (min-width: 50em) {
+     @media (width >= 50em) {
       justify-self: end;
     }
   }
@@ -55,7 +55,7 @@
 }
 
 .contact-info {
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     /* grid-row-start: 2; */
   }
 }
@@ -78,7 +78,7 @@
   transition: color var(--dur-fast) var(--ease);
   z-index: var(--z-above);
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     justify-self: end;
     margin-right: 2em;
   }

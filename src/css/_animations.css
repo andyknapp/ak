@@ -3,10 +3,12 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   10% {
     opacity: 1;
     transform: translateX(-3.52%);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-35.2%);
@@ -46,6 +48,7 @@
     opacity: 0;
     transform: scale3d(0.5, 0.5, 0.5);
   }
+
   to {
     opacity: 1;
     transform: scale3d(1, 1, 1);
@@ -73,6 +76,7 @@
 }
 
 /* Scroll-driven mobile nav nudge at page bottom */
+
 /* @media (max-width: 49.99em) {
   @supports (animation-timeline: scroll()) {
     @media (prefers-reduced-motion: no-preference) {

@@ -11,7 +11,7 @@
   padding: 0 0 1em 1em;
 }
 
-@media (min-width: 50em) {
+@media (width >= 50em) {
   .site-header {
     padding: 0;
     width: auto;
@@ -45,27 +45,27 @@
   background-color: var(--color-bg);
   z-index: var(--z-overlay);
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     padding: 0.75em 1.5em;
     gap: 3em;
   }
 }
 
 .site-nav.has-shadow {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 8%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .site-nav.has-shadow {
-    box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -2px 12px 0 rgb(0 0 0 / 50%);
   }
 }
 
 [data-theme="dark"] .site-nav.has-shadow {
-  box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -2px 12px 0 rgb(0 0 0 / 50%);
 }
 
-@media (min-width: 50em) {
+@media (width >= 50em) {
   .site-nav::after {
     content: "";
     display: block;
@@ -125,7 +125,7 @@
 
 
 
-@media (min-width: 50em) {
+@media (width >= 50em) {
   .logo-container {
     z-index: var(--z-overlay);
   }

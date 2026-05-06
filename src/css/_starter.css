@@ -2,12 +2,13 @@
   html {
     color-scheme: light dark;
     hanging-punctuation: first allow-end last;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   body {
     margin: 0;
     padding: 0;
+
     @media (width < 500px) {
       padding: 1rem;
     }
@@ -24,11 +25,13 @@
     font-weight: 900;
     letter-spacing: -0.02rem;
   }
+
   h1,
   h2,
   h3 {
     line-height: 1.1;
   }
+
   h1,
   h2,
   h3,
@@ -47,10 +50,11 @@
   }
 
   a {
-    color: oklch(0.68 0.17 228);
+    color: oklch(68% 0.17 228deg);
     text-underline-offset: 2px;
+
     &:not(:is(:hover, :focus)) {
-      text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+      text-decoration-color: color-mix(in srgb, currentcolor, transparent 50%);
     }
   }
 
@@ -61,9 +65,11 @@
     position: relative;
     vertical-align: baseline;
   }
+
   sub {
     inset-block-end: -0.25em;
   }
+
   sup {
     inset-block-start: -0.5em;
   }
@@ -74,6 +80,7 @@
     margin: 0;
     padding: 0;
     list-style-position: inside;
+
     ul,
     ol,
     dl {
@@ -94,6 +101,7 @@
     inline-size: fit-content;
     margin-inline: auto;
   }
+
   figcaption {
     contain: inline-size;
     font-size: 90%;
@@ -104,11 +112,14 @@
   textarea,
   button {
     font: inherit;
+
     /* FUTURE: appearance: base; */
   }
+
   label {
     display: block;
   }
+
   input:not(
     :where(
       [type="submit"],
@@ -120,12 +131,14 @@
   ) {
     inline-size: 100%;
   }
+
   button,
   input:where([type="submit"], [type="reset"], [type="button"]) {
     background: CanvasText;
     color: Canvas;
     border: 1px solid transparent;
   }
+
   textarea {
     field-sizing: content;
     min-block-size: 5lh;
@@ -141,16 +154,18 @@
   }
 
   svg {
-    fill: currentColor;
+    fill: currentcolor;
   }
 
   [aria-disabled="true" i],
   [disabled] {
     cursor: not-allowed;
   }
+
   [hidden] {
     display: none !important;
   }
+
   [disabled],
   label:has(input[disabled]) {
     opacity: 0.5;
@@ -183,9 +198,11 @@
   table {
     caption-side: bottom;
     border-collapse: collapse;
+
     td {
       font-size: 90%;
     }
+
     td,
     th {
       word-break: normal;
@@ -193,9 +210,11 @@
       padding: 0.5rem;
     }
   }
+
   [role="region"][aria-labelledby][tabindex] {
     overflow: auto;
   }
+
   caption {
     font-size: 90%;
   }
@@ -207,6 +226,7 @@
 
     html {
       interpolate-size: allow-keywords;
+
       &:focus-within {
         scroll-behavior: smooth;
       }

@@ -10,6 +10,34 @@ body {
   font-family: var(--font-body);
 }
 
+a {
+  background-color: transparent;
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease);
+}
+
+p a,
+li a {
+  position: relative;
+  color: var(--color-text);
+}
+
+p a::before,
+li a::before {
+  background-color: var(--color-accent-blue);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:visited,
+a:active {
+  outline: 0;
+}
+
 [class*="title-"] {
   display: block;
   margin: 0 0 1em;
@@ -38,9 +66,6 @@ body {
 
 .title-m {
   line-height: 1;
-}
-
-.title-m {
   margin: 0;
   letter-spacing: 1px;
   font-size: clamp(1em, calc(1em + 0.75 * (100vw - 20em) / 48), 1.75em);
@@ -58,39 +83,11 @@ body {
   font-size: clamp(0.75em, calc(0.75em + 0.15 * (100vw - 20em) / 48), 0.9em);
 }
 
-a {
-  background-color: transparent;
-  text-decoration: none;
-  transition: color var(--dur-base) var(--ease);
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-  outline: 0;
-}
-
-a:visited,
-a:active {
-  outline: 0;
-}
-
-p a,
-li a {
-  position: relative;
-  color: var(--color-text);
-}
-
 p,
 li {
   margin: 0 0 1em;
   line-height: 1.7;
   font-size: clamp(0.875em, calc(0.875em + 0.25 * (100vw - 20em) / 48), 1.125em);
-}
-
-p a::before,
-li a::before {
-  background-color: var(--color-accent-blue);
 }
 
 b,

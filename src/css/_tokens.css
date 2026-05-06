@@ -32,7 +32,6 @@
   /* Z-index */
   --z-above: 2;
   --z-overlay: 3;
-
   --container-width: 42.5em;
   --footer-height: 14em;
   --sticky-offset: 1em;
@@ -41,11 +40,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
+
     --color-bg: #141414;
     --color-bg-mid: #1e1e1e;
     --color-text: #e4e4e4;
     --color-muted: #9a9a9a;
-    --color-subtle: #555555;
+    --color-subtle: #555;
     --color-focus-bg: #1c2e3c;
     --color-focus-text: #7dc0de;
     --color-footer-bg: #0a0a0a;
@@ -56,11 +56,12 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
+
   --color-bg: #141414;
   --color-bg-mid: #1e1e1e;
   --color-text: #e4e4e4;
   --color-muted: #9a9a9a;
-  --color-subtle: #555555;
+  --color-subtle: #555;
   --color-focus-bg: #1c2e3c;
   --color-focus-text: #7dc0de;
   --color-footer-bg: #0a0a0a;
