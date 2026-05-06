@@ -1,19 +1,14 @@
+import tseslint from "typescript-eslint";
 import globals from "globals";
 
-export default [
-  {
-    files: ["src/js/**/*.js"],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: "script",
-      globals: globals.browser,
-    },
-    rules: {
-      "no-unused-vars": "warn",
-      "no-undef": "error",
-      "no-console": "warn",
-      "eqeqeq": ["error", "always"],
-      "prefer-const": "error",
-    },
+export default tseslint.config({
+  files: ["src/js/**/*.ts"],
+  extends: [tseslint.configs.recommended],
+  languageOptions: {
+    globals: globals.browser,
   },
-];
+  rules: {
+    "no-console": "warn",
+    "eqeqeq": ["error", "always"],
+  },
+});

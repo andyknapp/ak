@@ -5,6 +5,7 @@
 
 import { IdAttributePlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { bundle } from "lightningcss";
+import { build } from "esbuild";
 import { readFileSync } from "fs";
 import { resolve, basename } from "path";
 
@@ -15,8 +16,24 @@ export default (eleventyConfig) => {
 		addPassthroughCopy tells Eleventy to copy files or directories to the output folder
 		addPassthroughCopy can take a directory, file, or glob pattern
 	*/
-  eleventyConfig.addPassthroughCopy("src/js");
   //eleventyConfig.addPassthroughCopy("fonts/**/*.woff2");
+
+  eleventyConfig.addTemplateFormats("ts");
+  eleventyConfig.addExtension("ts", {
+    outputFileExtension: "js",
+    compile: async (_inputContent, inputPath) => {
+      return async () => {
+        const result = await build({
+          entryPoints: [inputPath],
+          bundle: false,
+          write: false,
+          target: "es2022",
+          minify: process.env.NODE_ENV === "production",
+        });
+        return result.outputFiles[0].text;
+      };
+    },
+  });
 
   /*
 		CSS processing via LightningCSS
@@ -78,7 +95,7 @@ export default (eleventyConfig) => {
 	*/
   eleventyConfig.addWatchTarget("src/**/*.{svg,webp,png,jpeg}");
   eleventyConfig.addWatchTarget("src/css/**/*.css");
-  eleventyConfig.addWatchTarget("src/js/**/*.js");
+  eleventyConfig.addWatchTarget("src/js/**/*.ts");
 
   /*
 		Official Eleventy plugins
