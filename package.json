@@ -8,9 +8,10 @@
     "dev": "eleventy --serve",
     "build": "eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "lint:js": "eslint src/js",
-    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint:css": "stylelint \"src/css/**/*.css\" --fix",
     "lint": "npm run typecheck && npm run lint:js && npm run lint:css"
   },
   "repository": {
@@ -34,7 +35,9 @@
     "globals": "^17.6.0",
     "prettier": "3.8.3",
     "stylelint": "^17.11.0",
+    "stylelint-config-hudochenkov": "^13.0.2",
     "stylelint-config-standard": "^40.0.0",
+    "stylelint-order": "^8.1.1",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.2"
   }

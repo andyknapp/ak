@@ -1,0 +1,52 @@
+<form
+  class="contact-form"
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>Skip this: <input name="bot-field" /></label>
+  </p>
+
+  <div class="contact-form-fields">
+    <div class="field-container">
+      <label for="name" class="screen-reader-text">Name</label>
+      <input
+        id="name"
+        class="contact-form-input"
+        type="text"
+        name="name"
+        placeholder="Name"
+        autocomplete="name"
+        required
+      />
+    </div>
+    <div class="field-container">
+      <label for="email" class="screen-reader-text">Email</label>
+      <input
+        id="email"
+        class="contact-form-input"
+        type="email"
+        name="email"
+        placeholder="Email"
+        autocomplete="email"
+        required
+      />
+    </div>
+
+    <div class="field-container field-container--full">
+      <label for="message" class="screen-reader-text">Message</label>
+      <textarea
+        id="message"
+        class="contact-form-input textarea"
+        name="message"
+        placeholder="Message"
+        required
+      ></textarea>
+    </div>
+  </div>
+
+  <button class="contact-form-submit" type="submit">Send</button>
+</form>

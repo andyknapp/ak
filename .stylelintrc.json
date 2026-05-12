@@ -1,6 +1,106 @@
 {
-  "extends": ["stylelint-config-standard"],
+  "extends": ["stylelint-config-standard", "stylelint-config-hudochenkov/full"],
+  "defaultSeverity": "error",
+  "plugins": ["stylelint-order"],
+  "ignoreFiles": ["dist/**/*.css", "src/styles/tokens.css", "src/css/_starter.css"],
   "rules": {
-    "import-notation": "string"
+    "at-rule-empty-line-before": null,
+    "at-rule-no-unknown": null,
+    "block-no-empty": true,
+    "color-named": [
+      "never",
+      {
+        "severity": "error",
+        "ignore": ["inside-function"]
+      }
+    ],
+    "color-no-invalid-hex": [
+      true,
+      {
+        "severity": "error"
+      }
+    ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment", "stylelint-commands"]
+      }
+    ],
+    "comment-no-empty": true,
+    "comment-whitespace-inside": "always",
+    "comment-word-disallowed-list": ["/^TODO:/"],
+    "custom-property-empty-line-before": null,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-single-line-max-declarations": 1,
+    "declaration-empty-line-before": "never",
+    "declaration-no-important": [
+      true,
+      {
+        "severity": "error"
+      }
+    ],
+    "declaration-property-unit-disallowed-list": [
+      {
+        "line-height": ["em", "px", "rem"]
+      },
+      {
+        "severity": "error"
+      }
+    ],
+    "declaration-property-unit-allowed-list": {
+      "border": ["px"],
+      "outline-offset": ["px"]
+    },
+    "font-family-name-quotes": "always-unless-keyword",
+    "font-family-no-duplicate-names": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "font-weight-notation": "numeric",
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "import-notation": "string",
+    "keyframe-declaration-no-important": true,
+    "length-zero-no-unit": true,
+    "max-nesting-depth": 4,
+    "media-feature-name-no-unknown": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
+    "no-duplicate-at-import-rules": true,
+    "no-duplicate-selectors": true,
+    "no-unknown-animations": null,
+    "property-no-unknown": true,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": ["appearance"]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+    "selector-max-class": 4,
+    "selector-max-compound-selectors": 3,
+    "selector-max-id": 1,
+    "selector-max-specificity": "0,4,1",
+    "selector-max-type": 2,
+    "selector-max-universal": 1,
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { "ignorePseudoClasses": ["global"] }
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-element-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "shorthand-property-no-redundant-values": true,
+    "unit-no-unknown": true,
+    "value-no-vendor-prefix": true,
+    "order/order": ["custom-properties", "declarations"]
   }
 }

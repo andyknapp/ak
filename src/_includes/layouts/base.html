@@ -17,10 +17,10 @@
     <script>
       (function () {
         var t =
-          localStorage.getItem("theme") ||
-          (matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light");
+          localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
         document.documentElement.dataset.theme = t;
       })();
     </script>
@@ -30,8 +30,7 @@
   <body>
     <a href="#main" class="visually-hidden">Skip to main content</a>
 
-    {% include "components/header.html" %}
-    {% include "components/nav.html" %}
+    {% include "components/header.html" %} {% include "components/nav.html" %}
 
     <main id="main" class="main-content">
       <div class="container">{{ content | safe }}</div>

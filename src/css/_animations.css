@@ -16,20 +16,34 @@
 }
 
 @keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes nav-highlight {
-  from, to { color: var(--color-accent-red); }
+  from,
+  to {
+    color: var(--color-accent-red);
+  }
 }
 
 @keyframes nav-highlight-light {
-  from, to { color: var(--color-red-light); }
+  from,
+  to {
+    color: var(--color-red-light);
+  }
 }
 
 @keyframes nav-unhighlight {
-  from, to { color: var(--color-bg); }
+  from,
+  to {
+    color: var(--color-bg);
+  }
 }
 
 @keyframes draw {
@@ -39,8 +53,13 @@
 }
 
 @keyframes nav-bg-fade {
-  from { background-color: var(--color-bg); }
-  to { background-color: transparent; }
+  from {
+    background-color: var(--color-bg);
+  }
+
+  to {
+    background-color: transparent;
+  }
 }
 
 @keyframes reveal-element {
@@ -57,7 +76,7 @@
 
 @keyframes nav-slide-up {
   to {
-    transform: translateY(-1.5em);
+    transform: translateY(-2em);
   }
 }
 
@@ -75,9 +94,9 @@
   }
 }
 
-/* Scroll-driven mobile nav nudge at page bottom */
+/* Scroll-driven mobile nav nudge at page bottom
 
-/* @media (max-width: 49.99em) {
+@media (width <= 49.99em) {
   @supports (animation-timeline: scroll()) {
     @media (prefers-reduced-motion: no-preference) {
       .site-nav {

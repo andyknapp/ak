@@ -1,46 +1,52 @@
 .site-footer {
-  view-timeline-name: --footer-tl;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr auto;
+  place-items: end end;
+  view-timeline-name: --footer-tl;
+  min-block-size: var(--footer-height);
   width: 100%;
-  height: var(--footer-height);
-  padding: 0 1em;
+  padding: 0 1em 0.5em;
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
 
   @media (width >= 50em) {
-    /* display: flex;
-    flex-flow: column nowrap;
-    justify-content: end; */
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
     padding-bottom: var(--sticky-offset);
-    padding-left: 18em;
   }
 
   .footer-content {
     position: relative;
     z-index: var(--z-overlay);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
 
     @media (width >= 50em) {
       position: sticky;
       bottom: var(--sticky-offset);
-      display: grid;
-      grid-template-columns: min(50%, var(--container-width)) 1fr auto;
       grid-template-rows: auto;
-      align-items: center;
+      grid-template-columns: min(50%, var(--container-width)) 1fr auto;
+      gap: 2em;
       align-content: end;
+      align-items: center;
+      padding-left: 18em;
     }
   }
 
-  /* @media (min-width: 75em) {
-    grid-template-columns: 1fr min(100%, var(--container-width)) auto auto;
-  } */
+  .fine-print {
+
+    /* grid-column: 2;
+    grid-row: 2; */
+    /* padding-bottom: 0.625em; */
+  }
 
   .headline-sub {
     font-size: clamp(0.65em, calc(0.65em + 0.1 * (100vw - 20em) / 48), 0.75em);
 
-     @media (width >= 50em) {
+    @media (width >= 50em) {
       justify-self: end;
     }
   }
@@ -54,40 +60,29 @@
   }
 }
 
-.contact-info {
-  @media (width >= 50em) {
-    /* grid-row-start: 2; */
-  }
-}
-
 .contact-email {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   gap: 1em;
+  align-items: center;
 }
 
 .theme-toggle {
-  background: none;
+  z-index: var(--z-above);
+  padding: 0.25em 0.5em;
   border: none;
-  cursor: pointer;
+  background: none;
   color: var(--color-footer-text);
   font-size: 1.1em;
-  padding: 0.25em 0.5em;
   line-height: 1;
+  cursor: pointer;
   transition: color var(--dur-fast) var(--ease);
-  z-index: var(--z-above);
 
   @media (width >= 50em) {
     justify-self: end;
-    margin-right: 2em;
   }
 }
 
 .theme-toggle:hover {
   color: var(--color-footer-link);
-}
-
-.fine-print {
-  padding-bottom: 0.625em;
 }

@@ -1,4 +1,5 @@
 :root {
+
   /* Accent palette — fixed across themes */
   --color-accent-red: #b72b28;
   --color-accent-blue: #1765bf;
@@ -33,13 +34,13 @@
   --z-above: 2;
   --z-overlay: 3;
   --container-width: 42.5em;
-  --footer-height: 14em;
+  --container-width-s: 30em;
+  --footer-height: 22em;
   --sticky-offset: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    color-scheme: dark;
 
     --color-bg: #141414;
     --color-bg-mid: #1e1e1e;
@@ -51,11 +52,11 @@
     --color-footer-bg: #0a0a0a;
     --color-footer-text: #4a4a4a;
     --color-footer-link: #6a6a6a;
+    color-scheme: dark;
   }
 }
 
 [data-theme="dark"] {
-  color-scheme: dark;
 
   --color-bg: #141414;
   --color-bg-mid: #1e1e1e;
@@ -67,4 +68,5 @@
   --color-footer-bg: #0a0a0a;
   --color-footer-text: #4a4a4a;
   --color-footer-link: #6a6a6a;
+  color-scheme: dark;
 }

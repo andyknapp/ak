@@ -1,34 +1,32 @@
-const emailLink = document.querySelector<HTMLAnchorElement>(".contact-email");
-if (emailLink) {
-  const addr = "aknapp1" + "@" + "gmail.com";
-  emailLink.href = "mailto:" + addr;
-  emailLink.textContent = addr;
-}
-
 const root = document.documentElement;
-const btn = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+const btn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
 
 function applyTheme(theme: string): void {
   root.dataset.theme = theme;
-  localStorage.setItem("theme", theme);
+  localStorage.setItem('theme', theme);
 }
 
-btn?.addEventListener("click", () => {
-  applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+btn?.addEventListener('click', () => {
+  applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
 });
 
-const nav = document.querySelector<HTMLElement>(".site-nav");
-const footer = document.querySelector<HTMLElement>(".site-footer");
+const nav = document.querySelector<HTMLElement>('.site-nav');
+const footer = document.querySelector<HTMLElement>('.site-footer');
 
 if (nav && footer) {
   let footerVisible = false;
 
   new IntersectionObserver(([entry]) => {
     footerVisible = entry.isIntersecting;
-    nav.classList.toggle("has-shadow", !footerVisible && window.scrollY > 50);
+    nav.classList.toggle('has-shadow', !footerVisible && window.scrollY > 50);
   }).observe(footer);
 
-  window.addEventListener("scroll", () => {
-    if (!footerVisible) nav.classList.toggle("has-shadow", window.scrollY > 50);
-  }, { passive: true });
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!footerVisible)
+        nav.classList.toggle('has-shadow', window.scrollY > 50);
+    },
+    { passive: true }
+  );
 }

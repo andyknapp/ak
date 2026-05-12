@@ -1,17 +1,13 @@
 @layer reset {
   html {
     color-scheme: light dark;
-    hanging-punctuation: first allow-end last;
     overflow-wrap: break-word;
+    hanging-punctuation: first allow-end last;
   }
 
   body {
     margin: 0;
     padding: 0;
-
-    @media (width < 500px) {
-      padding: 1rem;
-    }
   }
 
   *,
@@ -38,15 +34,15 @@
   h4,
   h5,
   h6 /* FUTURE :heading */ {
-    text-wrap: balance;
     margin-block-start: 0;
+    text-wrap: balance;
   }
 
   p,
   li,
   dd {
-    text-wrap: pretty;
     max-inline-size: 88ch;
+    text-wrap: pretty;
   }
 
   a {
@@ -60,10 +56,10 @@
 
   sub,
   sup {
-    font-size: 75%;
-    line-height: 0;
     position: relative;
     vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
   }
 
   sub {
@@ -121,36 +117,30 @@
   }
 
   input:not(
-    :where(
-      [type="submit"],
-      [type="checkbox"],
-      [type="radio"],
-      [type="button"],
-      [type="reset"]
-    )
+    :where([type="submit"], [type="checkbox"], [type="radio"], [type="button"], [type="reset"])
   ) {
     inline-size: 100%;
   }
 
   button,
   input:where([type="submit"], [type="reset"], [type="button"]) {
+    border: 1px solid transparent;
     background: CanvasText;
     color: Canvas;
-    border: 1px solid transparent;
   }
 
   textarea {
-    field-sizing: content;
-    min-block-size: 5lh;
     inline-size: 100%;
     max-inline-size: 100%;
+    min-block-size: 5lh;
+    field-sizing: content;
   }
 
   pre,
   code,
   kbd,
   samp {
-    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-family: ui-monospace, "SFMono-Regular", monospace;
   }
 
   svg {
@@ -176,19 +166,19 @@
   }
 
   pre {
-    white-space: pre-wrap;
+    padding: 1.5rem;
     background: CanvasText;
     color: Canvas;
-    padding: 1.5rem;
+    white-space: pre-wrap;
   }
 
   hr {
-    border-style: solid;
-    border-width: 1px 0 0;
-    color: inherit;
-    height: 0;
     overflow: visible;
+    height: 0;
     margin-block: 2.5rem;
+    border-width: 1px 0 0;
+    border-style: solid;
+    color: inherit;
   }
 
   :target {
@@ -196,8 +186,8 @@
   }
 
   table {
-    caption-side: bottom;
     border-collapse: collapse;
+    caption-side: bottom;
 
     td {
       font-size: 90%;
@@ -205,9 +195,9 @@
 
     td,
     th {
-      word-break: normal;
-      border: 1px solid gray;
       padding: 0.5rem;
+      border: 1px solid gray;
+      word-break: normal;
     }
   }
 

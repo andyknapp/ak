@@ -1,29 +1,37 @@
 <footer id="contact" class="site-footer">
-  <div class="footer-content">
-    <div class="contact-info">
-      <a class="contact-email" href="#" target="_blank" aria-label="Email Andy Knapp">email me</a>
-    </div>
+  {% include "components/contact-form.html" %}
 
+  <div class="footer-content">
+    <div class="fine-print">
+      <p class="headline-sub">&copy; {% year %} | Andy Knapp</p>
+    </div>
     <button
       class="theme-toggle"
       data-theme-toggle
       aria-label="Toggle color theme"
     >
-    <span class="screen-reader-text">dark or light theme</span>
-    <svg class="icon" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
-      <path d="M12 2v2" />
-      <path d="M12 20v2" />
-      <path d="M4.9 4.9 6.3 6.3" />
-      <path d="M17.7 17.7l1.4 1.4" />
-      <path d="M2 12h2" />
-      <path d="M20 12h2" />
-      <path d="M6.3 17.7 4.9 19.1" />
-      <path d="M19.1 4.9 17.7 6.3" />
-    </svg>
+      <span class="screen-reader-text">dark or light theme</span>
+      <svg
+        class="icon"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="M4.9 4.9 6.3 6.3" />
+        <path d="M17.7 17.7l1.4 1.4" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="M6.3 17.7 4.9 19.1" />
+        <path d="M19.1 4.9 17.7 6.3" />
+      </svg>
     </button>
-  </div>
-  <div class="fine-print">
-    <p class="headline-sub">&copy; {% year %} | Andy Knapp</p>
   </div>
 </footer>

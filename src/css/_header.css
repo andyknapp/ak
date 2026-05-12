@@ -1,53 +1,55 @@
 .site-header {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 50%);
-  align-items: end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 1em 1em;
-}
-
-@media (width >= 50em) {
-  .site-header {
-    padding: 0;
+  @media (width >= 50em) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 1fr;
+    align-items: end;
     width: auto;
+    height: 100%;
+    padding: 0;
   }
 }
 
 .logo-container {
-  padding-left: 1.5em;
-  margin: 0;
-  transition:
-    transform var(--dur-slow) var(--ease),
-    opacity var(--dur-slow) var(--ease);
+  display: none;
+
+  @media (width >= 50em) {
+    display: block;
+    margin: 0;
+    padding-left: 1.5em;
+    transition:
+      transform var(--dur-slow) var(--ease),
+      opacity var(--dur-slow) var(--ease);
+  }
 }
 
 .logo {
-  fill: var(--color-text);
   width: clamp(16em, calc(16em + 12 * (100vw - 20em) / 60), 28em);
+  fill: var(--color-text);
 }
 
 .site-nav {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-overlay);
   display: flex;
   flex-flow: row nowrap;
+  gap: 2em;
   justify-content: start;
   align-items: center;
-  gap: 2em;
-  bottom: 0;
-  left: 0;
   width: 100%;
   padding: 0.25em 1em;
   background-color: var(--color-bg);
-  z-index: var(--z-overlay);
 
   @media (width >= 50em) {
-    padding: 0.75em 1.5em;
+    top: auto;
+    bottom: 0;
     gap: 3em;
+    padding: 0.75em 1.5em;
   }
 }
 
@@ -68,10 +70,10 @@
 @media (width >= 50em) {
   .site-nav::after {
     content: "";
-    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
+    display: block;
     width: 100%;
     height: 0.35em;
     background: linear-gradient(
@@ -85,11 +87,12 @@
 
 .nav-item {
   padding: 0.5em 0;
-  line-height: 1.5;
   color: var(--color-text);
-  font-family: var(--font-display);
   font-weight: 400;
+  font-family: var(--font-display);
+  line-height: 1.5;
   text-transform: lowercase;
+
   /* transform: translateX(-64px); */
   transition:
     transform var(--dur-base) var(--ease),
@@ -99,12 +102,8 @@
 .nav-item-contact {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   gap: 0.5rem;
-}
-
-.nav-item:last-of-type {
-  transition-delay: 0.05s;
+  align-items: center;
 }
 
 .nav-item:hover {
@@ -115,13 +114,11 @@
   display: block;
   width: 2em;
   opacity: 1;
-  transform: scale(0.8);
   transition:
     transform var(--dur-slow) var(--ease),
     opacity var(--dur-slow) var(--ease);
+  transform: scale(0.8);
 }
-
-
 
 @media (width >= 50em) {
   .logo-container {
@@ -138,10 +135,10 @@
   }
 
   .logo .clone {
+    fill: transparent;
+    stroke: var(--color-text);
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    stroke: var(--color-text);
-    fill: transparent;
   }
 
   @supports (animation-timeline: view()) {
