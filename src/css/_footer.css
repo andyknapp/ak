@@ -8,8 +8,8 @@
   min-block-size: var(--footer-height);
   width: 100%;
   padding: 0 1em 0.5em;
-  background-color: var(--color-footer-bg);
-  color: var(--color-footer-text);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
 
   @media (width >= 50em) {
     padding-bottom: var(--sticky-offset);
@@ -21,26 +21,15 @@
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr auto;
-    align-items: center;
+    gap: 2em;
+    place-items: center end;
     width: 100%;
 
     @media (width >= 50em) {
       position: sticky;
       bottom: var(--sticky-offset);
-      grid-template-rows: auto;
-      grid-template-columns: min(50%, var(--container-width)) 1fr auto;
-      gap: 2em;
-      align-content: end;
-      align-items: center;
       padding-left: 18em;
     }
-  }
-
-  .fine-print {
-
-    /* grid-column: 2;
-    grid-row: 2; */
-    /* padding-bottom: 0.625em; */
   }
 
   .headline-sub {
@@ -52,7 +41,7 @@
   }
 
   a {
-    color: var(--color-footer-link);
+    color: var(--color-link-secondary);
 
     &:hover {
       color: var(--color-accent-red);
@@ -72,17 +61,13 @@
   padding: 0.25em 0.5em;
   border: none;
   background: none;
-  color: var(--color-footer-text);
+  color: var(--color-text-secondary);
   font-size: 1.1em;
   line-height: 1;
   cursor: pointer;
   transition: color var(--dur-fast) var(--ease);
-
-  @media (width >= 50em) {
-    justify-self: end;
-  }
 }
 
 .theme-toggle:hover {
-  color: var(--color-footer-link);
+  color: var(--color-text-focus);
 }
