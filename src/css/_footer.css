@@ -8,13 +8,9 @@
   min-block-size: var(--footer-height);
   width: 100%;
   padding: 0 1em 0.5em;
-  background-color: var(--color-bg-secondary);
-  color: var(--color-text-secondary);
-
-  @media (width >= 50em) {
-    padding-bottom: var(--sticky-offset);
-  }
-
+  background: linear-gradient(to bottom, var(--color-bg), var(--color-footer-stop));
+  color: var(--color-text);
+  
   .footer-content {
     position: relative;
     z-index: var(--z-overlay);
@@ -41,7 +37,7 @@
   }
 
   a {
-    color: var(--color-link-secondary);
+    color: var(--color-link);
 
     &:hover {
       color: var(--color-accent-red);
@@ -61,7 +57,7 @@
   padding: 0.25em 0.5em;
   border: none;
   background: none;
-  color: var(--color-text-secondary);
+  color: var(--color-muted);
   font-size: 1.1em;
   line-height: 1;
   cursor: pointer;

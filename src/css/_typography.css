@@ -1,13 +1,12 @@
 body {
   color: var(--color-text);
   font-weight: 400;
+  font-style: normal;
   font-size: 16px;
-  font-family: var(--font-sans);
-  line-height: 1.5;
-}
-
-.wf-active body {
   font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.5;
 }
 
 a {
@@ -41,11 +40,7 @@ a:active {
 [class*="title-"] {
   display: block;
   margin: 0 0 1em;
-  font-weight: 700;
-  font-family: var(--font-sans);
-}
-
-.wf-active [class*="title-"] {
+  font-weight: 900;
   font-family: var(--font-display);
 }
 

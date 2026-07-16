@@ -9,6 +9,11 @@
     transform: translateX(-3.52%);
   }
 
+  30% {
+    opacity: 1;
+    transform: translateX(-10.56%);
+  }
+
   100% {
     opacity: 0;
     transform: translateX(-35.2%);
@@ -22,27 +27,6 @@
 
   to {
     opacity: 0;
-  }
-}
-
-@keyframes nav-highlight {
-  from,
-  to {
-    color: var(--color-accent-red);
-  }
-}
-
-@keyframes nav-highlight-light {
-  from,
-  to {
-    color: var(--color-red-light);
-  }
-}
-
-@keyframes nav-unhighlight {
-  from,
-  to {
-    color: var(--color-bg);
   }
 }
 
@@ -74,12 +58,6 @@
   }
 }
 
-@keyframes nav-slide-up {
-  to {
-    transform: translateY(-2em);
-  }
-}
-
 /* Scroll-driven reveal — browsers without support see elements immediately */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
@@ -93,20 +71,3 @@
     }
   }
 }
-
-/* Scroll-driven mobile nav nudge at page bottom
-
-@media (width <= 49.99em) {
-  @supports (animation-timeline: scroll()) {
-    @media (prefers-reduced-motion: no-preference) {
-      .site-nav {
-        animation-name: nav-slide-up;
-        animation-duration: auto;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-        animation-timeline: scroll(root);
-        animation-range: 98% 100%;
-      }
-    }
-  }
-} */

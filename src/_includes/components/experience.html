@@ -1,9 +1,5 @@
-<section id="experience" class="">
+<section id="experience" class="container">
   <div class="container-content">
-    <section class="divider lead">
-      <h2 class="headline-sub">Web Design & Development Experience</h2>
-    </section>
-
     {% for item in collections.experience | where("section", "web") %}
     <section class="experience-block">
       <header class="experience-header">
@@ -21,6 +17,11 @@
         {{ item.templateContent | safe }}
       </div>
     </section>
+    {% if loop.first %}
+    <section class="divider lead">
+      <h2 class="headline-sub">Development Experience</h2>
+    </section>
+    {% endif %}
     {% endfor %}
 
     <section class="divider">

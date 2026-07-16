@@ -27,11 +27,16 @@
 
 @media (width >= 50em) {
   .experience-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-above);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+    padding: 1em 0;
+    background-color: var(--color-bg);
   }
 
   .experience-header .header-group {
@@ -73,7 +78,6 @@
   margin: 0;
   color: var(--color-muted);
   font-weight: 700;
-  font-family: var(--font-display);
   letter-spacing: 0;
 }
 
@@ -92,5 +96,15 @@
 @media (width >= 50em) {
   .divider {
     margin-bottom: 8em;
+  }
+}
+
+.experience-description {
+  ul {
+    list-style: none;
+  }
+
+  strong {
+    display: block;
   }
 }

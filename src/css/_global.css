@@ -19,9 +19,9 @@
   height: auto;
   padding: 15px 23px 14px;
   border-radius: 3px;
-  background-color: var(--color-focus-bg);
+  background-color: var(--color-bg);
   box-shadow: 0 0 2px 2px rgb(0 0 0 / 60%);
-  color: var(--color-focus-text);
+  color: var(--color-text-focus);
   font-weight: 700;
   font-size: 0.875rem;
   line-height: normal;

@@ -1,4 +1,6 @@
 .site-header {
+  padding: 9em 1em 0;
+
   @media (width >= 50em) {
     position: fixed;
     top: 0;
@@ -14,15 +16,20 @@
 }
 
 .logo-container {
-  display: none;
-
   @media (width >= 50em) {
-    display: block;
     margin: 0;
     padding-left: 1.5em;
     transition:
       transform var(--dur-slow) var(--ease),
       opacity var(--dur-slow) var(--ease);
+  }
+}
+
+.initials {
+  display: none;
+
+  @media (width >= 50em) {
+    display: inline;
   }
 }
 
@@ -59,12 +66,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .site-nav.has-shadow {
-    box-shadow: 0 -2px 12px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 25%);
   }
 }
 
 [data-theme="dark"] .site-nav.has-shadow {
-  box-shadow: 0 -2px 12px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 25%);
 }
 
 @media (width >= 50em) {
@@ -76,21 +83,15 @@
     display: block;
     width: 100%;
     height: 0.35em;
-    background: linear-gradient(
-      90deg,
-      var(--color-accent-blue) 0%,
-      var(--color-accent-purple) 50%,
-      var(--color-accent-red) 100%
-    );
+    background: linear-gradient(90deg, rgb(0 85 122) 0%, rgb(168 59 145) 50%, rgb(234 127 0) 100%);
   }
 }
 
 .nav-item {
   padding: 0.5em 0;
   color: var(--color-text);
-  font-weight: 400;
-  font-family: var(--font-display);
   line-height: 1.5;
+  letter-spacing: 0.5px;
   text-transform: lowercase;
 
   /* transform: translateX(-64px); */
@@ -107,7 +108,7 @@
 }
 
 .nav-item:hover {
-  color: var(--color-accent-red);
+  color: var(--color-nav-hover);
 }
 
 .nav-logo {
@@ -130,13 +131,8 @@
     stroke-width: 2px;
   }
 
-  .logo .upper.a {
-    stroke-width: 0;
-  }
-
   .logo .clone {
     fill: transparent;
-    stroke: var(--color-text);
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
@@ -162,7 +158,7 @@
         animation-timing-function: linear;
         animation-fill-mode: both;
         animation-timeline: scroll(root);
-        animation-range: 10vh 35vh;
+        animation-range: 10vh 45vh;
       }
 
       .logo .upper.a {
@@ -192,25 +188,6 @@
         animation-range: 31vh 50vh;
       }
 
-      .nav-item-exp {
-        animation-name: nav-highlight, nav-unhighlight;
-        animation-duration: auto, auto;
-        animation-timing-function: linear, linear;
-        animation-fill-mode: none, none;
-        animation-timeline: --showcase-tl, --footer-tl;
-        animation-range:
-          entry calc(var(--footer-height) / 4) exit 100%,
-          entry calc(var(--footer-height) / 4) exit 100%;
-      }
-
-      .nav-item-contact {
-        animation-name: nav-highlight-light;
-        animation-duration: auto;
-        animation-timing-function: linear;
-        animation-fill-mode: none;
-        animation-timeline: --footer-tl;
-        animation-range: entry calc(var(--footer-height) / 4) exit 100%;
-      }
     }
   }
 
