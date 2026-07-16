@@ -1,0 +1,201 @@
+.site-header {
+  padding: 9em 1em 0;
+
+  @media (width >= 50em) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 1fr;
+    align-items: end;
+    width: auto;
+    height: 100%;
+    padding: 0;
+  }
+}
+
+.logo-container {
+  @media (width >= 50em) {
+    margin: 0;
+    padding-left: 1.5em;
+    transition:
+      transform var(--dur-slow) var(--ease),
+      opacity var(--dur-slow) var(--ease);
+  }
+}
+
+.initials {
+  display: none;
+
+  @media (width >= 50em) {
+    display: inline;
+  }
+}
+
+.logo {
+  width: clamp(16em, calc(16em + 12 * (100vw - 20em) / 60), 28em);
+  fill: var(--color-text);
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2em;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 0.25em 1em;
+  background-color: var(--color-bg);
+
+  @media (width >= 50em) {
+    top: auto;
+    bottom: 0;
+    gap: 3em;
+    padding: 0.75em 1.5em;
+  }
+}
+
+.site-nav.has-shadow {
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 8%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-nav.has-shadow {
+    box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 25%);
+  }
+}
+
+[data-theme="dark"] .site-nav.has-shadow {
+  box-shadow: 0 -1px 8px 0 rgb(0 0 0 / 25%);
+}
+
+@media (width >= 50em) {
+  .site-nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.35em;
+    background: linear-gradient(90deg, rgb(0 85 122) 0%, rgb(168 59 145) 50%, rgb(234 127 0) 100%);
+  }
+}
+
+.nav-item {
+  padding: 0.5em 0;
+  color: var(--color-text);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+
+  /* transform: translateX(-64px); */
+  transition:
+    transform var(--dur-base) var(--ease),
+    color var(--dur-base) var(--ease);
+}
+
+.nav-item-contact {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-item:hover {
+  color: var(--color-nav-hover);
+}
+
+.nav-logo {
+  display: block;
+  width: 2em;
+  opacity: 1;
+  transition:
+    transform var(--dur-slow) var(--ease),
+    opacity var(--dur-slow) var(--ease);
+  transform: scale(0.8);
+}
+
+@media (width >= 50em) {
+  .logo-container {
+    z-index: var(--z-overlay);
+  }
+
+  .logo {
+    stroke: transparent;
+    stroke-width: 2px;
+  }
+
+  .logo .clone {
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .site-nav {
+        animation-name: nav-bg-fade;
+        animation-duration: auto;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: --footer-tl;
+        animation-range: entry 0% entry 30%;
+      }
+    }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .logo .full-name {
+        animation-name: name-exit;
+        animation-duration: auto;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 10vh 45vh;
+      }
+
+      .logo .upper.a {
+        animation-name: fade-out;
+        animation-duration: auto;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 10vh 35vh;
+      }
+
+      .logo .clone.a {
+        animation-name: draw;
+        animation-duration: auto;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 28vh 50vh;
+      }
+
+      .logo .clone.k {
+        animation-name: draw;
+        animation-duration: auto;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: scroll(root);
+        animation-range: 31vh 50vh;
+      }
+
+    }
+  }
+
+  .nav-item {
+    transform: translateX(0);
+  }
+
+  .nav-logo {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+/* Accent palette — fixed across themes */
+:root {
+  --color-accent-red: #b72b28;
+  --color-accent-blue: #1765bf;
+  --color-accent-purple: #694872;
+  --color-red-light: #e27e7c;
+  --color-gray: #5d5c5c;
+  --color-gray-light: #b1b1b1;
+  --color-black: #212121;
+  --color-black-pure: #000;
+  --color-white: #fafafa;
+  --color-white-pure: #fff;
+  --color-off-white: #eee;
+  --color-gradient-blue: #00557a;
+  --color-gradient-violet: #a83b91;
+  --color-gradient-orange: #ea7f00;
+
+  /* Semantic */
+  --color-bg: light-dark(var(--color-off-white), var(--color-black));
+  --color-footer-stop: light-dark(var(--color-white-pure), var(--color-black));
+  --color-text: light-dark(var(--color-black), var(--color-white));
+  --color-text-focus: var(--color-accent-blue);
+  --color-muted: light-dark(var(--color-gray), var(--color-gray-light));
+  --color-border: light-dark(var(--color-black), var(--color-white));
+  --color-link: light-dark(var(--color-black), var(--color-white));
+
+  /* Nav */
+  --color-nav-hover: var(--color-gradient-blue);
+
+  /* Typography */
+  --font-body: "Figtree", sans-serif;
+  --font-display: "Rubik", sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.47, 0, 0.75, 0.72);
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-fast: 0.15s;
+  --dur-base: 0.2s;
+  --dur-slow: 0.25s;
+
+  /* Layout */
+  --z-above: 2;
+  --z-overlay: 3;
+  --container-width: 42.5em;
+  --container-width-s: 30em;
+  --footer-height: 22em;
+  --sticky-offset: 1em;
+  color-scheme: light dark;
+}
+
+[data-theme="light"] { color-scheme: light; }
+
+[data-theme="dark"] { color-scheme: dark; }

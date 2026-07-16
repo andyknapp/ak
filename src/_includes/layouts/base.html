@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or metadata.title }}</title>
+    <meta
+      name="description"
+      content="{{ metaDescription or metadata.description }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <a href="#main" class="visually-hidden">Skip to main content</a>
+
+    {% include "components/header.html" %} {% include "components/nav.html" %}
+
+    <main id="main" class="main-content">
+      <div class="container container--main">{{ content | safe }}</div>
+    </main>
+
+    {% include "components/footer.html" %}
+  </body>
+
+  <script src="/js/index.js" async></script>
+</html>
