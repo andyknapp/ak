@@ -68,3 +68,15 @@
     color: var(--color-accent-blue);
   }
 }
+
+.contact-form-message {
+  font-size: 0.875rem;
+
+  &.is-success {
+    color: var(--color-accent-blue);
+  }
+
+  &.is-error {
+    color: var(--color-accent-red);
+  }
+}
