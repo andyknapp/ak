@@ -10,7 +10,7 @@
   padding: 0 1em 0.5em;
   background: linear-gradient(to bottom, var(--color-bg), var(--color-footer-stop));
   color: var(--color-text);
-  
+
   .footer-content {
     position: relative;
     z-index: var(--z-overlay);
@@ -24,7 +24,7 @@
     @media (width >= 50em) {
       position: sticky;
       bottom: var(--sticky-offset);
-      padding-left: 18em;
+      width: calc(100% - 18em);
     }
   }
 

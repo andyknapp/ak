@@ -25,7 +25,7 @@
   --color-link: light-dark(var(--color-black), var(--color-white));
 
   /* Nav */
-  --color-nav-hover: var(--color-gradient-blue);
+  --color-nav-hover: light-dark(var(--color-gradient-blue), var(--color-gradient-orange));
 
   /* Typography */
   --font-body: "Figtree", sans-serif;
