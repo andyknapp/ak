@@ -6,7 +6,7 @@ order: 1
 ---
 
 <p>
-  As a Senior UX Engineer at <a href="https://www.thinkcompany.com/" target="_blank" rel="nofollow">Think Company</a>, most of the past year has been agentic AI development. I've been the primary contributor on a set of full-stack proof-of-concept apps and internal tools, working across agentic workflows, RAG architectures, MCP server development and integration, multi-provider LLM APIs, and AI-augmented design-to-code pipelines. I've been a leader in Think Company's internal AI literacy and adoption efforts - turning research into starter kits, templates, and internal tools the wider team can use. A few highlights:
+  As a Senior UX Engineer at <a href="https://www.thinkcompany.com/" target="_blank" rel="nofollow noopener">Think Company</a>, most of the past year has been agentic AI development. I've been the primary contributor on a set of full-stack proof-of-concept apps and internal tools, working across agentic workflows, RAG architectures, MCP server development and integration, multi-provider LLM APIs, and AI-augmented design-to-code pipelines. I've been a leader in Think Company's internal AI literacy and adoption efforts - turning research into starter kits, templates, and internal tools the wider team can use. A few highlights:
 </p>
 
 <ul>
@@ -36,5 +36,5 @@ order: 1
 </p>
 
 <p>
-  I've co-authored a couple of Think Company blog posts along the way - <a href="https://www.thinkcompany.com/" target="_blank" rel="nofollow">Launching dark mode on thinkcompany.com</a> and <a href="https://www.thinkcompany.com/blog/7-benefits-to-using-storybook/" target="_blank" rel="nofollow">7 Benefits to using Storybook</a> - plus several on the internal Think Tech blog.
+  I've co-authored a couple of Think Company blog posts along the way - <a href="https://www.thinkcompany.com/" target="_blank" rel="nofollow noopener">Launching dark mode on thinkcompany.com</a> and <a href="https://www.thinkcompany.com/blog/7-benefits-to-using-storybook/" target="_blank" rel="nofollow noopener">7 Benefits to using Storybook</a> - plus several on the internal Think Tech blog.
 </p>
