@@ -41,6 +41,7 @@
   </body>
 
   <script src="/js/index.js" async></script>
+  {% if env.isProduction %}
   <!-- Cloudflare Web Analytics -->
   <script
     type="module"
@@ -48,4 +49,5 @@
     data-cf-beacon='{"token": "8a31e765354d4fa28f217a73a1d606b0"}'
   ></script>
   <!-- End Cloudflare Web Analytics -->
+  {% endif %}
 </html>
