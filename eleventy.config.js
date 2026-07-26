@@ -16,7 +16,7 @@ export default eleventyConfig => {
 		addPassthroughCopy tells Eleventy to copy files or directories to the output folder
 		addPassthroughCopy can take a directory, file, or glob pattern
 	*/
-  //eleventyConfig.addPassthroughCopy("fonts/**/*.woff2");
+  eleventyConfig.addPassthroughCopy('src/fonts');
 
   eleventyConfig.addTemplateFormats('ts');
   eleventyConfig.addExtension('ts', {
