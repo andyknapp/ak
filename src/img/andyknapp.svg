@@ -31,9 +31,4 @@
         <stop offset="0%"   stop-color="#a83b91" />
         <stop offset="100%" stop-color="#ea7f00" />
     </linearGradient>
-
-    <style type="text/css"><![CDATA[
-        .clone.a { stroke: url(#logo-gradient-a); }
-        .clone.k { stroke: url(#logo-gradient-k); }
-    ]]></style>
 </svg>
